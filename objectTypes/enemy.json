@@ -1,0 +1,65 @@
+{
+	"name": "Enemy",
+	"plugin-id": "Sprite",
+	"sid": 158644337110062,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 448628135207191
+		},
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 442192408791349
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 757623868108984
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 117,
+						"height": 236,
+						"originX": 0.5897435897435898,
+						"originY": 0.4661016949152542,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1317433,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0,
+								1,
+								0.9957627118644068,
+								0,
+								0.9957627118644068
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 891074999466556,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
