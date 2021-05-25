@@ -199,6 +199,15 @@
 							}
 						},
 						{
+							"id": "set-speed",
+							"objectClass": "enemyCar",
+							"sid": 855576821355503,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"speed": "random(-10,10)"
+							}
+						},
+						{
 							"id": "set-boolean-instvar",
 							"objectClass": "enemyCar",
 							"sid": 467200350683855,
