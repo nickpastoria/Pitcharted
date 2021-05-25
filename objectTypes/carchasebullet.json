@@ -1,0 +1,48 @@
+{
+	"name": "CarChaseBullet",
+	"plugin-id": "Sprite",
+	"sid": 997386754366303,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 174027785408827
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 410847021564161
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 23,
+						"height": 23,
+						"originX": 0.6086956521739131,
+						"originY": 1.0869565217391304,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5426703,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 347787046252229,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -26,6 +26,55 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 503517953022396
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "crosshair",
+					"sid": 472920360323640,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 369174703570154,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "enemyCar",
+							"sid": 280824743881437,
+							"parameters": {
+								"instance-variable": "Dead"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "enemyCar",
+							"sid": 721251954774331,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 313383551218146
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "RoadSpawner",
 					"sid": 786036521105751,
@@ -49,6 +98,119 @@
 				}
 			],
 			"sid": 735140426428046
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 269659012329334,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "PlayerCar",
+					"sid": 732478007130702,
+					"parameters": {
+						"object": "CarChaseBullet",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "CarChaseBullet",
+					"sid": 126085140552031,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 112281119311038
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "CarChaseBullet",
+					"sid": 739511861486732,
+					"parameters": {
+						"object": "enemyCar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-color",
+					"objectClass": "enemyCar",
+					"sid": 771062114257237,
+					"parameters": {
+						"color": "rgbEx(100, 0, 0)"
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "enemyCar",
+					"sid": 407333447030476,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "CarChaseBullet",
+					"sid": 703476923269332
+				}
+			],
+			"sid": 594975512976259,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemyCar",
+							"sid": 706922707773506,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-acceleration",
+							"objectClass": "enemyCar",
+							"sid": 875557991023679,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"acceleration": "500"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "enemyCar",
+							"sid": 467200350683855,
+							"parameters": {
+								"instance-variable": "Dead",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 934231462566430
+				}
+			]
 		}
 	],
 	"sid": 210743918402358

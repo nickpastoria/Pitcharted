@@ -109,6 +109,22 @@
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
 		}
 	],
 	"uniqueId": "fbzk83zr77e",
@@ -126,7 +142,11 @@
 			"PlatformBlock",
 			"EnemyBullet",
 			"Road",
-			"RoadSpawner"
+			"RoadSpawner",
+			"PlayerCar",
+			"enemyCar",
+			"crosshair",
+			"CarChaseBullet"
 		],
 		"subfolders": []
 	},
