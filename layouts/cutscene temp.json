@@ -1,0 +1,40 @@
+{
+	"name": "Cutscene temp",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"instances": [],
+			"sid": 699396421103188,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		}
+	],
+	"sid": 148093037049495,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 4000,
+	"height": 1920,
+	"unboundedScrolling": false,
+	"eventSheet": "Cutscene temp Event"
+}

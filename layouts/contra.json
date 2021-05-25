@@ -1,5 +1,5 @@
 {
-	"name": "Layout 1",
+	"name": "Contra",
 	"layers": [
 		{
 			"name": "Background",
@@ -749,5 +749,5 @@
 	"width": 5000,
 	"height": 960,
 	"unboundedScrolling": false,
-	"eventSheet": "Event sheet 1"
+	"eventSheet": "Contra"
 }

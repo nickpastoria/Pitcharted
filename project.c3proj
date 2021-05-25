@@ -128,13 +128,19 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Contra",
+			"Fps",
+			"Cutscene temp",
+			"Car Chase"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Contra Event",
+			"FPS Event",
+			"Cutscene temp Event",
+			"Car Chase Event"
 		],
 		"subfolders": []
 	},
