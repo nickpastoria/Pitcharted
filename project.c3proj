@@ -101,6 +101,14 @@
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
 		}
 	],
 	"uniqueId": "fbzk83zr77e",
@@ -116,7 +124,9 @@
 			"Bullet",
 			"Keyboard",
 			"PlatformBlock",
-			"EnemyBullet"
+			"EnemyBullet",
+			"Road",
+			"RoadSpawner"
 		],
 		"subfolders": []
 	},

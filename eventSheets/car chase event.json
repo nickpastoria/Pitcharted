@@ -1,5 +1,55 @@
 {
 	"name": "Car Chase Event",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 579145488652260
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "RoadSpawner",
+					"sid": 285368506784548,
+					"parameters": {
+						"width": "Road.Width"
+					}
+				}
+			],
+			"sid": 536479267426445
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "RoadSpawner",
+					"sid": 786036521105751,
+					"parameters": {
+						"object": "Road"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "RoadSpawner",
+					"sid": 387333948007267,
+					"parameters": {
+						"object": "Road",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 735140426428046
+		}
+	],
 	"sid": 210743918402358
 }
