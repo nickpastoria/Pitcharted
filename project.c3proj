@@ -162,8 +162,7 @@
 			"CarChase_PlayerCar",
 			"carChase_enemyCar",
 			"CarChase_crosshair",
-			"CarChase_Bullet",
-			"CarChase_StopVolume"
+			"CarChase_Bullet"
 		],
 		"subfolders": []
 	},

@@ -37,9 +37,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 179564848451591,
+					"sid": 989140896499356,
 					"parameters": {
-						"interval-seconds": "1.5"
+						"interval-seconds": "0.5"
 					}
 				}
 			],
@@ -261,6 +261,15 @@
 							"behaviorType": "MoveTo",
 							"parameters": {
 								"max-speed": "600"
+							}
+						},
+						{
+							"id": "set-stop-on-solids",
+							"objectClass": "carChase_enemyCar",
+							"sid": 481362568427141,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"enabled": false
 							}
 						}
 					],
