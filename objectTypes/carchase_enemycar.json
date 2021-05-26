@@ -19,11 +19,6 @@
 	],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Bullet",
-			"name": "Bullet",
-			"sid": 443595088732862
-		},
-		{
 			"behaviorId": "destroy",
 			"name": "DestroyOutsideLayout",
 			"sid": 246374197669166
@@ -32,6 +27,16 @@
 			"behaviorId": "Rotate",
 			"name": "Rotate",
 			"sid": 346150364470069
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 198251126983322
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 759877585016711
 		}
 	],
 	"effectTypes": [],

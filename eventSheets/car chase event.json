@@ -26,6 +26,42 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "carChase_enemyCar",
+					"sid": 391558092052197,
+					"parameters": {
+						"instance-variable": "Dead"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 179564848451591,
+					"parameters": {
+						"interval-seconds": "1.5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "carChase_enemyCar",
+					"sid": 428635626725310,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "CarChase_PlayerCar.X",
+						"y": "Self.Y",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 909416209877663
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 503517953022396
@@ -152,9 +188,9 @@
 				{
 					"id": "set-default-color",
 					"objectClass": "carChase_enemyCar",
-					"sid": 771062114257237,
+					"sid": 921904283027380,
 					"parameters": {
-						"color": "rgbEx(100, 0, 0)"
+						"color": "rgbEx(100, 100 * carChase_enemyCar.Health/5, 100* carChase_enemyCar.Health/5)"
 					}
 				},
 				{
@@ -190,21 +226,23 @@
 					],
 					"actions": [
 						{
-							"id": "set-acceleration",
-							"objectClass": "carChase_enemyCar",
-							"sid": 875557991023679,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"acceleration": "500"
-							}
-						},
-						{
 							"id": "set-speed",
 							"objectClass": "carChase_enemyCar",
 							"sid": 855576821355503,
 							"behaviorType": "Rotate",
 							"parameters": {
 								"speed": "random(-10,10)"
+							}
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "carChase_enemyCar",
+							"sid": 403861099479189,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "-300",
+								"y": "Self.Y + random(-30, 30)",
+								"mode": "direct"
 							}
 						},
 						{
@@ -215,11 +253,74 @@
 								"instance-variable": "Dead",
 								"value": "true"
 							}
+						},
+						{
+							"id": "set-max-speed",
+							"objectClass": "carChase_enemyCar",
+							"sid": 249907596620300,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"max-speed": "600"
+							}
 						}
 					],
 					"sid": 934231462566430
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "CarChase_Bullet",
+					"sid": 765016087536873,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "CarChase_Bullet",
+					"sid": 513036337228922
+				}
+			],
+			"sid": 213048684142571
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 105842769557213,
+					"parameters": {
+						"object": "carChase_enemyCar"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "carChase_enemyCar",
+					"sid": 477937457164751,
+					"parameters": {
+						"instance-variable": "Dead"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "flash",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 839807346428148,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "1.0"
+					}
+				}
+			],
+			"sid": 771522522260769
 		}
 	],
 	"sid": 210743918402358
