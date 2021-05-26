@@ -152,9 +152,9 @@
 				{
 					"id": "set-default-color",
 					"objectClass": "carChase_enemyCar",
-					"sid": 771062114257237,
+					"sid": 921904283027380,
 					"parameters": {
-						"color": "rgbEx(100, 0, 0)"
+						"color": "rgbEx(100, 100 * carChase_enemyCar.Health/5, 100* carChase_enemyCar.Health/5)"
 					}
 				},
 				{
@@ -220,6 +220,25 @@
 					"sid": 934231462566430
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "CarChase_Bullet",
+					"sid": 765016087536873,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "CarChase_Bullet",
+					"sid": 513036337228922
+				}
+			],
+			"sid": 213048684142571
 		}
 	],
 	"sid": 210743918402358

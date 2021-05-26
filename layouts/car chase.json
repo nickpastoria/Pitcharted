@@ -412,8 +412,8 @@
 						}
 					},
 					"world": {
-						"x": 1805,
-						"y": -111,
+						"x": 2318,
+						"y": 317,
 						"width": 150.469720695749,
 						"height": 69.06325070996293,
 						"originX": 0.5,
@@ -491,6 +491,226 @@
 						"height": 23,
 						"originX": 0.6086956521739131,
 						"originY": 1.0869565217391304,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "carChase_enemyCar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 32,
+					"instanceVariables": {
+						"Health": 5,
+						"Dead": false
+					},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": -300,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Rotate": {
+							"properties": {
+								"speed": 10,
+								"acceleration": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 3020,
+						"y": 606,
+						"width": 150.469720695749,
+						"height": 69.06325070996293,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "carChase_enemyCar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 33,
+					"instanceVariables": {
+						"Health": 5,
+						"Dead": false
+					},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": -300,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Rotate": {
+							"properties": {
+								"speed": 10,
+								"acceleration": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 2319,
+						"y": 512,
+						"width": 150.469720695749,
+						"height": 69.06325070996293,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "carChase_enemyCar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 34,
+					"instanceVariables": {
+						"Health": 5,
+						"Dead": false
+					},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": -300,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Rotate": {
+							"properties": {
+								"speed": 10,
+								"acceleration": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 3365,
+						"y": 309,
+						"width": 150.469720695749,
+						"height": 69.06325070996293,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "carChase_enemyCar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 35,
+					"instanceVariables": {
+						"Health": 5,
+						"Dead": false
+					},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": -300,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Rotate": {
+							"properties": {
+								"speed": 10,
+								"acceleration": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 3831,
+						"y": 615,
+						"width": 150.469720695749,
+						"height": 69.06325070996293,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
