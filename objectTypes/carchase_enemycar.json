@@ -15,6 +15,12 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 464146993575051
+		},
+		{
+			"name": "MaxHealth",
+			"type": "number",
+			"desc": "",
+			"sid": 708597372717514
 		}
 	],
 	"behaviorTypes": [

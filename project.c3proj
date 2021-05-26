@@ -163,7 +163,8 @@
 			"carChase_enemyCar",
 			"CarChase_crosshair",
 			"CarChase_Bullet",
-			"CarChase_CarSpawner"
+			"CarChase_CarSpawner",
+			"CarChase_CameraTarget"
 		],
 		"subfolders": []
 	},

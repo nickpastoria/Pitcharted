@@ -394,7 +394,8 @@
 					"uid": 29,
 					"instanceVariables": {
 						"Health": 5,
-						"Dead": false
+						"Dead": false,
+						"MaxHealth": 10
 					},
 					"behaviors": {
 						"DestroyOutsideLayout": {
@@ -622,6 +623,35 @@
 						"height": 42,
 						"originX": 0.4888888888888889,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_CameraTarget",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 32,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1254,
+						"y": 132,
+						"width": 57,
+						"height": 61,
+						"originX": 0.49122807017543857,
+						"originY": 0.4918032786885246,
 						"color": [
 							1,
 							1,

@@ -1,0 +1,37 @@
+{
+	"name": "CarChase_CameraTarget",
+	"plugin-id": "Sprite",
+	"sid": 586988656787619,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 57,
+						"height": 61,
+						"originX": 0.49122807017543857,
+						"originY": 0.4918032786885246,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9352585,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 524444260886366,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

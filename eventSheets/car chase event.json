@@ -225,9 +225,9 @@
 						{
 							"id": "set-default-color",
 							"objectClass": "carChase_enemyCar",
-							"sid": 229608494659380,
+							"sid": 881620472467561,
 							"parameters": {
-								"color": "rgbEx(100, 100 * carChase_enemyCar.Health/5, 100* carChase_enemyCar.Health/5)"
+								"color": "rgbEx(100, 100 * carChase_enemyCar.Health/Self.MaxHealth, 100* carChase_enemyCar.Health/Self.MaxHealth)"
 							}
 						},
 						{
@@ -364,19 +364,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 802787396995410,
+							"sid": 788786867643900,
 							"parameters": {
-								"interval-seconds": "1"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 142003471677763,
-							"parameters": {
-								"variable": "EnemiesOnAlive",
-								"comparison": 3,
-								"value": "1"
+								"interval-seconds": "2"
 							}
 						},
 						{
@@ -399,11 +389,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 689308539491021,
+									"sid": 670753852785325,
 									"parameters": {
 										"variable": "EnemiesOnAlive",
 										"comparison": 2,
-										"value": "6"
+										"value": "5"
 									}
 								},
 								{
@@ -468,6 +458,15 @@
 								"variable": "EnemiesLeft",
 								"value": "1"
 							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "carChase_enemyCar",
+							"sid": 119743222376890,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "Self.MaxHealth"
+							}
 						}
 					],
 					"sid": 576556112785256
@@ -512,6 +511,15 @@
 				}
 			],
 			"sid": 686241393990137
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Camera Stuff",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 565480609823783
 		}
 	],
 	"sid": 210743918402358
