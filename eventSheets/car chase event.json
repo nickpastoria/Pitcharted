@@ -79,6 +79,15 @@
 						"x": "Mouse.X",
 						"y": "Mouse.Y"
 					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "CarChase_CameraTarget",
+					"sid": 954912401205575,
+					"parameters": {
+						"x": "CarChase_PlayerCar.X + Self.distanceToCar",
+						"y": "450"
+					}
 				}
 			],
 			"sid": 369174703570154,
