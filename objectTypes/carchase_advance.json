@@ -1,0 +1,43 @@
+{
+	"name": "CarChase_Advance",
+	"plugin-id": "Sprite",
+	"sid": 738268810109382,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 480049583762788
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 198,
+						"height": 191,
+						"originX": 0.4797979797979798,
+						"originY": 0.47643979057591623,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4145831,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 412287127355222,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

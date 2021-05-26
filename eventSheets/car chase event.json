@@ -84,6 +84,7 @@
 					"id": "set-position",
 					"objectClass": "CarChase_CameraTarget",
 					"sid": 954912401205575,
+					"disabled": true,
 					"parameters": {
 						"x": "CarChase_PlayerCar.X + Self.distanceToCar",
 						"y": "450"
@@ -283,20 +284,20 @@
 								{
 									"id": "set-speed",
 									"objectClass": "carChase_enemyCar",
-									"sid": 599818445846679,
+									"sid": 754109056738862,
 									"behaviorType": "Rotate",
 									"parameters": {
-										"speed": "random(-10,10)"
+										"speed": "random(-25,25)"
 									}
 								},
 								{
 									"id": "move-to-position",
 									"objectClass": "carChase_enemyCar",
-									"sid": 998885893899399,
+									"sid": 723351100817358,
 									"behaviorType": "MoveTo",
 									"parameters": {
 										"x": "-300",
-										"y": "Self.Y + random(-30, 30)",
+										"y": "Self.Y + random(-100, 100)",
 										"mode": "direct"
 									}
 								},
@@ -326,6 +327,15 @@
 									"parameters": {
 										"enabled": false
 									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 312272461828561,
+									"parameters": {
+										"variable": "EnemiesLeft",
+										"value": "1"
+									}
 								}
 							],
 							"sid": 924213321327406
@@ -350,6 +360,13 @@
 							"parameters": {
 								"instance-variable": "Dead"
 							}
+						},
+						{
+							"id": "is-flashing",
+							"objectClass": "CarChase_PlayerCar",
+							"sid": 761630136169457,
+							"behaviorType": "Flash",
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -381,11 +398,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 259561685473306,
+							"sid": 178856330169782,
 							"parameters": {
 								"variable": "EnemiesLeft",
 								"comparison": 4,
-								"value": "0"
+								"value": "EnemiesOnAlive"
 							}
 						}
 					],
@@ -451,20 +468,20 @@
 					],
 					"actions": [
 						{
+							"id": "set-solid-collision-filter",
+							"objectClass": "carChase_enemyCar",
+							"sid": 698391200590664,
+							"parameters": {
+								"mode": "inclusive",
+								"tags": "\"Player Enemy\""
+							}
+						},
+						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
 							"sid": 259551535371239,
 							"parameters": {
 								"variable": "EnemiesOnAlive",
-								"value": "1"
-							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 933302320078827,
-							"parameters": {
-								"variable": "EnemiesLeft",
 								"value": "1"
 							}
 						},
@@ -522,13 +539,75 @@
 			"sid": 686241393990137
 		},
 		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Camera Stuff",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [],
-			"sid": 565480609823783
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 856677617707733,
+					"parameters": {
+						"variable": "EnemiesLeft",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "is-flashing",
+					"objectClass": "CarChase_Advance",
+					"sid": 671803033210463,
+					"behaviorType": "Flash",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "CarChase_Advance",
+					"sid": 138177869483527,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "CarChase_Advance",
+					"sid": 959981190194397,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.25",
+						"off-time": "0.25",
+						"duration": "1.5"
+					}
+				}
+			],
+			"sid": 254150729986555,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "CarChase_Wall",
+							"sid": 981352964411490,
+							"parameters": {
+								"instance-variable": "DisableAtEnd"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "CarChase_Wall",
+							"sid": 816792164712255,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 139450075303303
+				}
+			]
 		}
 	],
 	"sid": 210743918402358

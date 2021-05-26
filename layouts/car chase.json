@@ -361,13 +361,13 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Player"
 							}
 						}
 					},
 					"world": {
-						"x": 474,
-						"y": 597,
+						"x": 1318,
+						"y": 497,
 						"width": 175.49644081517098,
 						"height": 74.27650192177362,
 						"originX": 0.5,
@@ -412,7 +412,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Enemy"
 							}
 						},
 						"MoveTo": {
@@ -428,8 +428,8 @@
 						}
 					},
 					"world": {
-						"x": 2340,
-						"y": -79,
+						"x": 3364,
+						"y": 406,
 						"width": 150.469720695749,
 						"height": 69.06325070996293,
 						"originX": 0.5,
@@ -659,8 +659,8 @@
 						}
 					},
 					"world": {
-						"x": 1013,
-						"y": 440,
+						"x": 1999,
+						"y": 451,
 						"width": 57,
 						"height": 61,
 						"originX": 0.49122807017543857,
@@ -780,6 +780,191 @@
 						"width": 45,
 						"height": 42,
 						"originX": 0.4888888888888889,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_Advance",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 41,
+					"instanceVariables": {},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 2593,
+						"y": 440,
+						"width": 198,
+						"height": 191,
+						"originX": 0.4797979797979798,
+						"originY": 0.47643979057591623,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_Wall",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 42,
+					"instanceVariables": {
+						"DisableAtEnd": false
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Wall"
+							}
+						}
+					},
+					"world": {
+						"x": 2137,
+						"y": 722,
+						"width": 2742,
+						"height": 104,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_Wall",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 43,
+					"instanceVariables": {
+						"DisableAtEnd": false
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Wall"
+							}
+						}
+					},
+					"world": {
+						"x": 2141,
+						"y": 179,
+						"width": 2742,
+						"height": 104,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_Wall",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 44,
+					"instanceVariables": {
+						"DisableAtEnd": false
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Wall"
+							}
+						}
+					},
+					"world": {
+						"x": 836,
+						"y": 483,
+						"width": 129,
+						"height": 1125,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_Wall",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 45,
+					"instanceVariables": {
+						"DisableAtEnd": true
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Wall"
+							}
+						}
+					},
+					"world": {
+						"x": 3060,
+						"y": 467,
+						"width": 129,
+						"height": 1125,
+						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
