@@ -427,8 +427,8 @@
 						}
 					},
 					"world": {
-						"x": 2318,
-						"y": 317,
+						"x": 2340,
+						"y": -79,
 						"width": 150.469720695749,
 						"height": 69.06325070996293,
 						"originX": 0.5,
@@ -517,7 +517,7 @@
 					}
 				},
 				{
-					"type": "carChase_enemyCar",
+					"type": "CarChase_CarSpawner",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -525,47 +525,15 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 32,
-					"instanceVariables": {
-						"Health": 5,
-						"Dead": false
-					},
-					"behaviors": {
-						"DestroyOutsideLayout": {
-							"properties": {}
-						},
-						"Rotate": {
-							"properties": {
-								"speed": 10,
-								"acceleration": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						},
-						"MoveTo": {
-							"properties": {
-								"max-speed": 450,
-								"acceleration": 600,
-								"deceleration": 600,
-								"rotate-speed": 0,
-								"set-angle": false,
-								"stop-on-solids": true,
-								"enabled": true
-							}
-						}
-					},
+					"uid": 36,
+					"instanceVariables": {},
+					"behaviors": {},
 					"world": {
-						"x": 3020,
-						"y": 606,
-						"width": 150.469720695749,
-						"height": 69.06325070996293,
-						"originX": 0.5,
+						"x": 2455,
+						"y": 320,
+						"width": 45,
+						"height": 42,
+						"originX": 0.4888888888888889,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -578,7 +546,7 @@
 					}
 				},
 				{
-					"type": "carChase_enemyCar",
+					"type": "CarChase_CarSpawner",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -586,47 +554,44 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 33,
-					"instanceVariables": {
-						"Health": 5,
-						"Dead": false
-					},
-					"behaviors": {
-						"DestroyOutsideLayout": {
-							"properties": {}
-						},
-						"Rotate": {
-							"properties": {
-								"speed": 10,
-								"acceleration": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						},
-						"MoveTo": {
-							"properties": {
-								"max-speed": 450,
-								"acceleration": 600,
-								"deceleration": 600,
-								"rotate-speed": 0,
-								"set-angle": false,
-								"stop-on-solids": true,
-								"enabled": true
-							}
-						}
-					},
+					"uid": 37,
+					"instanceVariables": {},
+					"behaviors": {},
 					"world": {
-						"x": 2319,
+						"x": 2461,
+						"y": 411,
+						"width": 45,
+						"height": 42,
+						"originX": 0.4888888888888889,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_CarSpawner",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 38,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2459,
 						"y": 512,
-						"width": 150.469720695749,
-						"height": 69.06325070996293,
-						"originX": 0.5,
+						"width": 45,
+						"height": 42,
+						"originX": 0.4888888888888889,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -639,7 +604,7 @@
 					}
 				},
 				{
-					"type": "carChase_enemyCar",
+					"type": "CarChase_CarSpawner",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -647,108 +612,15 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 34,
-					"instanceVariables": {
-						"Health": 5,
-						"Dead": false
-					},
-					"behaviors": {
-						"DestroyOutsideLayout": {
-							"properties": {}
-						},
-						"Rotate": {
-							"properties": {
-								"speed": 10,
-								"acceleration": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						},
-						"MoveTo": {
-							"properties": {
-								"max-speed": 450,
-								"acceleration": 600,
-								"deceleration": 600,
-								"rotate-speed": 0,
-								"set-angle": false,
-								"stop-on-solids": true,
-								"enabled": true
-							}
-						}
-					},
+					"uid": 39,
+					"instanceVariables": {},
+					"behaviors": {},
 					"world": {
-						"x": 3365,
-						"y": 309,
-						"width": 150.469720695749,
-						"height": 69.06325070996293,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "carChase_enemyCar",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 35,
-					"instanceVariables": {
-						"Health": 5,
-						"Dead": false
-					},
-					"behaviors": {
-						"DestroyOutsideLayout": {
-							"properties": {}
-						},
-						"Rotate": {
-							"properties": {
-								"speed": 10,
-								"acceleration": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						},
-						"MoveTo": {
-							"properties": {
-								"max-speed": 450,
-								"acceleration": 600,
-								"deceleration": 600,
-								"rotate-speed": 0,
-								"set-angle": false,
-								"stop-on-solids": true,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 3831,
-						"y": 615,
-						"width": 150.469720695749,
-						"height": 69.06325070996293,
-						"originX": 0.5,
+						"x": 2461,
+						"y": 606,
+						"width": 45,
+						"height": 42,
+						"originX": 0.4888888888888889,
 						"originY": 0.5,
 						"color": [
 							1,
