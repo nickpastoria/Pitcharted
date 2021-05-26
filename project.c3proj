@@ -166,7 +166,9 @@
 			"CarChase_CarSpawner",
 			"CarChase_CameraTarget",
 			"CarChase_Advance",
-			"CarChase_Wall"
+			"CarChase_Wall",
+			"CarChase_Grass",
+			"CarChase_GrassSpawner"
 		],
 		"subfolders": []
 	},

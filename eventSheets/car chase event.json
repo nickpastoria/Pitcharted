@@ -50,6 +50,14 @@
 					}
 				},
 				{
+					"id": "set-width",
+					"objectClass": "CarChase_GrassSpawner",
+					"sid": 579547867665406,
+					"parameters": {
+						"width": "CarChase_Grass.Width"
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 564641320105302,
@@ -534,6 +542,34 @@
 						}
 					],
 					"sid": 393971434660480
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "CarChase_GrassSpawner",
+							"sid": 930865563834943,
+							"parameters": {
+								"object": "CarChase_Grass"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "CarChase_GrassSpawner",
+							"sid": 949263634502494,
+							"parameters": {
+								"object": "CarChase_Grass",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 852239768431660
 				}
 			],
 			"sid": 686241393990137
