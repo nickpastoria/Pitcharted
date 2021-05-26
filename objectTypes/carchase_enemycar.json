@@ -1,5 +1,5 @@
 {
-	"name": "enemyCar",
+	"name": "carChase_enemyCar",
 	"plugin-id": "Sprite",
 	"sid": 881810770729374,
 	"isGlobal": false,

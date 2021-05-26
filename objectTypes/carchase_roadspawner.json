@@ -1,0 +1,37 @@
+{
+	"name": "CarChase_RoadSpawner",
+	"plugin-id": "Sprite",
+	"sid": 497827178033999,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 53,
+						"height": 40,
+						"originX": 0.4716981132075472,
+						"originY": 0.475,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5054621,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 631667294148863,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

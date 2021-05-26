@@ -1,19 +1,19 @@
 {
-	"name": "Road",
+	"name": "CarChase_PlayerCar",
 	"plugin-id": "Sprite",
-	"sid": 225893792979979,
+	"sid": 357025937065258,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Bullet",
-			"name": "Bullet",
-			"sid": 798401653574491
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 767407829836199
 		},
 		{
-			"behaviorId": "destroy",
-			"name": "DestroyOutsideLayout",
-			"sid": 594362731203510
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 946169066398410
 		}
 	],
 	"effectTypes": [],
@@ -22,39 +22,39 @@
 			{
 				"frames": [
 					{
-						"width": 650,
-						"height": 840,
+						"width": 1205,
+						"height": 510,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5864757,
+						"imageSpriteId": 7347162,
 						"collisionPoly": {
 							"points": [
-								1,
 								0,
-								1,
-								0.5,
-								1,
-								0.9988095238095238,
-								0.5,
-								0.9988095238095238,
-								0.0015384615384614886,
-								0.9988095238095238,
-								0.0015384615384614886,
-								0.5,
-								0.0015384615384614886,
 								0,
 								0.5,
-								0
+								0,
+								0.9991701244813278,
+								0,
+								0.9991701244813278,
+								0.5,
+								0.9991701244813278,
+								0.9980392156862745,
+								0.5,
+								0.9980392156862745,
+								0,
+								0.9980392156862745,
+								0,
+								0.5
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 408031006840388,
+				"sid": 197123800569725,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

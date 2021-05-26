@@ -1,52 +1,41 @@
 {
-	"name": "PlayerCar",
+	"name": "CarChase_crosshair",
 	"plugin-id": "Sprite",
-	"sid": 357025937065258,
+	"sid": 784669828403723,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "EightDir",
-			"name": "8Direction",
-			"sid": 767407829836199
-		},
-		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 946169066398410
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 1205,
-						"height": 510,
+						"width": 512,
+						"height": 512,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7347162,
+						"imageSpriteId": 5730294,
 						"collisionPoly": {
 							"points": [
-								0,
-								0,
+								0.201171875,
+								0.201171875,
 								0.5,
 								0,
-								0.9991701244813278,
-								0,
-								0.9991701244813278,
+								0.796875,
+								0.201171875,
+								0.998046875,
 								0.5,
-								0.9991701244813278,
-								0.9980392156862745,
+								0.794921875,
+								0.794921875,
 								0.5,
-								0.9980392156862745,
-								0,
-								0.9980392156862745,
-								0,
+								0.998046875,
+								0.203125,
+								0.794921875,
+								0.001953125,
 								0.5
 							]
 						},
@@ -54,7 +43,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 197123800569725,
+				"sid": 230168766145660,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
