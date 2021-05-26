@@ -1,19 +1,19 @@
 {
-	"name": "CarChaseBullet",
+	"name": "CarChase_Road",
 	"plugin-id": "Sprite",
-	"sid": 997386754366303,
+	"sid": 225893792979979,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Bullet",
 			"name": "Bullet",
-			"sid": 174027785408827
+			"sid": 798401653574491
 		},
 		{
 			"behaviorId": "destroy",
 			"name": "DestroyOutsideLayout",
-			"sid": 410847021564161
+			"sid": 594362731203510
 		}
 	],
 	"effectTypes": [],
@@ -22,19 +22,39 @@
 			{
 				"frames": [
 					{
-						"width": 23,
-						"height": 23,
-						"originX": 0.6086956521739131,
-						"originY": 1.0869565217391304,
+						"width": 650,
+						"height": 840,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5426703,
+						"imageSpriteId": 5864757,
+						"collisionPoly": {
+							"points": [
+								1,
+								0,
+								1,
+								0.5,
+								1,
+								0.9988095238095238,
+								0.5,
+								0.9988095238095238,
+								0.0015384615384614886,
+								0.9988095238095238,
+								0.0015384615384614886,
+								0.5,
+								0.0015384615384614886,
+								0,
+								0.5,
+								0
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 347787046252229,
+				"sid": 408031006840388,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

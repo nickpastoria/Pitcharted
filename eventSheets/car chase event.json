@@ -13,10 +13,10 @@
 			"actions": [
 				{
 					"id": "set-width",
-					"objectClass": "RoadSpawner",
+					"objectClass": "CarChase_RoadSpawner",
 					"sid": 285368506784548,
 					"parameters": {
-						"width": "Road.Width"
+						"width": "CarChase_Road.Width"
 					}
 				}
 			],
@@ -34,7 +34,7 @@
 			"actions": [
 				{
 					"id": "set-position",
-					"objectClass": "crosshair",
+					"objectClass": "CarChase_crosshair",
 					"sid": 472920360323640,
 					"parameters": {
 						"x": "Mouse.X",
@@ -49,7 +49,7 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "enemyCar",
+							"objectClass": "carChase_enemyCar",
 							"sid": 280824743881437,
 							"parameters": {
 								"instance-variable": "Dead"
@@ -59,7 +59,7 @@
 					"actions": [
 						{
 							"id": "set-enabled",
-							"objectClass": "enemyCar",
+							"objectClass": "carChase_enemyCar",
 							"sid": 721251954774331,
 							"behaviorType": "Rotate",
 							"parameters": {
@@ -76,10 +76,10 @@
 			"conditions": [
 				{
 					"id": "is-overlapping-another-object",
-					"objectClass": "RoadSpawner",
+					"objectClass": "CarChase_RoadSpawner",
 					"sid": 786036521105751,
 					"parameters": {
-						"object": "Road"
+						"object": "CarChase_Road"
 					},
 					"isInverted": true
 				}
@@ -87,10 +87,10 @@
 			"actions": [
 				{
 					"id": "spawn-another-object",
-					"objectClass": "RoadSpawner",
+					"objectClass": "CarChase_RoadSpawner",
 					"sid": 387333948007267,
 					"parameters": {
-						"object": "Road",
+						"object": "CarChase_Road",
 						"layer": "0",
 						"image-point": "0",
 						"create-hierarchy": false
@@ -115,10 +115,10 @@
 			"actions": [
 				{
 					"id": "spawn-another-object",
-					"objectClass": "PlayerCar",
+					"objectClass": "CarChase_PlayerCar",
 					"sid": 732478007130702,
 					"parameters": {
-						"object": "CarChaseBullet",
+						"object": "CarChase_Bullet",
 						"layer": "1",
 						"image-point": "0",
 						"create-hierarchy": false
@@ -126,7 +126,7 @@
 				},
 				{
 					"id": "set-angle-toward-position",
-					"objectClass": "CarChaseBullet",
+					"objectClass": "CarChase_Bullet",
 					"sid": 126085140552031,
 					"parameters": {
 						"x": "Mouse.X",
@@ -141,17 +141,17 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "CarChaseBullet",
+					"objectClass": "CarChase_Bullet",
 					"sid": 739511861486732,
 					"parameters": {
-						"object": "enemyCar"
+						"object": "carChase_enemyCar"
 					}
 				}
 			],
 			"actions": [
 				{
 					"id": "set-default-color",
-					"objectClass": "enemyCar",
+					"objectClass": "carChase_enemyCar",
 					"sid": 771062114257237,
 					"parameters": {
 						"color": "rgbEx(100, 0, 0)"
@@ -159,7 +159,7 @@
 				},
 				{
 					"id": "subtract-from-instvar",
-					"objectClass": "enemyCar",
+					"objectClass": "carChase_enemyCar",
 					"sid": 407333447030476,
 					"parameters": {
 						"instance-variable": "Health",
@@ -168,7 +168,7 @@
 				},
 				{
 					"id": "destroy",
-					"objectClass": "CarChaseBullet",
+					"objectClass": "CarChase_Bullet",
 					"sid": 703476923269332
 				}
 			],
@@ -179,7 +179,7 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "enemyCar",
+							"objectClass": "carChase_enemyCar",
 							"sid": 706922707773506,
 							"parameters": {
 								"instance-variable": "Health",
@@ -191,7 +191,7 @@
 					"actions": [
 						{
 							"id": "set-acceleration",
-							"objectClass": "enemyCar",
+							"objectClass": "carChase_enemyCar",
 							"sid": 875557991023679,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -200,7 +200,7 @@
 						},
 						{
 							"id": "set-speed",
-							"objectClass": "enemyCar",
+							"objectClass": "carChase_enemyCar",
 							"sid": 855576821355503,
 							"behaviorType": "Rotate",
 							"parameters": {
@@ -209,7 +209,7 @@
 						},
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "enemyCar",
+							"objectClass": "carChase_enemyCar",
 							"sid": 467200350683855,
 							"parameters": {
 								"instance-variable": "Dead",

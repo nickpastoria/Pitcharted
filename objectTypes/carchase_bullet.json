@@ -1,29 +1,40 @@
 {
-	"name": "RoadSpawner",
+	"name": "CarChase_Bullet",
 	"plugin-id": "Sprite",
-	"sid": 497827178033999,
+	"sid": 997386754366303,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 174027785408827
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 410847021564161
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 53,
-						"height": 40,
-						"originX": 0.4716981132075472,
-						"originY": 0.475,
+						"width": 23,
+						"height": 23,
+						"originX": 0.6086956521739131,
+						"originY": 1.0869565217391304,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5054621,
+						"imageSpriteId": 5426703,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 631667294148863,
+				"sid": 347787046252229,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

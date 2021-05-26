@@ -141,12 +141,12 @@
 			"Keyboard",
 			"PlatformBlock",
 			"EnemyBullet",
-			"Road",
-			"RoadSpawner",
-			"PlayerCar",
-			"enemyCar",
-			"crosshair",
-			"CarChaseBullet"
+			"CarChase_Road",
+			"CarChase_RoadSpawner",
+			"CarChase_PlayerCar",
+			"carChase_enemyCar",
+			"CarChase_crosshair",
+			"CarChase_Bullet"
 		],
 		"subfolders": []
 	},

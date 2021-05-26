@@ -6,7 +6,7 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "Road",
+					"type": "CarChase_Road",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -50,7 +50,7 @@
 					}
 				},
 				{
-					"type": "RoadSpawner",
+					"type": "CarChase_RoadSpawner",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -79,7 +79,7 @@
 					}
 				},
 				{
-					"type": "Road",
+					"type": "CarChase_Road",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -123,7 +123,7 @@
 					}
 				},
 				{
-					"type": "Road",
+					"type": "CarChase_Road",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -167,7 +167,7 @@
 					}
 				},
 				{
-					"type": "Road",
+					"type": "CarChase_Road",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -211,7 +211,7 @@
 					}
 				},
 				{
-					"type": "Road",
+					"type": "CarChase_Road",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -255,7 +255,7 @@
 					}
 				},
 				{
-					"type": "Road",
+					"type": "CarChase_Road",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -328,7 +328,7 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "PlayerCar",
+					"type": "CarChase_PlayerCar",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -374,7 +374,7 @@
 					}
 				},
 				{
-					"type": "enemyCar",
+					"type": "carChase_enemyCar",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -429,7 +429,7 @@
 					}
 				},
 				{
-					"type": "crosshair",
+					"type": "CarChase_crosshair",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -458,7 +458,7 @@
 					}
 				},
 				{
-					"type": "CarChaseBullet",
+					"type": "CarChase_Bullet",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
