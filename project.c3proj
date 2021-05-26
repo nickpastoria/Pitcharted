@@ -120,8 +120,24 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Rotate",
 			"name": "Rotate",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
@@ -146,7 +162,8 @@
 			"CarChase_PlayerCar",
 			"carChase_enemyCar",
 			"CarChase_crosshair",
-			"CarChase_Bullet"
+			"CarChase_Bullet",
+			"CarChase_StopVolume"
 		],
 		"subfolders": []
 	},

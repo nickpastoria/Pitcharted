@@ -14,6 +14,16 @@
 			"behaviorId": "bound",
 			"name": "BoundToLayout",
 			"sid": 946169066398410
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 799933241683350
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 617453997667600
 		}
 	],
 	"effectTypes": [],
