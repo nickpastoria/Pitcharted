@@ -284,7 +284,7 @@
 								"deceleration": 1000,
 								"directions": "dir-8",
 								"set-angle": "no",
-								"default-controls": true,
+								"default-controls": false,
 								"enabled": true
 							}
 						},
@@ -311,8 +311,8 @@
 						"y": 497,
 						"width": 175.49644081517098,
 						"height": 74.27650192177362,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.23319502074688797,
+						"originY": 0.47843137254901963,
 						"color": [
 							1,
 							1,

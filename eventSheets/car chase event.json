@@ -1112,6 +1112,213 @@
 				}
 			],
 			"sid": 974965010896251
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 507827853507709,
+					"parameters": {
+						"key": 38
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 356387455505452,
+					"parameters": {
+						"key": 87
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 202330628091492,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "up"
+					}
+				},
+				{
+					"id": "rotate-toward-angle",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 193822476136169,
+					"parameters": {
+						"degrees": "1",
+						"angle": "-10"
+					}
+				}
+			],
+			"sid": 637691416133211,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 604780787980274,
+					"parameters": {
+						"key": 40
+					},
+					"isInverted": true
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 747770074562344,
+					"parameters": {
+						"key": 83
+					},
+					"isInverted": true
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 148870345546454,
+					"parameters": {
+						"key": 38
+					},
+					"isInverted": true
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 617305033673177,
+					"parameters": {
+						"key": 87
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "rotate-toward-angle",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 318779433540455,
+					"parameters": {
+						"degrees": "1",
+						"angle": "0"
+					}
+				}
+			],
+			"sid": 580230589600254
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 119708998741603,
+					"parameters": {
+						"key": 40
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 864891279010837,
+					"parameters": {
+						"key": 83
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 397871432173944,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "down"
+					}
+				},
+				{
+					"id": "rotate-toward-angle",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 848020531295487,
+					"parameters": {
+						"degrees": "1",
+						"angle": "10"
+					}
+				}
+			],
+			"sid": 838772994184030,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 942432758249924,
+					"parameters": {
+						"key": 39
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 509616167971615,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 491949078624812,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 496398749105385,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 310721066250074,
+					"parameters": {
+						"key": 37
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 187007653954296,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 696705747721329,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 262086835847467,
+			"isOrBlock": true
 		}
 	],
 	"sid": 210743918402358
