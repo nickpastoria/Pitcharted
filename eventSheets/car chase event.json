@@ -2,106 +2,6 @@
 	"name": "Car Chase Event",
 	"events": [
 		{
-			"eventType": "variable",
-			"name": "MaxEnemies",
-			"type": "number",
-			"initialValue": "15",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 591645516309570
-		},
-		{
-			"eventType": "variable",
-			"name": "EnemiesLeft",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 931116382267672
-		},
-		{
-			"eventType": "variable",
-			"name": "EnemiesOnAlive",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 763572264013784
-		},
-		{
-			"eventType": "variable",
-			"name": "BG_Speed",
-			"type": "number",
-			"initialValue": "7",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 469821231290656
-		},
-		{
-			"eventType": "variable",
-			"name": "FireRate",
-			"type": "number",
-			"initialValue": "7",
-			"comment": "Shots Per Second",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 532196629431864
-		},
-		{
-			"eventType": "variable",
-			"name": "MaxAmmo",
-			"type": "number",
-			"initialValue": "20",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 202779025723626
-		},
-		{
-			"eventType": "variable",
-			"name": "Ammo",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 477169151571118
-		},
-		{
-			"eventType": "variable",
-			"name": "Health",
-			"type": "number",
-			"initialValue": "10",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 361160011078965
-		},
-		{
-			"eventType": "variable",
-			"name": "MaxEnemiesOnScreen",
-			"type": "number",
-			"initialValue": "1",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 229773907475354
-		},
-		{
-			"eventType": "variable",
-			"name": "EnemiesKilled",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 337706346204791
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -138,28 +38,28 @@
 					}
 				},
 				{
-					"id": "set-progress",
-					"objectClass": "CarChase_Health",
-					"sid": 386484516708068,
-					"parameters": {
-						"value": "Health/10 * 100"
-					}
-				},
-				{
-					"id": "set-progress",
-					"objectClass": "CarChase_AmmoBar",
-					"sid": 459018653414911,
-					"parameters": {
-						"value": "Ammo/MaxAmmo * 100"
-					}
-				},
-				{
 					"id": "set-instvar-value",
 					"objectClass": "CarChase_GameManager",
 					"sid": 386758056083963,
 					"parameters": {
 						"instance-variable": "Health",
 						"value": "Self.MaxHealth"
+					}
+				},
+				{
+					"id": "set-progress",
+					"objectClass": "CarChase_Health",
+					"sid": 951528121616180,
+					"parameters": {
+						"value": "CarChase_GameManager.Health/CarChase_GameManager.MaxHealth * 100"
+					}
+				},
+				{
+					"id": "set-progress",
+					"objectClass": "CarChase_AmmoBar",
+					"sid": 494757411395318,
+					"parameters": {
+						"value": "CarChase_GameManager.Ammo/CarChase_GameManager.MaxAmmo * 100"
 					}
 				}
 			],
@@ -722,9 +622,9 @@
 						{
 							"id": "set-x",
 							"objectClass": "CarChase_Grass",
-							"sid": 949301162833939,
+							"sid": 775144241622197,
 							"parameters": {
-								"x": "4000 - BG_Speed"
+								"x": "4000 - CarChase_GameManager.BG_Speed"
 							}
 						}
 					],
@@ -747,9 +647,9 @@
 						{
 							"id": "set-x",
 							"objectClass": "CarChase_Road",
-							"sid": 690358133928700,
+							"sid": 666233195976509,
 							"parameters": {
-								"x": "4000 - BG_Speed"
+								"x": "4000 - CarChase_GameManager.BG_Speed"
 							}
 						}
 					],
