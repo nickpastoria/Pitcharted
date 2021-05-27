@@ -223,7 +223,8 @@
 			"Contra",
 			"Fps",
 			"Cutscene temp",
-			"Car Chase"
+			"Car Chase",
+			"Climbing"
 		],
 		"subfolders": []
 	},
@@ -232,7 +233,8 @@
 			"Contra Event",
 			"FPS Event",
 			"Cutscene temp Event",
-			"Car Chase Event"
+			"Car Chase Event",
+			"Event sheet 1"
 		],
 		"subfolders": []
 	},
