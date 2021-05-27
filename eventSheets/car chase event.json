@@ -921,55 +921,65 @@
 				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "CarChase_PlayerCar",
-					"sid": 299845209097180,
+					"sid": 851764235820998,
 					"parameters": {
 						"object": "CarChase_EnemyBullet"
 					}
-				},
-				{
-					"id": "is-flashing",
-					"objectClass": "CarChase_PlayerCar",
-					"sid": 898581017315732,
-					"behaviorType": "Flash",
-					"isInverted": true
 				}
 			],
 			"actions": [
 				{
-					"id": "flash",
-					"objectClass": "CarChase_PlayerCar",
-					"sid": 401720533130657,
-					"behaviorType": "Flash",
-					"parameters": {
-						"on-time": "0.1",
-						"off-time": "0.1",
-						"duration": "1.0"
-					}
-				},
-				{
 					"id": "destroy",
-					"objectClass": "EnemyBullet",
-					"sid": 848249807259105
-				},
-				{
-					"id": "subtract-from-instvar",
-					"objectClass": "CarChase_GameManager",
-					"sid": 466971885450767,
-					"parameters": {
-						"instance-variable": "Health",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-progress",
-					"objectClass": "CarChase_Health",
-					"sid": 656159900390607,
-					"parameters": {
-						"value": "CarChase_GameManager.Health/10 * 100"
-					}
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 713486328194664
 				}
 			],
-			"sid": 526946746218544
+			"sid": 526946746218544,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-flashing",
+							"objectClass": "CarChase_PlayerCar",
+							"sid": 476749857933377,
+							"behaviorType": "Flash",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "CarChase_PlayerCar",
+							"sid": 993725399452240,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "1.0"
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "CarChase_GameManager",
+							"sid": 849139277858714,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "CarChase_Health",
+							"sid": 850227597919160,
+							"parameters": {
+								"value": "CarChase_GameManager.Health/CarChase_GameManager.MaxHealth * 100"
+							}
+						}
+					],
+					"sid": 134811523385045
+				}
+			]
 		},
 		{
 			"eventType": "block",
