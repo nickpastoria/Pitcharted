@@ -120,21 +120,46 @@
 					}
 				},
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 564641320105302,
+					"id": "set-instvar-value",
+					"objectClass": "CarChase_GameManager",
+					"sid": 820658380345684,
 					"parameters": {
-						"variable": "EnemiesLeft",
-						"value": "MaxEnemies"
+						"instance-variable": "EnemiesLeft",
+						"value": "Self.MaxEnemies"
 					}
 				},
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 480166310514097,
+					"id": "set-instvar-value",
+					"objectClass": "CarChase_GameManager",
+					"sid": 682129621461221,
 					"parameters": {
-						"variable": "Ammo",
-						"value": "MaxAmmo"
+						"instance-variable": "Ammo",
+						"value": "Self.MaxAmmo"
+					}
+				},
+				{
+					"id": "set-progress",
+					"objectClass": "CarChase_Health",
+					"sid": 386484516708068,
+					"parameters": {
+						"value": "Health/10 * 100"
+					}
+				},
+				{
+					"id": "set-progress",
+					"objectClass": "CarChase_AmmoBar",
+					"sid": 459018653414911,
+					"parameters": {
+						"value": "Ammo/MaxAmmo * 100"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "CarChase_GameManager",
+					"sid": 386758056083963,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "Self.MaxHealth"
 					}
 				}
 			],
@@ -172,17 +197,17 @@
 				{
 					"id": "set-x",
 					"objectClass": "CarChase_Grass",
-					"sid": 766553215989457,
+					"sid": 120851261017032,
 					"parameters": {
-						"x": "Self.X - BG_Speed"
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
 					}
 				},
 				{
 					"id": "set-x",
 					"objectClass": "CarChase_Road",
-					"sid": 843457047604262,
+					"sid": 966993043752090,
 					"parameters": {
-						"x": "Self.X - BG_Speed"
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
 					}
 				},
 				{
@@ -219,17 +244,17 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 694366103245781,
+					"sid": 661167029624726,
 					"parameters": {
-						"interval-seconds": "1.0/FireRate"
+						"interval-seconds": "1.0/CarChase_GameManager.FireRate"
 					}
 				},
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 107322392108424,
+					"id": "compare-instance-variable",
+					"objectClass": "CarChase_GameManager",
+					"sid": 451742953127206,
 					"parameters": {
-						"variable": "Ammo",
+						"instance-variable": "Ammo",
 						"comparison": 4,
 						"value": "0"
 					}
@@ -278,12 +303,20 @@
 					}
 				},
 				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 881530988197414,
+					"id": "subtract-from-instvar",
+					"objectClass": "CarChase_GameManager",
+					"sid": 834408087435376,
 					"parameters": {
-						"variable": "Ammo",
+						"instance-variable": "Ammo",
 						"value": "1"
+					}
+				},
+				{
+					"id": "set-progress",
+					"objectClass": "CarChase_AmmoBar",
+					"sid": 926889443261404,
+					"parameters": {
+						"value": "CarChase_GameManager.Ammo/CarChase_GameManager.MaxAmmo * 100"
 					}
 				}
 			],
@@ -384,7 +417,7 @@
 						{
 							"id": "subtract-from-instvar",
 							"objectClass": "carChase_enemyCar",
-							"sid": 162331589567611,
+							"sid": 862119060736191,
 							"parameters": {
 								"instance-variable": "Health",
 								"value": "1"
@@ -414,11 +447,11 @@
 							],
 							"actions": [
 								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 454515070244769,
+									"id": "subtract-from-instvar",
+									"objectClass": "CarChase_GameManager",
+									"sid": 330728151948208,
 									"parameters": {
-										"variable": "EnemiesOnAlive",
+										"instance-variable": "EnemiesAlive",
 										"value": "1"
 									}
 								},
@@ -479,20 +512,20 @@
 									}
 								},
 								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 231000782349768,
+									"id": "add-to-instvar",
+									"objectClass": "CarChase_GameManager",
+									"sid": 108753835655529,
 									"parameters": {
-										"variable": "EnemiesKilled",
+										"instance-variable": "Ammo",
 										"value": "1"
 									}
 								},
 								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 312272461828561,
+									"id": "subtract-from-instvar",
+									"objectClass": "CarChase_GameManager",
+									"sid": 692370346789192,
 									"parameters": {
-										"variable": "EnemiesLeft",
+										"instance-variable": "EnemiesLeft",
 										"value": "1"
 									}
 								}
@@ -503,31 +536,31 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 912938738954059,
+									"id": "compare-instance-variable",
+									"objectClass": "CarChase_GameManager",
+									"sid": 264845586863679,
 									"parameters": {
-										"variable": "EnemiesKilled",
+										"instance-variable": "Ammo",
 										"comparison": 0,
 										"value": "3"
 									}
 								},
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 844660144965346,
+									"id": "compare-instance-variable",
+									"objectClass": "CarChase_GameManager",
+									"sid": 489808694095203,
 									"parameters": {
-										"variable": "EnemiesKilled",
+										"instance-variable": "EnemiesKilled",
 										"comparison": 0,
 										"value": "7"
 									}
 								},
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 977825435549821,
+									"id": "compare-instance-variable",
+									"objectClass": "CarChase_GameManager",
+									"sid": 150368208543521,
 									"parameters": {
-										"variable": "EnemiesKilled",
+										"instance-variable": "Ammo",
 										"comparison": 0,
 										"value": "11"
 									}
@@ -535,11 +568,11 @@
 							],
 							"actions": [
 								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 767745928303779,
+									"id": "add-to-instvar",
+									"objectClass": "CarChase_GameManager",
+									"sid": 529883672121402,
 									"parameters": {
-										"variable": "MaxEnemiesOnScreen",
+										"instance-variable": "MaxEnemiesOnScreen",
 										"value": "1"
 									}
 								}
@@ -561,13 +594,13 @@
 							}
 						},
 						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 178856330169782,
+							"id": "compare-instance-variable",
+							"objectClass": "CarChase_GameManager",
+							"sid": 624717310008509,
 							"parameters": {
-								"variable": "EnemiesLeft",
+								"instance-variable": "EnemiesLeft",
 								"comparison": 4,
-								"value": "EnemiesOnAlive"
+								"value": "CarChase_GameManager.EnemiesAlive"
 							}
 						}
 					],
@@ -578,13 +611,13 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 406920445400518,
+									"id": "compare-instance-variable",
+									"objectClass": "CarChase_GameManager",
+									"sid": 271423159650334,
 									"parameters": {
-										"variable": "EnemiesOnAlive",
+										"instance-variable": "EnemiesAlive",
 										"comparison": 2,
-										"value": "MaxEnemiesOnScreen"
+										"value": "CarChase_GameManager.MaxEnemiesOnScreen"
 									}
 								},
 								{
@@ -642,11 +675,11 @@
 							}
 						},
 						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 259551535371239,
+							"id": "add-to-instvar",
+							"objectClass": "CarChase_GameManager",
+							"sid": 971563877965708,
 							"parameters": {
-								"variable": "EnemiesOnAlive",
+								"instance-variable": "EnemiesAlive",
 								"value": "1"
 							}
 						},
@@ -729,11 +762,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 856677617707733,
+					"id": "compare-instance-variable",
+					"objectClass": "CarChase_GameManager",
+					"sid": 671335436473294,
 					"parameters": {
-						"variable": "EnemiesLeft",
+						"instance-variable": "EnemiesLeft",
 						"comparison": 0,
 						"value": "0"
 					}
@@ -880,12 +913,20 @@
 					}
 				},
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 151808119659326,
+					"id": "set-instvar-value",
+					"objectClass": "CarChase_GameManager",
+					"sid": 164013102993588,
 					"parameters": {
-						"variable": "Ammo",
-						"value": "MaxAmmo"
+						"instance-variable": "Ammo",
+						"value": "CarChase_GameManager.MaxAmmo"
+					}
+				},
+				{
+					"id": "set-progress",
+					"objectClass": "CarChase_AmmoBar",
+					"sid": 903621795138884,
+					"parameters": {
+						"value": "CarChase_GameManager.Ammo/CarChase_GameManager.MaxAmmo * 100"
 					}
 				}
 			],
@@ -928,12 +969,20 @@
 					"sid": 848249807259105
 				},
 				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 781660491114725,
+					"id": "subtract-from-instvar",
+					"objectClass": "CarChase_GameManager",
+					"sid": 466971885450767,
 					"parameters": {
-						"variable": "Health",
+						"instance-variable": "Health",
 						"value": "1"
+					}
+				},
+				{
+					"id": "set-progress",
+					"objectClass": "CarChase_Health",
+					"sid": 656159900390607,
+					"parameters": {
+						"value": "CarChase_GameManager.Health/10 * 100"
 					}
 				}
 			],
@@ -988,6 +1037,29 @@
 				}
 			],
 			"sid": 481026056257171
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "CarChase_GameManager",
+					"sid": 595514592665890,
+					"parameters": {
+						"instance-variable": "Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 186277143111415
+				}
+			],
+			"sid": 870285266552025
 		}
 	],
 	"sid": 210743918402358

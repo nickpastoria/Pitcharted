@@ -1,0 +1,14 @@
+{
+	"name": "CarChase_Health",
+	"plugin-id": "progressbar",
+	"sid": 345603587022594,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 417769765258982
+		}
+	]
+}

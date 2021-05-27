@@ -1,0 +1,104 @@
+{
+	"name": "CarChase_GameManager",
+	"plugin-id": "Sprite",
+	"sid": 969042567780043,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "MaxEnemies",
+			"type": "number",
+			"desc": "",
+			"sid": 146709920399965
+		},
+		{
+			"name": "EnemiesLeft",
+			"type": "number",
+			"desc": "",
+			"sid": 277784523035719
+		},
+		{
+			"name": "EnemiesAlive",
+			"type": "number",
+			"desc": "",
+			"sid": 281076505829389
+		},
+		{
+			"name": "BG_Speed",
+			"type": "number",
+			"desc": "",
+			"sid": 498060251180946
+		},
+		{
+			"name": "FireRate",
+			"type": "number",
+			"desc": "",
+			"sid": 823323803754106
+		},
+		{
+			"name": "MaxAmmo",
+			"type": "number",
+			"desc": "",
+			"sid": 742765439834827
+		},
+		{
+			"name": "Ammo",
+			"type": "number",
+			"desc": "",
+			"sid": 805643674152481
+		},
+		{
+			"name": "MaxEnemiesOnScreen",
+			"type": "number",
+			"desc": "",
+			"sid": 189058499208109
+		},
+		{
+			"name": "EnemiesKilled",
+			"type": "number",
+			"desc": "",
+			"sid": 899243259769864
+		},
+		{
+			"name": "MaxHealth",
+			"type": "number",
+			"desc": "",
+			"sid": 107964895216459
+		},
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "",
+			"sid": 258310922648911
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 906714,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 688860223445799,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
