@@ -252,6 +252,46 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-destroyed",
+							"objectClass": "carChase_enemyCar",
+							"sid": 848314143244928
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "CarChase_GameManager",
+							"sid": 709479856239859,
+							"parameters": {
+								"instance-variable": "EnemiesAlive",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "CarChase_GameManager",
+							"sid": 776553133068271,
+							"parameters": {
+								"instance-variable": "EnemiesKilled",
+								"value": "1"
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "CarChase_GameManager",
+							"sid": 296182417514544,
+							"parameters": {
+								"instance-variable": "EnemiesLeft",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 155134009164832
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "carChase_enemyCar",
 							"sid": 927984775592413,
@@ -347,21 +387,12 @@
 							],
 							"actions": [
 								{
-									"id": "subtract-from-instvar",
-									"objectClass": "CarChase_GameManager",
-									"sid": 330728151948208,
-									"parameters": {
-										"instance-variable": "EnemiesAlive",
-										"value": "1"
-									}
-								},
-								{
 									"id": "set-speed",
 									"objectClass": "carChase_enemyCar",
-									"sid": 754109056738862,
+									"sid": 132696158671792,
 									"behaviorType": "Rotate",
 									"parameters": {
-										"speed": "random(-25,25)"
+										"speed": "random(-720,720)"
 									}
 								},
 								{
@@ -376,11 +407,11 @@
 								{
 									"id": "move-to-position",
 									"objectClass": "carChase_enemyCar",
-									"sid": 414057226560904,
+									"sid": 288024240472863,
 									"behaviorType": "MoveTo",
 									"parameters": {
 										"x": "-300",
-										"y": "Self.Y + random(-400, 400)",
+										"y": "Self.Y + random(-1000, 1000)",
 										"mode": "direct"
 									}
 								},
@@ -410,24 +441,6 @@
 									"parameters": {
 										"enabled": false
 									}
-								},
-								{
-									"id": "add-to-instvar",
-									"objectClass": "CarChase_GameManager",
-									"sid": 108753835655529,
-									"parameters": {
-										"instance-variable": "Ammo",
-										"value": "1"
-									}
-								},
-								{
-									"id": "subtract-from-instvar",
-									"objectClass": "CarChase_GameManager",
-									"sid": 692370346789192,
-									"parameters": {
-										"instance-variable": "EnemiesLeft",
-										"value": "1"
-									}
 								}
 							],
 							"sid": 924213321327406
@@ -438,9 +451,9 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "CarChase_GameManager",
-									"sid": 264845586863679,
+									"sid": 797819565869423,
 									"parameters": {
-										"instance-variable": "Ammo",
+										"instance-variable": "EnemiesKilled",
 										"comparison": 0,
 										"value": "3"
 									}
@@ -458,9 +471,9 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "CarChase_GameManager",
-									"sid": 150368208543521,
+									"sid": 381028227034280,
 									"parameters": {
-										"instance-variable": "Ammo",
+										"instance-variable": "EnemiesKilled",
 										"comparison": 0,
 										"value": "11"
 									}
@@ -496,11 +509,11 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "CarChase_GameManager",
-							"sid": 624717310008509,
+							"sid": 177041607768942,
 							"parameters": {
-								"instance-variable": "EnemiesLeft",
-								"comparison": 4,
-								"value": "CarChase_GameManager.EnemiesAlive"
+								"instance-variable": "EnemiesAlive",
+								"comparison": 2,
+								"value": "CarChase_GameManager.EnemiesLeft"
 							}
 						}
 					],
@@ -960,6 +973,66 @@
 				}
 			],
 			"sid": 870285266552025
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "carChase_enemyCar",
+					"sid": 544847787610868,
+					"parameters": {
+						"object": "CarChase_PlayerCar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "carChase_enemyCar",
+					"sid": 138571157573045,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"enabled": false
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "carChase_enemyCar",
+					"sid": 694488828483673,
+					"behaviorType": "Rotate",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "carChase_enemyCar",
+					"sid": 779587466247981,
+					"parameters": {
+						"x": "CarChase_PlayerCar.X",
+						"y": "CarChase_PlayerCar.Y"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "carChase_enemyCar",
+					"sid": 418112329077171,
+					"parameters": {
+						"angle": "Self.Angle + 180"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "carChase_enemyCar",
+					"sid": 834189906130846,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 974965010896251
 		}
 	],
 	"sid": 210743918402358
