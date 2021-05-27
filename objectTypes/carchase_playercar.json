@@ -66,6 +66,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Smoke Point",
+								"x": 0.13195020746887967,
+								"y": 0.7529411764705882
+							}
+						],
 						"duration": 1
 					}
 				],

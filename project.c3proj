@@ -55,6 +55,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -173,6 +181,14 @@
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
 		}
 	],
 	"uniqueId": "fbzk83zr77e",
@@ -208,7 +224,8 @@
 			"CarChase_HealthText",
 			"CarChase_AmmoBar",
 			"CarChase_GameManager",
-			"CarChase_Skid"
+			"CarChase_Skid",
+			"CarChase_Smoke"
 		],
 		"subfolders": []
 	},

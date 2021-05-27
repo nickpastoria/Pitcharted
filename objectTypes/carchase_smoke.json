@@ -1,0 +1,31 @@
+{
+	"name": "CarChase_Smoke",
+	"plugin-id": "Particles",
+	"sid": 837750892129073,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 534257679463691
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 238990968560399
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 3244784,
+		"useCollisionPoly": true
+	}
+}

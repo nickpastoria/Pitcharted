@@ -1319,6 +1319,52 @@
 			],
 			"sid": 262086835847467,
 			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 611880474388904
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 592272596372615,
+					"parameters": {
+						"object": "CarChase_Smoke",
+						"layer": "1",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "CarChase_Smoke",
+					"sid": 142248746786414,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "CarChase_PlayerCar",
+						"image-point": "1",
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "rotate-clockwise",
+					"objectClass": "CarChase_Smoke",
+					"sid": 244314157697667,
+					"parameters": {
+						"degrees": "180"
+					}
+				}
+			],
+			"sid": 996445887571911
 		}
 	],
 	"sid": 210743918402358
