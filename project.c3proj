@@ -186,7 +186,8 @@
 			"CarChase_GrassSpawner",
 			"CarChase_Road",
 			"CarChase_ExitVolume",
-			"CarChase_ReloadBar"
+			"CarChase_ReloadBar",
+			"CarChase_EnemyBullet"
 		],
 		"subfolders": []
 	},

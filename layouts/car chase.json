@@ -209,7 +209,7 @@
 					"behaviors": {
 						"8Direction": {
 							"properties": {
-								"max-speed": 350,
+								"max-speed": 500,
 								"acceleration": 1000,
 								"deceleration": 1000,
 								"directions": "dir-8",
@@ -288,7 +288,7 @@
 						},
 						"MoveTo": {
 							"properties": {
-								"max-speed": 450,
+								"max-speed": 300,
 								"acceleration": 600,
 								"deceleration": 600,
 								"rotate-speed": 0,
@@ -930,6 +930,50 @@
 							1,
 							1
 						]
+					}
+				},
+				{
+					"type": "CarChase_EnemyBullet",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 28,
+					"instanceVariables": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 1991.8368239656634,
+						"y": -47.88045371919094,
+						"width": 35.874782229304195,
+						"height": 35.874782229304195,
+						"originX": 0.6086956521739131,
+						"originY": 1.0869565217391304,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],
