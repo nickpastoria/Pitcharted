@@ -47,267 +47,16 @@
 						"image-scale-y": 1,
 						"image-angle": 0
 					},
-					"uid": 46,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1000,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 2822,
-						"y": -2,
-						"width": 525,
-						"height": 1000,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_Grass",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 48,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1000,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 2296,
-						"y": -2,
-						"width": 525,
-						"height": 1000,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_Grass",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 49,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1000,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 1770,
-						"y": -2,
-						"width": 525,
-						"height": 1000,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_Grass",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 50,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1000,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 1246,
-						"y": -4,
-						"width": 525,
-						"height": 1000,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_Grass",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 51,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1000,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 721,
-						"y": -1,
-						"width": 525,
-						"height": 1000,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_Road",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 21,
 					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1000,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
+					"behaviors": {},
 					"world": {
-						"x": 3766,
-						"y": 451,
-						"width": 464.26403592637814,
-						"height": 599.9719848894733,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 0,
+						"y": 0,
+						"width": 4000,
+						"height": 1003,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -315,43 +64,65 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 1
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_Grass",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 46,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 4000,
+						"y": 5.684341886080802e-14,
+						"width": 4000,
+						"height": 1003,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				},
 				{
 					"type": "CarChase_Road",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
 					},
 					"uid": 24,
 					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1000,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
+					"behaviors": {},
 					"world": {
-						"x": 3302,
-						"y": 451,
-						"width": 464.26403592637814,
-						"height": 599.9719848894733,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 0,
+						"y": 56,
+						"width": 4000,
+						"height": 849,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -366,168 +137,25 @@
 					"type": "CarChase_Road",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
 					},
 					"uid": 25,
 					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1000,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
+					"behaviors": {},
 					"world": {
-						"x": 2838,
-						"y": 451,
-						"width": 464.26403592637814,
-						"height": 599.9719848894733,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 1
-					}
-				},
-				{
-					"type": "CarChase_Road",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 26,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1000,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 2374,
-						"y": 451,
-						"width": 464.26403592637814,
-						"height": 599.9719848894733,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 1
-					}
-				},
-				{
-					"type": "CarChase_Road",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 27,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1000,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 1909,
-						"y": 451,
-						"width": 464.26403592637814,
-						"height": 599.9719848894733,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 1
-					}
-				},
-				{
-					"type": "CarChase_Road",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 28,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1000,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 1445,
-						"y": 451,
-						"width": 464.26403592637814,
-						"height": 599.9719848894733,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 4000,
+						"y": 56,
+						"width": 4000,
+						"height": 849,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -581,9 +209,9 @@
 					"behaviors": {
 						"8Direction": {
 							"properties": {
-								"max-speed": 200,
-								"acceleration": 600,
-								"deceleration": 500,
+								"max-speed": 350,
+								"acceleration": 1000,
+								"deceleration": 1000,
 								"directions": "dir-8",
 								"set-angle": "no",
 								"default-controls": true,
@@ -1086,8 +714,8 @@
 						}
 					},
 					"world": {
-						"x": 2137,
-						"y": 722,
+						"x": 2141,
+						"y": 817,
 						"width": 2742,
 						"height": 104,
 						"originX": 0.5,
@@ -1124,8 +752,8 @@
 						}
 					},
 					"world": {
-						"x": 2141,
-						"y": 179,
+						"x": 2137,
+						"y": 139,
 						"width": 2742,
 						"height": 104,
 						"originX": 0.5,
@@ -1243,50 +871,6 @@
 						],
 						"angle": 0,
 						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_Road",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 52,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1000,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 981,
-						"y": 452,
-						"width": 464.26403592637814,
-						"height": 599.9719848894733,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 1
 					}
 				}
 			],

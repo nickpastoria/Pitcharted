@@ -4,18 +4,7 @@
 	"sid": 655343839609620,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Bullet",
-			"name": "Bullet",
-			"sid": 928612252061377
-		},
-		{
-			"behaviorId": "destroy",
-			"name": "DestroyOutsideLayout",
-			"sid": 363045986609756
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
 		"width": 429,

@@ -32,6 +32,16 @@
 			"sid": 763572264013784
 		},
 		{
+			"eventType": "variable",
+			"name": "BG_Speed",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 469821231290656
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -41,14 +51,6 @@
 				}
 			],
 			"actions": [
-				{
-					"id": "set-width",
-					"objectClass": "CarChase_RoadSpawner",
-					"sid": 285368506784548,
-					"parameters": {
-						"width": "CarChase_Road.Width"
-					}
-				},
 				{
 					"id": "set-width",
 					"objectClass": "CarChase_GrassSpawner",
@@ -97,36 +99,25 @@
 						"x": "CarChase_PlayerCar.X + Self.distanceToCar",
 						"y": "450"
 					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_Grass",
+					"sid": 766553215989457,
+					"parameters": {
+						"x": "Self.X - BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_Road",
+					"sid": 843457047604262,
+					"parameters": {
+						"x": "Self.X - BG_Speed"
+					}
 				}
 			],
-			"sid": 369174703570154,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "carChase_enemyCar",
-							"sid": 280824743881437,
-							"parameters": {
-								"instance-variable": "Dead"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-enabled",
-							"objectClass": "carChase_enemyCar",
-							"sid": 721251954774331,
-							"behaviorType": "Rotate",
-							"parameters": {
-								"state": "enabled"
-							}
-						}
-					],
-					"sid": 313383551218146
-				}
-			]
+			"sid": 369174703570154
 		},
 		{
 			"eventType": "block",
@@ -299,13 +290,22 @@
 									}
 								},
 								{
+									"id": "set-enabled",
+									"objectClass": "carChase_enemyCar",
+									"sid": 478514386107537,
+									"behaviorType": "Rotate",
+									"parameters": {
+										"state": "enabled"
+									}
+								},
+								{
 									"id": "move-to-position",
 									"objectClass": "carChase_enemyCar",
-									"sid": 723351100817358,
+									"sid": 414057226560904,
 									"behaviorType": "MoveTo",
 									"parameters": {
 										"x": "-300",
-										"y": "Self.Y + random(-100, 100)",
+										"y": "Self.Y + random(-400, 400)",
 										"mode": "direct"
 									}
 								},
@@ -519,57 +519,51 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "CarChase_RoadSpawner",
-							"sid": 668861875231544,
+							"id": "compare-x",
+							"objectClass": "CarChase_Grass",
+							"sid": 681245425129252,
 							"parameters": {
-								"object": "CarChase_Road"
-							},
-							"isInverted": true
+								"comparison": 3,
+								"x-co-ordinate": "-4000"
+							}
 						}
 					],
 					"actions": [
 						{
-							"id": "spawn-another-object",
-							"objectClass": "CarChase_RoadSpawner",
-							"sid": 155512203044909,
+							"id": "set-x",
+							"objectClass": "CarChase_Grass",
+							"sid": 198852696310877,
 							"parameters": {
-								"object": "CarChase_Road",
-								"layer": "0",
-								"image-point": "0",
-								"create-hierarchy": false
+								"x": "4000"
 							}
 						}
 					],
-					"sid": 393971434660480
+					"sid": 511405933738581
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "CarChase_GrassSpawner",
-							"sid": 930865563834943,
+							"id": "compare-x",
+							"objectClass": "CarChase_Road",
+							"sid": 591826167087599,
 							"parameters": {
-								"object": "CarChase_Grass"
-							},
-							"isInverted": true
+								"comparison": 3,
+								"x-co-ordinate": "-4000"
+							}
 						}
 					],
 					"actions": [
 						{
-							"id": "spawn-another-object",
-							"objectClass": "CarChase_GrassSpawner",
-							"sid": 949263634502494,
+							"id": "set-x",
+							"objectClass": "CarChase_Road",
+							"sid": 803018726812842,
 							"parameters": {
-								"object": "CarChase_Grass",
-								"layer": "0",
-								"image-point": "0",
-								"create-hierarchy": false
+								"x": "4000"
 							}
 						}
 					],
-					"sid": 852239768431660
+					"sid": 946324104781965
 				}
 			],
 			"sid": 686241393990137

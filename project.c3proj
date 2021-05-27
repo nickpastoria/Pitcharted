@@ -104,14 +104,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "destroy",
-			"name": "Destroy outside layout",
-			"author": "Scirra",
-			"version": "r241",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
 			"author": "Scirra",
@@ -122,6 +114,14 @@
 			"type": "behavior",
 			"id": "Flash",
 			"name": "Flash",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
@@ -157,7 +157,6 @@
 			"Keyboard",
 			"PlatformBlock",
 			"EnemyBullet",
-			"CarChase_Road",
 			"CarChase_RoadSpawner",
 			"CarChase_PlayerCar",
 			"carChase_enemyCar",
@@ -168,7 +167,8 @@
 			"CarChase_Advance",
 			"CarChase_Wall",
 			"CarChase_Grass",
-			"CarChase_GrassSpawner"
+			"CarChase_GrassSpawner",
+			"CarChase_Road"
 		],
 		"subfolders": []
 	},
