@@ -207,7 +207,8 @@
 			"CarChase_Health",
 			"CarChase_HealthText",
 			"CarChase_AmmoBar",
-			"CarChase_GameManager"
+			"CarChase_GameManager",
+			"CarChase_Skid"
 		],
 		"subfolders": []
 	},

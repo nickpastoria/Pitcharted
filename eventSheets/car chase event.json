@@ -111,6 +111,14 @@
 					}
 				},
 				{
+					"id": "set-x",
+					"objectClass": "CarChase_Skid",
+					"sid": 449846792994325,
+					"parameters": {
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
 					"id": "set-position",
 					"objectClass": "CarChase_ReloadBar",
 					"sid": 775304291265793,
@@ -128,7 +136,69 @@
 					}
 				}
 			],
-			"sid": 369174703570154
+			"sid": 369174703570154,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "carChase_enemyCar",
+							"sid": 893295620585173,
+							"parameters": {
+								"instance-variable": "Dead"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "carChase_enemyCar",
+							"sid": 970453604622494,
+							"parameters": {
+								"object": "CarChase_Skid",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "carChase_enemyCar",
+							"sid": 124585560468460,
+							"parameters": {
+								"object": "CarChase_Skid",
+								"layer": "0",
+								"image-point": "2",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "carChase_enemyCar",
+							"sid": 481735245264560,
+							"parameters": {
+								"object": "CarChase_Skid",
+								"layer": "0",
+								"image-point": "3",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "carChase_enemyCar",
+							"sid": 435567422112245,
+							"parameters": {
+								"object": "CarChase_Skid",
+								"layer": "0",
+								"image-point": "4",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 140533920753107
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -1029,6 +1099,15 @@
 					"behaviorType": "Bullet",
 					"parameters": {
 						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "carChase_enemyCar",
+					"sid": 960770157556362,
+					"parameters": {
+						"instance-variable": "Dead",
+						"value": "true"
 					}
 				}
 			],

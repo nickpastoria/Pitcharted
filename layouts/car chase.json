@@ -202,6 +202,39 @@
 						"angle": 0,
 						"zElevation": 1
 					}
+				},
+				{
+					"type": "CarChase_Skid",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 53,
+					"instanceVariables": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 1724,
+						"y": 357,
+						"width": 14,
+						"height": 14,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.56
+						],
+						"angle": 0,
+						"zElevation": 3
+					}
 				}
 			],
 			"sid": 947493678085140,
