@@ -24,6 +24,11 @@
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 617453997667600
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 102969036084178
 		}
 	],
 	"effectTypes": [],

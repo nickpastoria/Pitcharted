@@ -39,6 +39,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "progressbar",
+			"name": "Progress bar",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -120,6 +128,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "destroy",
 			"name": "Destroy outside layout",
 			"author": "Scirra",
@@ -168,7 +184,9 @@
 			"CarChase_Wall",
 			"CarChase_Grass",
 			"CarChase_GrassSpawner",
-			"CarChase_Road"
+			"CarChase_Road",
+			"CarChase_ExitVolume",
+			"CarChase_ReloadBar"
 		],
 		"subfolders": []
 	},

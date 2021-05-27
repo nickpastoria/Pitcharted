@@ -35,11 +35,41 @@
 			"eventType": "variable",
 			"name": "BG_Speed",
 			"type": "number",
-			"initialValue": "5",
+			"initialValue": "7",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 469821231290656
+		},
+		{
+			"eventType": "variable",
+			"name": "FireRate",
+			"type": "number",
+			"initialValue": "7",
+			"comment": "Shots Per Second",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 532196629431864
+		},
+		{
+			"eventType": "variable",
+			"name": "MaxAmmo",
+			"type": "number",
+			"initialValue": "15",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 202779025723626
+		},
+		{
+			"eventType": "variable",
+			"name": "Ammo",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 477169151571118
 		},
 		{
 			"eventType": "block",
@@ -66,6 +96,15 @@
 					"parameters": {
 						"variable": "EnemiesLeft",
 						"value": "MaxEnemies"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 480166310514097,
+					"parameters": {
+						"variable": "Ammo",
+						"value": "MaxAmmo"
 					}
 				}
 			],
@@ -115,6 +154,23 @@
 					"parameters": {
 						"x": "Self.X - BG_Speed"
 					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "CarChase_ReloadBar",
+					"sid": 775304291265793,
+					"parameters": {
+						"x": "CarChase_PlayerCar.X - 100",
+						"y": "CarChase_PlayerCar.Y - 100"
+					}
+				},
+				{
+					"id": "set-progress",
+					"objectClass": "CarChase_ReloadBar",
+					"sid": 436811497837461,
+					"parameters": {
+						"value": "(CarChase_PlayerCar.Timer.CurrentTime(\"Reload\")/CarChase_PlayerCar.Timer.TotalTime(\"Reload\")) * 100"
+					}
 				}
 			],
 			"sid": 369174703570154
@@ -123,12 +179,29 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-click",
+					"id": "mouse-button-is-down",
 					"objectClass": "Mouse",
-					"sid": 269659012329334,
+					"sid": 134743558422972,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked"
+						"mouse-button": "left"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 694366103245781,
+					"parameters": {
+						"interval-seconds": "1.0/FireRate"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 107322392108424,
+					"parameters": {
+						"variable": "Ammo",
+						"comparison": 4,
+						"value": "0"
 					}
 				}
 			],
@@ -151,6 +224,26 @@
 					"parameters": {
 						"x": "Mouse.X",
 						"y": "Mouse.Y"
+					}
+				},
+				{
+					"id": "shake",
+					"objectClass": "CarChase_CameraTarget",
+					"sid": 104504066053266,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "10",
+						"duration": "0.1",
+						"mode": "reducing-magnitude"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 881530988197414,
+					"parameters": {
+						"variable": "Ammo",
+						"value": "1"
 					}
 				}
 			],
@@ -228,6 +321,15 @@
 							"parameters": {
 								"object": "carChase_enemyCar"
 							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "carChase_enemyCar",
+							"sid": 495914557568474,
+							"parameters": {
+								"instance-variable": "Dead"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -532,9 +634,9 @@
 						{
 							"id": "set-x",
 							"objectClass": "CarChase_Grass",
-							"sid": 198852696310877,
+							"sid": 949301162833939,
 							"parameters": {
-								"x": "4000"
+								"x": "4000 - BG_Speed"
 							}
 						}
 					],
@@ -557,9 +659,9 @@
 						{
 							"id": "set-x",
 							"objectClass": "CarChase_Road",
-							"sid": 803018726812842,
+							"sid": 690358133928700,
 							"parameters": {
-								"x": "4000"
+								"x": "4000 - BG_Speed"
 							}
 						}
 					],
@@ -638,6 +740,101 @@
 					"sid": 139450075303303
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 278174072795459,
+					"parameters": {
+						"object": "CarChase_ExitVolume"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 706402726850243
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 551060789822965,
+					"parameters": {
+						"mouse-button": "right",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "is-timer-running",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 154013592644545,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"Reload\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "start-timer",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 381798334256016,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "0.5",
+						"type": "once",
+						"tag": "\"Reload\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "CarChase_ReloadBar",
+					"sid": 165152083895369,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 209364015584008
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 788252719057912,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"Reload\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "CarChase_ReloadBar",
+					"sid": 586511294636957,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 151808119659326,
+					"parameters": {
+						"variable": "Ammo",
+						"value": "MaxAmmo"
+					}
+				}
+			],
+			"sid": 679362590227521
 		}
 	],
 	"sid": 210743918402358
