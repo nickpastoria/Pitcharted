@@ -52,6 +52,16 @@
 					}
 				},
 				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 367112282615994,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bently: QUICK HOP IN MY JEEPl\"",
+						"axis": "x"
+					}
+				},
+				{
 					"id": "typewriter-text",
 					"objectClass": "Temp_Cutscene_text",
 					"sid": 553533913109652,
