@@ -744,7 +744,18 @@
 		}
 	],
 	"sid": 932266163882268,
-	"nonworld-instances": [],
+	"nonworld-instances": [
+		{
+			"type": "Temp_Cutscene_Array",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 63,
+			"instanceVariables": {}
+		}
+	],
 	"effectTypes": [],
 	"width": 5000,
 	"height": 960,

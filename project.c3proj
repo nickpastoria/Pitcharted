@@ -79,6 +79,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -257,7 +265,10 @@
 			"Temp_Cutscene_Sprite1",
 			"Temp_Cutscene_Sprite2",
 			"Temp_Cutscene_Background",
-			"Cutscene_Textbox"
+			"Cutscene_Textbox",
+			"Temp_Cutscene_Array",
+			"Temp_Cutscene_text",
+			"temp_cutscene_clicktocontinue"
 		],
 		"subfolders": []
 	},
