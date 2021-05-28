@@ -1,0 +1,75 @@
+{
+	"name": "CarChase_Enemy",
+	"plugin-id": "Sprite",
+	"sid": 920656143951289,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 152244853215858
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 621948248893777
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 165,
+						"originX": 0.36,
+						"originY": 0.5575757575757576,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7371111,
+						"collisionPoly": {
+							"points": [
+								0.176,
+								0.26666666666666666,
+								0.5,
+								0.3515151515151515,
+								0.672,
+								0.4909090909090909,
+								0.676,
+								0.5,
+								0.844,
+								0.7636363636363637,
+								0.5,
+								0.8181818181818182,
+								0.132,
+								0.793939393939394,
+								0.12,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Bullet Spawn",
+								"x": 0.808,
+								"y": 0.7333333333333333
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 498074509954623,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

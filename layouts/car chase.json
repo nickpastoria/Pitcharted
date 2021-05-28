@@ -397,10 +397,10 @@
 					"world": {
 						"x": 963,
 						"y": -108,
-						"width": 23,
-						"height": 23,
-						"originX": 0.6086956521739131,
-						"originY": 1.0869565217391304,
+						"width": 20,
+						"height": 22,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -408,7 +408,8 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 0,
+						"blendMode": "additive"
 					}
 				},
 				{
@@ -987,8 +988,8 @@
 						"y": -47.88045371919094,
 						"width": 35.874782229304195,
 						"height": 35.874782229304195,
-						"originX": 0.6086956521739131,
-						"originY": 1.0869565217391304,
+						"originX": 0.4782608695652174,
+						"originY": 0.4782608695652174,
 						"color": [
 							1,
 							1,
@@ -1353,6 +1354,84 @@
 						],
 						"angle": 0,
 						"zElevation": 2
+					}
+				},
+				{
+					"type": "CarChase_Enemy",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 58,
+					"instanceVariables": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 2043,
+						"y": -126,
+						"width": 104.8983713089338,
+						"height": 69.2329250638963,
+						"originX": 0.36,
+						"originY": 0.5575757575757576,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 3
+					}
+				},
+				{
+					"type": "CarChase_Explosion",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 57,
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0.5,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 1648,
+						"y": -138,
+						"width": 149.4880496388461,
+						"height": 149.4880496388461,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 4
 					}
 				}
 			],
