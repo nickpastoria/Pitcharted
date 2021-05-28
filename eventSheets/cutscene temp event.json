@@ -1,5 +1,152 @@
 {
 	"name": "Cutscene temp Event",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 818625369428709
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 705909559289345,
+					"parameters": {
+						"width": "0",
+						"height": "1",
+						"depth": "1"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 712826800662781,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: Why would you do that?\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 546965624411501,
+					"parameters": {
+						"where": "back",
+						"value": "\"Badguy: Because I want to!\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "Temp_Cutscene_text",
+					"sid": 553533913109652,
+					"parameters": {
+						"text": "Temp_Cutscene_Array.Front",
+						"duration": "1"
+					}
+				}
+			],
+			"sid": 827641391877360
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-click",
+					"objectClass": "Mouse",
+					"sid": 774399836214111
+				},
+				{
+					"id": "is-running-typewriter-text",
+					"objectClass": "Temp_Cutscene_text",
+					"sid": 366151474343834,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "pop",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 658807082729711,
+					"parameters": {
+						"where": "front",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "Temp_Cutscene_text",
+					"sid": 372358559181462,
+					"parameters": {
+						"text": "Temp_Cutscene_Array.Front",
+						"duration": "1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "temp_cutscene_clicktocontinue",
+					"sid": 582380305166834,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 427847409242521,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Leave Scene For Next Scene"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-empty",
+							"objectClass": "Temp_Cutscene_Array",
+							"sid": 269156366613183
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 539996318042907,
+							"parameters": {
+								"layout": "Car Chase"
+							}
+						}
+					],
+					"sid": 673351820954284
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-running-typewriter-text",
+					"objectClass": "Temp_Cutscene_text",
+					"sid": 749984348234255,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "temp_cutscene_clicktocontinue",
+					"sid": 333345634757042,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 834456630135625
+		}
+	],
 	"sid": 112461552201579
 }

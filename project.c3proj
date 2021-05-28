@@ -71,6 +71,22 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -245,7 +261,14 @@
 			"ShadowLight",
 			"CarChase_TreeCover",
 			"CarChase_Explosion",
-			"CarChase_Enemy"
+			"CarChase_Enemy",
+			"Temp_Cutscene_Sprite1",
+			"Temp_Cutscene_Sprite2",
+			"Temp_Cutscene_Background",
+			"Cutscene_Textbox",
+			"Temp_Cutscene_Array",
+			"Temp_Cutscene_text",
+			"temp_cutscene_clicktocontinue"
 		],
 		"subfolders": []
 	},
