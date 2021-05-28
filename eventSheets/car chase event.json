@@ -104,6 +104,14 @@
 				},
 				{
 					"id": "set-x",
+					"objectClass": "CarChase_TreeCover",
+					"sid": 711820030285128,
+					"parameters": {
+						"x": "Self.X - (CarChase_GameManager.BG_Speed + Self.Parralax)"
+					}
+				},
+				{
+					"id": "set-x",
 					"objectClass": "CarChase_Road",
 					"sid": 966993043752090,
 					"parameters": {
@@ -134,71 +142,97 @@
 					"parameters": {
 						"value": "(CarChase_PlayerCar.Timer.CurrentTime(\"Reload\")/CarChase_PlayerCar.Timer.Duration(\"Reload\")) * 100"
 					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "carChase_enemyCar",
+					"sid": 792868006916505,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "carChase_enemyCar",
+					"sid": 672417645566894,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "2",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "carChase_enemyCar",
+					"sid": 573449652645402,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "3",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "carChase_enemyCar",
+					"sid": 884950844836027,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "4",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 418615585181235,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "2",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 450453063062592,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "3",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 985403961026243,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "4",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 448005351765126,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "5",
+						"create-hierarchy": false
+					}
 				}
 			],
-			"sid": 369174703570154,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "carChase_enemyCar",
-							"sid": 893295620585173,
-							"parameters": {
-								"instance-variable": "Dead"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "carChase_enemyCar",
-							"sid": 970453604622494,
-							"parameters": {
-								"object": "CarChase_Skid",
-								"layer": "0",
-								"image-point": "1",
-								"create-hierarchy": false
-							}
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "carChase_enemyCar",
-							"sid": 124585560468460,
-							"parameters": {
-								"object": "CarChase_Skid",
-								"layer": "0",
-								"image-point": "2",
-								"create-hierarchy": false
-							}
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "carChase_enemyCar",
-							"sid": 481735245264560,
-							"parameters": {
-								"object": "CarChase_Skid",
-								"layer": "0",
-								"image-point": "3",
-								"create-hierarchy": false
-							}
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "carChase_enemyCar",
-							"sid": 435567422112245,
-							"parameters": {
-								"object": "CarChase_Skid",
-								"layer": "0",
-								"image-point": "4",
-								"create-hierarchy": false
-							}
-						}
-					],
-					"sid": 140533920753107
-				}
-			]
+			"sid": 369174703570154
 		},
 		{
 			"eventType": "block",
@@ -737,6 +771,31 @@
 						}
 					],
 					"sid": 946324104781965
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "CarChase_TreeCover",
+							"sid": 107328253563498,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "-4000"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "CarChase_TreeCover",
+							"sid": 168958923140222,
+							"parameters": {
+								"x": "4000 - (CarChase_GameManager.BG_Speed+Self.Parralax)"
+							}
+						}
+					],
+					"sid": 193780582484602
 				}
 			],
 			"sid": 686241393990137

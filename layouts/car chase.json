@@ -157,7 +157,7 @@
 						"x": 0,
 						"y": 56,
 						"width": 4000,
-						"height": 849,
+						"height": 850,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -265,64 +265,6 @@
 			"name": "Game",
 			"overriden": 0,
 			"instances": [
-				{
-					"type": "CarChase_PlayerCar",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 23,
-					"instanceVariables": {},
-					"behaviors": {
-						"8Direction": {
-							"properties": {
-								"max-speed": 500,
-								"acceleration": 1000,
-								"deceleration": 1000,
-								"directions": "dir-8",
-								"set-angle": "no",
-								"default-controls": false,
-								"enabled": true
-							}
-						},
-						"BoundToLayout": {
-							"properties": {
-								"bound-by": "edge"
-							}
-						},
-						"Flash": {
-							"properties": {}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "Player"
-							}
-						},
-						"Timer": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 1314,
-						"y": 538,
-						"width": 185.14798382210896,
-						"height": 102.217116068456,
-						"originX": 0.2864583333333333,
-						"originY": 0.49056603773584906,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "carChase_enemyCar",
 					"properties": {
@@ -799,7 +741,7 @@
 					},
 					"world": {
 						"x": 2141,
-						"y": 817,
+						"y": 906,
 						"width": 2742,
 						"height": 104,
 						"originX": 0.5,
@@ -837,7 +779,7 @@
 					},
 					"world": {
 						"x": 2137,
-						"y": 139,
+						"y": 70,
 						"width": 2742,
 						"height": 104,
 						"originX": 0.5,
@@ -1187,6 +1129,126 @@
 						],
 						"angle": 3.141592653589793,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_PlayerCar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 23,
+					"instanceVariables": {},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 500,
+								"acceleration": 1000,
+								"deceleration": 1000,
+								"directions": "dir-8",
+								"set-angle": "no",
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						},
+						"Flash": {
+							"properties": {}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Player"
+							}
+						},
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 1314,
+						"y": 538,
+						"width": 185.14798382210896,
+						"height": 102.217116068456,
+						"originX": 0.2708333333333333,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "CarChase_TreeCover",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 55,
+					"instanceVariables": {
+						"Parralax": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 4000,
+						"height": 1000,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "CarChase_TreeCover",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 56,
+					"instanceVariables": {
+						"Parralax": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 4000,
+						"y": 0,
+						"width": 4000,
+						"height": 1000,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
 					}
 				},
 				{

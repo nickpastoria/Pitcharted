@@ -63,6 +63,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "shadowlight",
+			"name": "Shadow light",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -225,7 +233,9 @@
 			"CarChase_AmmoBar",
 			"CarChase_GameManager",
 			"CarChase_Skid",
-			"CarChase_Smoke"
+			"CarChase_Smoke",
+			"ShadowLight",
+			"CarChase_TreeCover"
 		],
 		"subfolders": []
 	},
