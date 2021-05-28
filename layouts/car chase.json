@@ -658,39 +658,6 @@
 					}
 				},
 				{
-					"type": "CarChase_Advance",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 41,
-					"instanceVariables": {},
-					"behaviors": {
-						"Flash": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 2593,
-						"y": 440,
-						"width": 198,
-						"height": 191,
-						"originX": 0.4797979797979798,
-						"originY": 0.47643979057591623,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "CarChase_Wall",
 					"properties": {
 						"initially-visible": false,
@@ -1432,6 +1399,39 @@
 						],
 						"angle": 0,
 						"zElevation": 5
+					}
+				},
+				{
+					"type": "CarChase_Advance",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 41,
+					"instanceVariables": {},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 2593,
+						"y": 440,
+						"width": 198,
+						"height": 191,
+						"originX": 0.4797979797979798,
+						"originY": 0.47643979057591623,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 7
 					}
 				}
 			],

@@ -24,20 +24,30 @@
 				{
 					"id": "push",
 					"objectClass": "Temp_Cutscene_Array",
-					"sid": 712826800662781,
+					"sid": 300635055074986,
 					"parameters": {
 						"where": "back",
-						"value": "\"Bathan: Why would you do that?\"",
+						"value": "\"Bathan: Ok! We've got the treasure\"",
 						"axis": "x"
 					}
 				},
 				{
 					"id": "push",
 					"objectClass": "Temp_Cutscene_Array",
-					"sid": 546965624411501,
+					"sid": 667062812746577,
 					"parameters": {
 						"where": "back",
-						"value": "\"Badguy: Because I want to!\"",
+						"value": "\"Bently: Those Guys Sure look mad! We'd Better Scram!\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 386625364476987,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: We'll be fine. I'm a professional\"",
 						"axis": "x"
 					}
 				},

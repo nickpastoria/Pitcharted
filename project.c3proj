@@ -280,9 +280,9 @@
 	},
 	"layouts": {
 		"items": [
+			"Cutscene temp",
 			"Contra",
 			"Fps",
-			"Cutscene temp",
 			"Car Chase",
 			"Climbing"
 		],
