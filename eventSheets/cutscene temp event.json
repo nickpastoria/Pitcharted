@@ -60,18 +60,31 @@
 						"value": "\"Bently: QUICK HOP IN MY JEEPl\"",
 						"axis": "x"
 					}
-				},
+				}
+			],
+			"sid": 827641391877360
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 722291140125524
+				}
+			],
+			"actions": [
 				{
 					"id": "typewriter-text",
 					"objectClass": "Temp_Cutscene_text",
-					"sid": 553533913109652,
+					"sid": 299898471503006,
 					"parameters": {
 						"text": "Temp_Cutscene_Array.Front",
 						"duration": "1"
 					}
 				}
 			],
-			"sid": 827641391877360
+			"sid": 722783027518560
 		},
 		{
 			"eventType": "block",

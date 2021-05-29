@@ -176,6 +176,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "destroy",
 			"name": "Destroy outside layout",
 			"author": "Scirra",
@@ -268,7 +276,8 @@
 			"Cutscene_Textbox",
 			"Temp_Cutscene_Array",
 			"Temp_Cutscene_text",
-			"temp_cutscene_clicktocontinue"
+			"temp_cutscene_clicktocontinue",
+			"carChase_dummy"
 		],
 		"subfolders": []
 	},
@@ -281,20 +290,18 @@
 	"layouts": {
 		"items": [
 			"Cutscene temp",
-			"Contra",
 			"Fps",
 			"Car Chase",
-			"Climbing"
+			"Boss Fight"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Contra Event",
 			"FPS Event",
 			"Cutscene temp Event",
 			"Car Chase Event",
-			"Event sheet 1"
+			"Boss Fight"
 		],
 		"subfolders": []
 	},

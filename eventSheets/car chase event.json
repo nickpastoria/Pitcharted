@@ -61,6 +61,48 @@
 					"parameters": {
 						"value": "CarChase_GameManager.Ammo/CarChase_GameManager.MaxAmmo * 100"
 					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 573534847796567,
+					"parameters": {
+						"object": "CarChase_Smoke",
+						"layer": "1",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "CarChase_Smoke",
+					"sid": 416541518717783,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "CarChase_PlayerCar",
+						"image-point": "1",
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "rotate-clockwise",
+					"objectClass": "CarChase_Smoke",
+					"sid": 732570885768585,
+					"parameters": {
+						"degrees": "180"
+					}
+				},
+				{
+					"id": "set-world-gravity",
+					"objectClass": "carChase_dummy",
+					"sid": 204303466474932,
+					"behaviorType": "Physics",
+					"parameters": {
+						"gravity": "0"
+					}
 				}
 			],
 			"sid": 536479267426445
@@ -189,6 +231,61 @@
 				},
 				{
 					"id": "spawn-another-object",
+					"objectClass": "carChase_dummy",
+					"sid": 578366110591942,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "carChase_dummy",
+					"sid": 944153453762706,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "2",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "carChase_dummy",
+					"sid": 598297437644978,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "3",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "carChase_dummy",
+					"sid": 985152677304361,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "4",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "carChase_dummy",
+					"sid": 529073328368469,
+					"parameters": {
+						"object": "CarChase_Skid",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
 					"objectClass": "CarChase_PlayerCar",
 					"sid": 418615585181235,
 					"parameters": {
@@ -240,9 +337,95 @@
 						"x": "CarChase_PlayerCar.X",
 						"y": "CarChase_PlayerCar.Y"
 					}
+				},
+				{
+					"id": "apply-force",
+					"objectClass": "carChase_dummy",
+					"sid": 333681586133627,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "-600",
+						"force-y": "0",
+						"image-point": "0"
+					}
 				}
 			],
 			"sid": 369174703570154
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "CarChase_Grass",
+					"sid": 414254985275462,
+					"parameters": {
+						"comparison": 3,
+						"x-co-ordinate": "-4000"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_Grass",
+					"sid": 100173463896151,
+					"parameters": {
+						"x": "4000 - CarChase_GameManager.BG_Speed"
+					}
+				}
+			],
+			"sid": 742222447027985
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "CarChase_Road",
+					"sid": 985950972456580,
+					"parameters": {
+						"comparison": 3,
+						"x-co-ordinate": "-4000"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_Road",
+					"sid": 690589015059155,
+					"parameters": {
+						"x": "4000 - CarChase_GameManager.BG_Speed"
+					}
+				}
+			],
+			"sid": 655579851139042
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "CarChase_TreeCover",
+					"sid": 154305832819656,
+					"parameters": {
+						"comparison": 3,
+						"x-co-ordinate": "-4000"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_TreeCover",
+					"sid": 211512139936730,
+					"parameters": {
+						"x": "4000 - (CarChase_GameManager.BG_Speed+Self.Parralax)"
+					}
+				}
+			],
+			"sid": 715342185257535
 		},
 		{
 			"eventType": "block",
@@ -356,270 +539,233 @@
 			"sid": 213048684142571
 		},
 		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Enemy Car Behavior",
-			"description": "",
-			"isActiveOnStart": true,
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "carChase_enemyCar",
+					"sid": 489251446637883,
+					"parameters": {
+						"instance-variable": "Dead"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 541971336416845,
+					"parameters": {
+						"interval-seconds": "0.5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "carChase_enemyCar",
+					"sid": 581974464185070,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "CarChase_PlayerCar.X",
+						"y": "Self.Y",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 981744072500450
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "CarChase_Bullet",
+					"sid": 588561594131563,
+					"parameters": {
+						"object": "carChase_enemyCar"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "carChase_enemyCar",
+					"sid": 883319287805884,
+					"parameters": {
+						"instance-variable": "Dead"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-color",
+					"objectClass": "carChase_enemyCar",
+					"sid": 784987451857519,
+					"parameters": {
+						"color": "rgbEx(100, 100 * carChase_enemyCar.Health/Self.MaxHealth, 100* carChase_enemyCar.Health/Self.MaxHealth)"
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "carChase_enemyCar",
+					"sid": 769627090768424,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "CarChase_Bullet",
+					"sid": 936444538189610,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "CarChase_Bullet",
+					"sid": 482338617984824,
+					"parameters": {
+						"animation": "\"animation 1\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "CarChase_Bullet",
+					"sid": 631521821834757,
+					"parameters": {
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation-speed",
+					"objectClass": "CarChase_Bullet",
+					"sid": 210419397300008,
+					"parameters": {
+						"speed": "30"
+					}
+				}
+			],
+			"sid": 381963815326188,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-destroyed",
+							"id": "compare-instance-variable",
 							"objectClass": "carChase_enemyCar",
-							"sid": 848314143244928
+							"sid": 579274557748533,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 0,
+								"value": "0"
+							}
 						}
 					],
 					"actions": [
 						{
 							"id": "subtract-from-instvar",
 							"objectClass": "CarChase_GameManager",
-							"sid": 709479856239859,
+							"sid": 141197408541522,
 							"parameters": {
 								"instance-variable": "EnemiesAlive",
 								"value": "1"
 							}
 						},
 						{
+							"id": "subtract-from-instvar",
+							"objectClass": "CarChase_GameManager",
+							"sid": 789449057617610,
+							"parameters": {
+								"instance-variable": "EnemiesLeft",
+								"value": "1"
+							}
+						},
+						{
 							"id": "add-to-instvar",
 							"objectClass": "CarChase_GameManager",
-							"sid": 776553133068271,
+							"sid": 506846837291282,
 							"parameters": {
 								"instance-variable": "EnemiesKilled",
 								"value": "1"
 							}
 						},
 						{
-							"id": "subtract-from-instvar",
-							"objectClass": "CarChase_GameManager",
-							"sid": 296182417514544,
-							"parameters": {
-								"instance-variable": "EnemiesLeft",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 155134009164832
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "carChase_enemyCar",
-							"sid": 927984775592413,
-							"parameters": {
-								"instance-variable": "Dead"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "every-x-seconds",
-							"objectClass": "System",
-							"sid": 517425340301793,
-							"parameters": {
-								"interval-seconds": "0.5"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "move-to-position",
-							"objectClass": "carChase_enemyCar",
-							"sid": 510863375865179,
-							"behaviorType": "MoveTo",
-							"parameters": {
-								"x": "CarChase_PlayerCar.X",
-								"y": "Self.Y",
-								"mode": "direct"
-							}
-						}
-					],
-					"sid": 119059814759876
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "CarChase_Bullet",
-							"sid": 872911158553895,
-							"parameters": {
-								"object": "carChase_enemyCar"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "carChase_enemyCar",
-							"sid": 495914557568474,
-							"parameters": {
-								"instance-variable": "Dead"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-default-color",
-							"objectClass": "carChase_enemyCar",
-							"sid": 881620472467561,
-							"parameters": {
-								"color": "rgbEx(100, 100 * carChase_enemyCar.Health/Self.MaxHealth, 100* carChase_enemyCar.Health/Self.MaxHealth)"
-							}
-						},
-						{
-							"id": "subtract-from-instvar",
-							"objectClass": "carChase_enemyCar",
-							"sid": 862119060736191,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "1"
-							}
-						},
-						{
 							"id": "set-speed",
-							"objectClass": "CarChase_Bullet",
-							"sid": 461680874610965,
-							"behaviorType": "Bullet",
+							"objectClass": "carChase_enemyCar",
+							"sid": 534110418918508,
+							"behaviorType": "Rotate",
 							"parameters": {
-								"speed": "0"
+								"speed": "random(-720,720)"
 							}
 						},
 						{
-							"id": "start-animation",
-							"objectClass": "CarChase_Bullet",
-							"sid": 343418974160399,
+							"id": "set-enabled",
+							"objectClass": "carChase_enemyCar",
+							"sid": 539928500249856,
+							"behaviorType": "Rotate",
 							"parameters": {
-								"from": "beginning"
+								"state": "enabled"
 							}
 						},
 						{
-							"id": "set-animation-speed",
-							"objectClass": "CarChase_Bullet",
-							"sid": 967543736558338,
+							"id": "set-boolean-instvar",
+							"objectClass": "carChase_enemyCar",
+							"sid": 856755308590459,
 							"parameters": {
-								"speed": "30"
+								"instance-variable": "Dead",
+								"value": "true"
 							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "carChase_enemyCar",
+							"sid": 807844293848488,
+							"parameters": {
+								"object": "CarChase_Explosion",
+								"layer": "1",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "carChase_enemyCar",
+							"sid": 394865482386265,
+							"parameters": {
+								"object": "carChase_dummy",
+								"layer": "1",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-velocity",
+							"objectClass": "carChase_dummy",
+							"sid": 675370534746436,
+							"behaviorType": "Physics",
+							"parameters": {
+								"x-component": "(carChase_enemyCar.MoveTo.Speed) * sign(-carChase_enemyCar.X + carChase_enemyCar.MoveTo.TargetX)",
+								"y-component": "0"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "carChase_enemyCar",
+							"sid": 414171301158407
 						}
 					],
-					"sid": 625329885820309,
+					"sid": 195819365645158,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "carChase_enemyCar",
-									"sid": 617908383863954,
-									"parameters": {
-										"instance-variable": "Health",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-speed",
-									"objectClass": "carChase_enemyCar",
-									"sid": 132696158671792,
-									"behaviorType": "Rotate",
-									"parameters": {
-										"speed": "random(-720,720)"
-									}
-								},
-								{
-									"id": "set-enabled",
-									"objectClass": "carChase_enemyCar",
-									"sid": 478514386107537,
-									"behaviorType": "Rotate",
-									"parameters": {
-										"state": "enabled"
-									}
-								},
-								{
-									"id": "move-to-position",
-									"objectClass": "carChase_enemyCar",
-									"sid": 288024240472863,
-									"behaviorType": "MoveTo",
-									"parameters": {
-										"x": "-300",
-										"y": "Self.Y + random(-1000, 1000)",
-										"mode": "direct"
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "carChase_enemyCar",
-									"sid": 699684025780761,
-									"parameters": {
-										"instance-variable": "Dead",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-max-speed",
-									"objectClass": "carChase_enemyCar",
-									"sid": 986548465236425,
-									"behaviorType": "MoveTo",
-									"parameters": {
-										"max-speed": "600"
-									}
-								},
-								{
-									"id": "set-stop-on-solids",
-									"objectClass": "carChase_enemyCar",
-									"sid": 607596126843731,
-									"behaviorType": "MoveTo",
-									"parameters": {
-										"enabled": false
-									}
-								},
-								{
-									"id": "spawn-another-object",
-									"objectClass": "carChase_enemyCar",
-									"sid": 492824103693271,
-									"parameters": {
-										"object": "CarChase_Explosion",
-										"layer": "1",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
-								}
-							],
-							"sid": 924213321327406,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-overlapping-another-object",
-											"objectClass": "carChase_enemyCar",
-											"sid": 270748421531147,
-											"parameters": {
-												"object": "CarChase_Enemy"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "destroy",
-											"objectClass": "CarChase_Enemy",
-											"sid": 134185450101081
-										}
-									],
-									"sid": 231713138012660
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
 									"objectClass": "CarChase_GameManager",
-									"sid": 797819565869423,
+									"sid": 122228740256401,
 									"parameters": {
 										"instance-variable": "EnemiesKilled",
 										"comparison": 0,
@@ -629,7 +775,7 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "CarChase_GameManager",
-									"sid": 489808694095203,
+									"sid": 108596734815018,
 									"parameters": {
 										"instance-variable": "EnemiesKilled",
 										"comparison": 0,
@@ -639,7 +785,7 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "CarChase_GameManager",
-									"sid": 381028227034280,
+									"sid": 691791897295943,
 									"parameters": {
 										"instance-variable": "EnemiesKilled",
 										"comparison": 0,
@@ -651,218 +797,148 @@
 								{
 									"id": "add-to-instvar",
 									"objectClass": "CarChase_GameManager",
-									"sid": 529883672121402,
+									"sid": 573315502059484,
 									"parameters": {
 										"instance-variable": "MaxEnemiesOnScreen",
 										"value": "1"
 									}
 								}
 							],
-							"sid": 874708627059148,
+							"sid": 925952732208070,
 							"isOrBlock": true
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-x-seconds",
-							"objectClass": "System",
-							"sid": 788786867643900,
-							"parameters": {
-								"interval-seconds": "2"
-							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "CarChase_GameManager",
-							"sid": 177041607768942,
-							"parameters": {
-								"instance-variable": "EnemiesAlive",
-								"comparison": 2,
-								"value": "CarChase_GameManager.EnemiesLeft"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 191666004026361,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "CarChase_GameManager",
-									"sid": 271423159650334,
-									"parameters": {
-										"instance-variable": "EnemiesAlive",
-										"comparison": 2,
-										"value": "CarChase_GameManager.MaxEnemiesOnScreen"
-									}
-								},
-								{
-									"id": "pick-random-instance",
-									"objectClass": "System",
-									"sid": 529261672571311,
-									"parameters": {
-										"object": "CarChase_CarSpawner"
-									}
-								},
-								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "CarChase_CarSpawner",
-									"sid": 392791040046665,
-									"parameters": {
-										"object": "carChase_enemyCar"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "spawn-another-object",
-									"objectClass": "CarChase_CarSpawner",
-									"sid": 669278792345943,
-									"parameters": {
-										"object": "carChase_enemyCar",
-										"layer": "1",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
-								}
-							],
-							"sid": 150282126544207
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-created",
-							"objectClass": "carChase_enemyCar",
-							"sid": 585128632346896
-						}
-					],
-					"actions": [
-						{
-							"id": "set-solid-collision-filter",
-							"objectClass": "carChase_enemyCar",
-							"sid": 698391200590664,
-							"parameters": {
-								"mode": "inclusive",
-								"tags": "\"Player Enemy\""
-							}
-						},
-						{
-							"id": "add-to-instvar",
-							"objectClass": "CarChase_GameManager",
-							"sid": 971563877965708,
-							"parameters": {
-								"instance-variable": "EnemiesAlive",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "carChase_enemyCar",
-							"sid": 119743222376890,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "Self.MaxHealth"
-							}
-						}
-					],
-					"sid": 576556112785256
 				}
-			],
-			"sid": 284671557416723
+			]
 		},
 		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "BG Spawning Behavior",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
+			"eventType": "block",
+			"conditions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-x",
-							"objectClass": "CarChase_Grass",
-							"sid": 681245425129252,
-							"parameters": {
-								"comparison": 3,
-								"x-co-ordinate": "-4000"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-x",
-							"objectClass": "CarChase_Grass",
-							"sid": 775144241622197,
-							"parameters": {
-								"x": "4000 - CarChase_GameManager.BG_Speed"
-							}
-						}
-					],
-					"sid": 511405933738581
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 550602792220047,
+					"parameters": {
+						"interval-seconds": "0.5"
+					}
 				},
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-x",
-							"objectClass": "CarChase_Road",
-							"sid": 591826167087599,
-							"parameters": {
-								"comparison": 3,
-								"x-co-ordinate": "-4000"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-x",
-							"objectClass": "CarChase_Road",
-							"sid": 666233195976509,
-							"parameters": {
-								"x": "4000 - CarChase_GameManager.BG_Speed"
-							}
-						}
-					],
-					"sid": 946324104781965
+					"id": "compare-instance-variable",
+					"objectClass": "CarChase_GameManager",
+					"sid": 602552289339547,
+					"parameters": {
+						"instance-variable": "EnemiesAlive",
+						"comparison": 2,
+						"value": "CarChase_GameManager.EnemiesLeft"
+					}
 				},
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-x",
-							"objectClass": "CarChase_TreeCover",
-							"sid": 107328253563498,
-							"parameters": {
-								"comparison": 3,
-								"x-co-ordinate": "-4000"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-x",
-							"objectClass": "CarChase_TreeCover",
-							"sid": 168958923140222,
-							"parameters": {
-								"x": "4000 - (CarChase_GameManager.BG_Speed+Self.Parralax)"
-							}
-						}
-					],
-					"sid": 193780582484602
+					"id": "compare-instance-variable",
+					"objectClass": "CarChase_GameManager",
+					"sid": 476913330866853,
+					"parameters": {
+						"instance-variable": "EnemiesAlive",
+						"comparison": 2,
+						"value": "CarChase_GameManager.MaxEnemiesOnScreen"
+					}
+				},
+				{
+					"id": "pick-random-instance",
+					"objectClass": "System",
+					"sid": 609000488892291,
+					"parameters": {
+						"object": "CarChase_CarSpawner"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "CarChase_CarSpawner",
+					"sid": 195459179205189,
+					"parameters": {
+						"object": "carChase_enemyCar"
+					},
+					"isInverted": true
 				}
 			],
-			"sid": 686241393990137
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "CarChase_CarSpawner",
+					"sid": 174548730315855,
+					"parameters": {
+						"object": "carChase_enemyCar",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 770165921306501
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "carChase_enemyCar",
+					"sid": 907133772424297
+				}
+			],
+			"actions": [
+				{
+					"id": "set-solid-collision-filter",
+					"objectClass": "carChase_enemyCar",
+					"sid": 378065576632220,
+					"parameters": {
+						"mode": "inclusive",
+						"tags": "\"Player Enemy\""
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "CarChase_GameManager",
+					"sid": 740228648283171,
+					"parameters": {
+						"instance-variable": "EnemiesAlive",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "carChase_enemyCar",
+					"sid": 664641050226483,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "Self.MaxHealth"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "carChase_enemyCar",
+					"sid": 249092702321201,
+					"parameters": {
+						"object": "CarChase_Enemy",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "CarChase_Enemy",
+					"sid": 497567999514264,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "carChase_enemyCar",
+						"image-point": "0",
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 341195914239322
 		},
 		{
 			"eventType": "block",
@@ -1171,75 +1247,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "carChase_enemyCar",
-					"sid": 544847787610868,
-					"parameters": {
-						"object": "CarChase_PlayerCar"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-enabled",
-					"objectClass": "carChase_enemyCar",
-					"sid": 138571157573045,
-					"behaviorType": "MoveTo",
-					"parameters": {
-						"enabled": false
-					}
-				},
-				{
-					"id": "set-enabled",
-					"objectClass": "carChase_enemyCar",
-					"sid": 694488828483673,
-					"behaviorType": "Rotate",
-					"parameters": {
-						"state": "disabled"
-					}
-				},
-				{
-					"id": "set-angle-toward-position",
-					"objectClass": "carChase_enemyCar",
-					"sid": 779587466247981,
-					"parameters": {
-						"x": "CarChase_PlayerCar.X",
-						"y": "CarChase_PlayerCar.Y"
-					}
-				},
-				{
-					"id": "set-angle",
-					"objectClass": "carChase_enemyCar",
-					"sid": 418112329077171,
-					"parameters": {
-						"angle": "Self.Angle + 180"
-					}
-				},
-				{
-					"id": "set-enabled",
-					"objectClass": "carChase_enemyCar",
-					"sid": 834189906130846,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"state": "enabled"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "carChase_enemyCar",
-					"sid": 960770157556362,
-					"parameters": {
-						"instance-variable": "Dead",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 974965010896251
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "key-is-down",
 					"objectClass": "Keyboard",
 					"sid": 507827853507709,
@@ -1447,70 +1454,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-created",
-					"objectClass": "CarChase_PlayerCar",
-					"sid": 611880474388904
-				}
-			],
-			"actions": [
-				{
-					"id": "spawn-another-object",
-					"objectClass": "CarChase_PlayerCar",
-					"sid": 592272596372615,
-					"parameters": {
-						"object": "CarChase_Smoke",
-						"layer": "1",
-						"image-point": "1",
-						"create-hierarchy": false
-					}
-				},
-				{
-					"id": "pin-to-object-imagepoint",
-					"objectClass": "CarChase_Smoke",
-					"sid": 142248746786414,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "CarChase_PlayerCar",
-						"image-point": "1",
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "rotate-clockwise",
-					"objectClass": "CarChase_Smoke",
-					"sid": 244314157697667,
-					"parameters": {
-						"degrees": "180"
-					}
-				}
-			],
-			"sid": 996445887571911
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-created",
-					"objectClass": "CarChase_Bullet",
-					"sid": 998754012607579
-				}
-			],
-			"actions": [
-				{
-					"id": "stop-animation",
-					"objectClass": "CarChase_Bullet",
-					"sid": 673628669460377
-				}
-			],
-			"sid": 617800154609747
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-animation-finished",
 					"objectClass": "CarChase_Bullet",
 					"sid": 318066244625686,
@@ -1527,44 +1470,6 @@
 				}
 			],
 			"sid": 271212845975604
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-created",
-					"objectClass": "carChase_enemyCar",
-					"sid": 863599581611395
-				}
-			],
-			"actions": [
-				{
-					"id": "spawn-another-object",
-					"objectClass": "carChase_enemyCar",
-					"sid": 520930308605815,
-					"parameters": {
-						"object": "CarChase_Enemy",
-						"layer": "1",
-						"image-point": "0",
-						"create-hierarchy": false
-					}
-				},
-				{
-					"id": "pin-to-object-imagepoint",
-					"objectClass": "CarChase_Enemy",
-					"sid": 974246882304179,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "carChase_enemyCar",
-						"image-point": "0",
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				}
-			],
-			"sid": 896333698013100
 		}
 	],
 	"sid": 210743918402358

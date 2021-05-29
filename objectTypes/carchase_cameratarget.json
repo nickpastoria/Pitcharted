@@ -9,6 +9,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 506932803794747
+		},
+		{
+			"name": "FollowCar",
+			"type": "boolean",
+			"desc": "",
+			"sid": 232536098465792
 		}
 	],
 	"behaviorTypes": [
