@@ -290,6 +290,7 @@
 	"layouts": {
 		"items": [
 			"Cutscene temp",
+			"Intro Cutscene",
 			"Fps",
 			"Car Chase",
 			"Boss Fight"
@@ -299,7 +300,7 @@
 	"eventSheets": {
 		"items": [
 			"FPS Event",
-			"Cutscene temp Event",
+			"Cutscene Main Event",
 			"Car Chase Event",
 			"Boss Fight"
 		],

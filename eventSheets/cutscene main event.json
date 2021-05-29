@@ -1,5 +1,5 @@
 {
-	"name": "Cutscene temp Event",
+	"name": "Cutscene Main Event",
 	"events": [
 		{
 			"eventType": "block",
@@ -60,31 +60,18 @@
 						"value": "\"Bently: QUICK HOP IN MY JEEPl\"",
 						"axis": "x"
 					}
-				}
-			],
-			"sid": 827641391877360
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 722291140125524
-				}
-			],
-			"actions": [
+				},
 				{
 					"id": "typewriter-text",
 					"objectClass": "Temp_Cutscene_text",
-					"sid": 299898471503006,
+					"sid": 189276256462730,
 					"parameters": {
 						"text": "Temp_Cutscene_Array.Front",
 						"duration": "1"
 					}
 				}
 			],
-			"sid": 722783027518560
+			"sid": 827641391877360
 		},
 		{
 			"eventType": "block",
