@@ -69,6 +69,24 @@
 			"type": "number",
 			"desc": "",
 			"sid": 258310922648911
+		},
+		{
+			"name": "EnemyIncrease1",
+			"type": "number",
+			"desc": "",
+			"sid": 753585189409425
+		},
+		{
+			"name": "EnemyIncrease2",
+			"type": "number",
+			"desc": "",
+			"sid": 483868980860356
+		},
+		{
+			"name": "EnemyIncrease3",
+			"type": "number",
+			"desc": "",
+			"sid": 853095510845121
 		}
 	],
 	"behaviorTypes": [],
