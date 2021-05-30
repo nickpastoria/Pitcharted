@@ -87,6 +87,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -277,7 +285,13 @@
 			"Temp_Cutscene_Array",
 			"Temp_Cutscene_text",
 			"temp_cutscene_clicktocontinue",
-			"carChase_dummy"
+			"carChase_dummy",
+			"Bossfight_body",
+			"Bossfight_Side1",
+			"CarChase_AnimDummy",
+			"BossFight_EndVolume",
+			"Button",
+			"Text"
 		],
 		"subfolders": []
 	},
@@ -291,9 +305,13 @@
 		"items": [
 			"Cutscene temp",
 			"Intro Cutscene",
+			"Cutscene 2",
 			"Fps",
 			"Car Chase",
-			"Boss Fight"
+			"BossFight",
+			"Main Menu",
+			"Final Cutscene",
+			"Ending"
 		],
 		"subfolders": []
 	},
@@ -302,7 +320,11 @@
 			"FPS Event",
 			"Cutscene Main Event",
 			"Car Chase Event",
-			"Boss Fight"
+			"Boss Fight",
+			"Menu Event",
+			"Cutscene 2 Event",
+			"Cutscene 1 Event",
+			"Cutscene Final Event"
 		],
 		"subfolders": []
 	},
@@ -451,5 +473,5 @@
 	},
 	"viewportWidth": 2000,
 	"viewportHeight": 960,
-	"firstLayout": null
+	"firstLayout": "Main Menu"
 }

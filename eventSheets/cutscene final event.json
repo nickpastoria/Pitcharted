@@ -1,0 +1,131 @@
+{
+	"name": "Cutscene Final Event",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 495754311024310
+				}
+			],
+			"actions": [
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 178273470490011,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan:  *HUF* See I told you we'd make it\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 866436969841388,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bently: ..... I don't wanna talk right now\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 628364839273484,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: Aww cmon. You signed up for exitment.\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 795827849913969,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: And you are hansomely rewarded with lots of treasure\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 749432556851640,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bently: Sure.\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 242197360257860,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bently: Yeah.\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 788280152527450,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bently: Screw treasure. I could use a psychologist right about now.\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 718194807067966,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: After we sell this gold. I'll get you the best psychologist.\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 693195372318594,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: See. It all turned out all right.\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "Temp_Cutscene_text",
+					"sid": 511918441480891,
+					"parameters": {
+						"text": "Temp_Cutscene_Array.Front",
+						"duration": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 157207307331209,
+					"parameters": {
+						"variable": "NextLevel",
+						"value": "\"Ending\""
+					}
+				}
+			],
+			"sid": 880260296930587
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Cutscene Main Event"
+		}
+	],
+	"sid": 783438689562904
+}
