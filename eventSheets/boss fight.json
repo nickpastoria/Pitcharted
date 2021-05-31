@@ -1,0 +1,10 @@
+{
+	"name": "Boss Fight",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Car Chase Event"
+		}
+	],
+	"sid": 631124266965059
+}

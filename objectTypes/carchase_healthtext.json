@@ -1,0 +1,15 @@
+{
+	"name": "CarChase_HealthText",
+	"plugin-id": "Text",
+	"sid": 840332367890231,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 451746819879524
+		}
+	],
+	"effectTypes": []
+}
