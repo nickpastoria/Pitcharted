@@ -50,6 +50,18 @@
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 3525298,
+						"collisionPoly": {
+							"points": [
+								0.16800000000000007,
+								0.19000000000000006,
+								0.994,
+								0.1860000000000001,
+								1,
+								1,
+								0.17600000000000005,
+								1
+							]
+						},
 						"useCollisionPoly": true,
 						"imagePoints": [
 							{
