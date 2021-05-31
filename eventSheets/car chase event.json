@@ -139,6 +139,17 @@
 						"variable": "NextLevel",
 						"value": "CarChase_GameManager.nextLevel"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 797761733681511,
+					"parameters": {
+						"audio-file": "music",
+						"loop": "looping",
+						"volume": "-5",
+						"tag-optional": "\"music\""
+					}
 				}
 			],
 			"sid": 536479267426445
@@ -1128,6 +1139,17 @@
 					"parameters": {
 						"visibility": "visible"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 880754221897633,
+					"parameters": {
+						"audio-file": "reload",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 209364015584008
@@ -1310,6 +1332,14 @@
 					"id": "restart-layout",
 					"objectClass": "System",
 					"sid": 186277143111415
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 884074061199506,
+					"parameters": {
+						"tag": "\"music\""
+					}
 				}
 			],
 			"sid": 870285266552025
