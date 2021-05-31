@@ -1,0 +1,111 @@
+{
+	"name": "Cutscene Final Event",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 495754311024310
+				}
+			],
+			"actions": [
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 178273470490011,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan:  *HUF* See I told you we'd make it\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 866436969841388,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bently: ..... I don't wanna talk right now\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 211920887241683,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: Aww cmon. You signed up for exitement.\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 468599090228958,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: And you are handsomely rewarded with lots of treasure\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 788280152527450,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bently: Screw treasure. I could use a psychologist right about now.\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 612620922248248,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: After we sell this gold. I'll get you the best psychologist money can buy.\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 752893115329026,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bently: I'd Like That\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "Temp_Cutscene_text",
+					"sid": 511918441480891,
+					"parameters": {
+						"text": "Temp_Cutscene_Array.Front",
+						"duration": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 157207307331209,
+					"parameters": {
+						"variable": "NextLevel",
+						"value": "\"Ending\""
+					}
+				}
+			],
+			"sid": 880260296930587
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Cutscene Main Event"
+		}
+	],
+	"sid": 783438689562904
+}
