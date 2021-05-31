@@ -291,7 +291,8 @@
 			"CarChase_AnimDummy",
 			"BossFight_EndVolume",
 			"Button",
-			"Text"
+			"Text",
+			"MainMenuText"
 		],
 		"subfolders": []
 	},
