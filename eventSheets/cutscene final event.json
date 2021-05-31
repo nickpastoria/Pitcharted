@@ -34,20 +34,20 @@
 				{
 					"id": "push",
 					"objectClass": "Temp_Cutscene_Array",
-					"sid": 628364839273484,
+					"sid": 211920887241683,
 					"parameters": {
 						"where": "back",
-						"value": "\"Bathan: Aww cmon. You signed up for exitment.\"",
+						"value": "\"Bathan: Aww cmon. You signed up for exitement.\"",
 						"axis": "x"
 					}
 				},
 				{
 					"id": "push",
 					"objectClass": "Temp_Cutscene_Array",
-					"sid": 795827849913969,
+					"sid": 468599090228958,
 					"parameters": {
 						"where": "back",
-						"value": "\"Bathan: And you are hansomely rewarded with lots of treasure\"",
+						"value": "\"Bathan: And you are handsomely rewarded with lots of treasure\"",
 						"axis": "x"
 					}
 				},

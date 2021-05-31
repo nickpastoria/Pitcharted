@@ -942,7 +942,7 @@
 					},
 					"uid": 52,
 					"instanceVariables": {
-						"MaxEnemies": 30,
+						"MaxEnemies": 20,
 						"EnemiesLeft": 0,
 						"EnemiesAlive": 0,
 						"BG_Speed": 7,
