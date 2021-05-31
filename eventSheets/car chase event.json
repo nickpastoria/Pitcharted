@@ -139,6 +139,17 @@
 						"variable": "NextLevel",
 						"value": "CarChase_GameManager.nextLevel"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 797761733681511,
+					"parameters": {
+						"audio-file": "music",
+						"loop": "looping",
+						"volume": "-5",
+						"tag-optional": "\"music\""
+					}
 				}
 			],
 			"sid": 536479267426445
@@ -1128,6 +1139,17 @@
 					"parameters": {
 						"visibility": "visible"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 880754221897633,
+					"parameters": {
+						"audio-file": "reload",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 209364015584008
@@ -1287,6 +1309,17 @@
 					"parameters": {
 						"angle": "CarChase_Enemy.Angle"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 278377122555471,
+					"parameters": {
+						"audio-file": "gunshot-enemy",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 481026056257171
@@ -1310,6 +1343,14 @@
 					"id": "restart-layout",
 					"objectClass": "System",
 					"sid": 186277143111415
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 884074061199506,
+					"parameters": {
+						"tag": "\"music\""
+					}
 				}
 			],
 			"sid": 870285266552025
@@ -1566,6 +1607,17 @@
 					"parameters": {
 						"color": "rgbEx(100, 100 * Self.Health/Self.MaxHealth, 100 * Self.Health/Self.MaxHealth)"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 312567259844542,
+					"parameters": {
+						"audio-file": "hit",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 214320999163851
@@ -1598,6 +1650,18 @@
 					"id": "destroy",
 					"objectClass": "CarChase_Bullet",
 					"sid": 693105663043641
+				},
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 549052846832227,
+					"parameters": {
+						"folder": "sounds",
+						"audio-file-name": "choose(\"bullet-metal-hit-1\",\"bullet-metal-hit-2\",\"bullet-metal-hit-3\",\"bullet-metal-hit-4\")",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 407412383292171,
@@ -1632,6 +1696,17 @@
 							"sid": 607884026104062,
 							"parameters": {
 								"color": "rgbEx(100, 100 * Self.Health/Self.MaxHealth, 100 * Self.Health/Self.MaxHealth)"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 563512748653604,
+							"parameters": {
+								"audio-file": "hit",
+								"loop": "not-looping",
+								"volume": "-10",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -1678,6 +1753,17 @@
 					"id": "destroy",
 					"objectClass": "Bossfight_Side1",
 					"sid": 916001381725004
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 666365992114197,
+					"parameters": {
+						"audio-file": "explosion",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 839144548953770
@@ -1729,6 +1815,17 @@
 					"parameters": {
 						"instance-variable": "EnemiesLeft",
 						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 839741456627103,
+					"parameters": {
+						"audio-file": "explosion",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -2295,6 +2392,34 @@
 				}
 			],
 			"sid": 174368118557120
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 567591785113242,
+					"parameters": {
+						"object": "carChase_dummy"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 987040437698977,
+					"parameters": {
+						"folder": "sounds",
+						"audio-file-name": "choose(\"collision-1\",\"collision-2\",\"collision-3\")",
+						"loop": "not-looping",
+						"volume": "-5",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 489905272390694
 		}
 	],
 	"sid": 210743918402358

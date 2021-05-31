@@ -1,40 +1,36 @@
 {
-	"name": "CarChase_EnemyBullet",
+	"name": "AudioController",
 	"plugin-id": "Sprite",
-	"sid": 878348682415936,
+	"sid": 102982268858179,
 	"isGlobal": false,
-	"instanceVariables": [],
-	"behaviorTypes": [
+	"instanceVariables": [
 		{
-			"behaviorId": "Bullet",
-			"name": "Bullet",
-			"sid": 432414148858363
-		},
-		{
-			"behaviorId": "destroy",
-			"name": "DestroyOutsideLayout",
-			"sid": 378122018804860
+			"name": "BulletHits",
+			"type": "number",
+			"desc": "",
+			"sid": 252910553558198
 		}
 	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 23,
-						"height": 23,
-						"originX": 0.4782608695652174,
-						"originY": 0.4782608695652174,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9196078,
+						"imageSpriteId": 5893818,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 229471520803324,
+				"sid": 287654838331385,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
