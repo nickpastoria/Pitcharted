@@ -95,6 +95,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -292,7 +300,8 @@
 			"BossFight_EndVolume",
 			"Button",
 			"Text",
-			"MainMenuText"
+			"MainMenuText",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -335,7 +344,13 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "explosion.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 897725419974758
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
