@@ -54,26 +54,6 @@
 				{
 					"id": "push",
 					"objectClass": "Temp_Cutscene_Array",
-					"sid": 749432556851640,
-					"parameters": {
-						"where": "back",
-						"value": "\"Bently: Sure.\"",
-						"axis": "x"
-					}
-				},
-				{
-					"id": "push",
-					"objectClass": "Temp_Cutscene_Array",
-					"sid": 242197360257860,
-					"parameters": {
-						"where": "back",
-						"value": "\"Bently: Yeah.\"",
-						"axis": "x"
-					}
-				},
-				{
-					"id": "push",
-					"objectClass": "Temp_Cutscene_Array",
 					"sid": 788280152527450,
 					"parameters": {
 						"where": "back",
@@ -84,20 +64,20 @@
 				{
 					"id": "push",
 					"objectClass": "Temp_Cutscene_Array",
-					"sid": 718194807067966,
+					"sid": 612620922248248,
 					"parameters": {
 						"where": "back",
-						"value": "\"Bathan: After we sell this gold. I'll get you the best psychologist.\"",
+						"value": "\"Bathan: After we sell this gold. I'll get you the best psychologist money can buy.\"",
 						"axis": "x"
 					}
 				},
 				{
 					"id": "push",
 					"objectClass": "Temp_Cutscene_Array",
-					"sid": 693195372318594,
+					"sid": 752893115329026,
 					"parameters": {
 						"where": "back",
-						"value": "\"Bathan: See. It all turned out all right.\"",
+						"value": "\"Bently: I'd Like That\"",
 						"axis": "x"
 					}
 				},

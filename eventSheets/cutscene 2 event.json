@@ -54,10 +54,10 @@
 				{
 					"id": "push",
 					"objectClass": "Temp_Cutscene_Array",
-					"sid": 844156144171013,
+					"sid": 354812719563146,
 					"parameters": {
 						"where": "back",
-						"value": "\"Bently: *Turns Around*\"",
+						"value": "\"*Bently Turns Around*\"",
 						"axis": "x"
 					}
 				},
