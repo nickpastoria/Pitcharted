@@ -1,0 +1,87 @@
+{
+	"name": "Bossfight_Side1",
+	"plugin-id": "Sprite",
+	"sid": 121493978414157,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "",
+			"sid": 111087318070532
+		},
+		{
+			"name": "MaxHealth",
+			"type": "number",
+			"desc": "",
+			"sid": 895843710916240
+		},
+		{
+			"name": "FireMode",
+			"type": "number",
+			"desc": "",
+			"sid": 998536133244035
+		},
+		{
+			"name": "Fired",
+			"type": "boolean",
+			"desc": "",
+			"sid": 919130521060421
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 697886502602724
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3525298,
+						"collisionPoly": {
+							"points": [
+								0.16800000000000007,
+								0.19000000000000006,
+								0.994,
+								0.1860000000000001,
+								1,
+								1,
+								0.17600000000000005,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.548,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 117682612713075,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

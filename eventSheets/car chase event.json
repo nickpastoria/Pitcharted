@@ -546,6 +546,12 @@
 						"audio-file": "163457__lemudcrab__ak47-shot",
 						"loop": "not-looping",
 						"volume": "0",
+
+					"sid": 925114984287568,
+					"parameters": {
+						"audio-file": "gunshot",
+						"loop": "not-looping",
+						"volume": "-10",
 						"tag-optional": "\"\""
 					}
 				}
@@ -700,6 +706,16 @@
 						"audio-file-name": "choose(\"bullet-metal-hit-1\",\"bullet-metal-hit-2\",\"bullet-metal-hit-3\",\"bullet-metal-hit-4\")",
 						"loop": "not-looping",
 						"volume": "0",
+					"sid": 992147622534741
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 996280256253230,
+					"parameters": {
+						"audio-file": "hit",
+						"loop": "not-looping",
+						"volume": "-10",
 						"tag-optional": "\"\""
 					}
 				}
@@ -820,6 +836,11 @@
 								"audio-file": "523089__magnuswaker__explosion-1",
 								"loop": "not-looping",
 								"volume": "0",
+							"sid": 660620990976304,
+							"parameters": {
+								"audio-file": "explosion",
+								"loop": "not-looping",
+								"volume": "-10",
 								"tag-optional": "\"\""
 							}
 						}
@@ -1275,6 +1296,17 @@
 							"sid": 850227597919160,
 							"parameters": {
 								"value": "CarChase_GameManager.Health/CarChase_GameManager.MaxHealth * 100"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 484349190038925,
+							"parameters": {
+								"audio-file": "hithurt",
+								"loop": "not-looping",
+								"volume": "-10",
+								"tag-optional": "\"\""
 							}
 						}
 					],
