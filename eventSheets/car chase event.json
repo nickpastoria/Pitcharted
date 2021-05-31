@@ -2128,14 +2128,6 @@
 					}
 				},
 				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 901434459816295,
-					"parameters": {
-						"interval-seconds": "0.1"
-					}
-				},
-				{
 					"id": "compare-instance-variable",
 					"objectClass": "Bossfight_body",
 					"sid": 992035483861658,
@@ -2143,6 +2135,16 @@
 						"instance-variable": "Shotsleft",
 						"comparison": 4,
 						"value": "0"
+					}
+				},
+				{
+					"id": "for",
+					"objectClass": "System",
+					"sid": 915485715506986,
+					"parameters": {
+						"name": "\"\"",
+						"start-index": "1",
+						"end-index": "Bossfight_body.MaxShots"
 					}
 				}
 			],
@@ -2177,10 +2179,10 @@
 				{
 					"id": "add-to-instvar",
 					"objectClass": "Bossfight_body",
-					"sid": 759954714565075,
+					"sid": 429947530638150,
 					"parameters": {
 						"instance-variable": "shotangle",
-						"value": "(60/Self.MaxShots) * Self.Direction"
+						"value": "(90/Self.MaxShots) * Self.Direction"
 					}
 				},
 				{
@@ -2220,6 +2222,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Bossfight_body",
+					"sid": 203337508381068,
+					"parameters": {
+						"instance-variable": "shotangle",
+						"value": "0"
+					}
+				},
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Bossfight_body",

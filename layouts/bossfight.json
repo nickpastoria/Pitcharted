@@ -743,7 +743,7 @@
 						"MaxHealth": 30,
 						"MaxShots": 20,
 						"Shotsleft": 0,
-						"shotangle": -30,
+						"shotangle": 0,
 						"Direction": 1
 					},
 					"behaviors": {
