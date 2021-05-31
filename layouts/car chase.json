@@ -711,8 +711,8 @@
 						}
 					},
 					"world": {
-						"x": 836,
-						"y": 483,
+						"x": 965,
+						"y": 488,
 						"width": 129,
 						"height": 1125,
 						"originX": 0.5,
@@ -955,7 +955,9 @@
 						"Health": 0,
 						"EnemyIncrease1": 3,
 						"EnemyIncrease2": 7,
-						"EnemyIncrease3": 11
+						"EnemyIncrease3": 11,
+						"BossPhase": 3,
+						"nextLevel": "Cutscene 2"
 					},
 					"behaviors": {},
 					"world": {
@@ -1081,7 +1083,7 @@
 					}
 				},
 				{
-					"type": "AudioController",
+					"type": "CarChase_crosshair",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -1089,16 +1091,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 9,
-					"instanceVariables": {
-						"BulletHits": 1
-					},
+					"uid": 30,
+					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 2199,
-						"y": -497,
-						"width": 250,
-						"height": 250,
+						"x": 2830,
+						"y": 395,
+						"width": 124.42266674525183,
+						"height": 124.42266674525183,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1470,35 +1470,6 @@
 						],
 						"angle": 0,
 						"zElevation": 4
-					}
-				},
-				{
-					"type": "CarChase_crosshair",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 30,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 2830,
-						"y": 395,
-						"width": 124.42266674525183,
-						"height": 124.42266674525183,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 5
 					}
 				},
 				{

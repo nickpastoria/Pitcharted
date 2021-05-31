@@ -2392,6 +2392,34 @@
 				}
 			],
 			"sid": 174368118557120
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 567591785113242,
+					"parameters": {
+						"object": "carChase_dummy"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 987040437698977,
+					"parameters": {
+						"folder": "sounds",
+						"audio-file-name": "choose(\"collision-1\",\"collision-2\",\"collision-3\")",
+						"loop": "not-looping",
+						"volume": "-5",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 489905272390694
 		}
 	],
 	"sid": 210743918402358
