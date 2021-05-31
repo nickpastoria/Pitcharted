@@ -551,6 +551,17 @@
 					"parameters": {
 						"value": "CarChase_GameManager.Ammo/CarChase_GameManager.MaxAmmo * 100"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 925114984287568,
+					"parameters": {
+						"audio-file": "gunshot",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 112281119311038
@@ -664,6 +675,17 @@
 					"id": "destroy",
 					"objectClass": "CarChase_Bullet",
 					"sid": 992147622534741
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 996280256253230,
+					"parameters": {
+						"audio-file": "hit",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 381963815326188,
@@ -773,6 +795,17 @@
 							"id": "destroy",
 							"objectClass": "carChase_enemyCar",
 							"sid": 414171301158407
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 660620990976304,
+							"parameters": {
+								"audio-file": "explosion",
+								"loop": "not-looping",
+								"volume": "-10",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 195819365645158,
@@ -1200,6 +1233,17 @@
 							"sid": 850227597919160,
 							"parameters": {
 								"value": "CarChase_GameManager.Health/CarChase_GameManager.MaxHealth * 100"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 484349190038925,
+							"parameters": {
+								"audio-file": "hithurt",
+								"loop": "not-looping",
+								"volume": "-10",
+								"tag-optional": "\"\""
 							}
 						}
 					],

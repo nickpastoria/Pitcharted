@@ -348,7 +348,22 @@
 				{
 					"name": "explosion.webm",
 					"type": "audio/webm; codecs=opus",
-					"sid": 897725419974758
+					"sid": 675310968145999
+				},
+				{
+					"name": "hithurt.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 903448496563662
+				},
+				{
+					"name": "hit.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 541718821216667
+				},
+				{
+					"name": "gunshot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 881859968356678
 				}
 			],
 			"subfolders": []
