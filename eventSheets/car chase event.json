@@ -1309,6 +1309,17 @@
 					"parameters": {
 						"angle": "CarChase_Enemy.Angle"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 278377122555471,
+					"parameters": {
+						"audio-file": "gunshot-enemy",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 481026056257171

@@ -1,0 +1,37 @@
+{
+	"name": "Menu Event",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "NextLevel",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 736053120641999
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Button",
+					"sid": 196056837336969
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 663066743175252,
+					"parameters": {
+						"layout": "Intro Cutscene"
+					}
+				}
+			],
+			"sid": 965924645773034
+		}
+	],
+	"sid": 742759585668067
+}

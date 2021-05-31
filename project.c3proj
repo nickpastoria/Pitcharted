@@ -444,6 +444,11 @@
 					"name": "cutsceneclicks.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 253777528797183
+				},
+				{
+					"name": "gunshot-enemy.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 362587145539861
 				}
 			],
 			"subfolders": []
