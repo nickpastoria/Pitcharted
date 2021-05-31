@@ -105,25 +105,39 @@
 					}
 				},
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 974166332281111,
+					"id": "set-instvar-value",
+					"objectClass": "Bossfight_Side1",
+					"sid": 160981997815163,
 					"parameters": {
-						"audio-file": "344204__spiid__zoom0001-lr",
-						"loop": "looping",
-						"volume": "-10",
-						"tag-optional": "\"ambience\""
+						"instance-variable": "Health",
+						"value": "Self.MaxHealth"
 					}
 				},
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 393903904889236,
+					"id": "set-instvar-value",
+					"objectClass": "Bossfight_body",
+					"sid": 561347647519397,
 					"parameters": {
-						"audio-file": "466998__bone666138__8-bit-video-game-fight-music",
-						"loop": "looping",
-						"volume": "-5",
-						"tag-optional": "\"soundtrack\""
+						"instance-variable": "Health",
+						"value": "Self.MaxHealth"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Bossfight_body",
+					"sid": 870574717144233,
+					"parameters": {
+						"instance-variable": "Shotsleft",
+						"value": "Self.MaxShots"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 986560636619632,
+					"parameters": {
+						"variable": "NextLevel",
+						"value": "CarChase_GameManager.nextLevel"
 					}
 				}
 			],
@@ -537,17 +551,6 @@
 					"parameters": {
 						"value": "CarChase_GameManager.Ammo/CarChase_GameManager.MaxAmmo * 100"
 					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 817201556568184,
-					"parameters": {
-						"audio-file": "163457__lemudcrab__ak47-shot",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
 				}
 			],
 			"sid": 112281119311038
@@ -567,17 +570,6 @@
 					"id": "destroy",
 					"objectClass": "CarChase_Bullet",
 					"sid": 513036337228922
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 998034178833014,
-					"parameters": {
-						"audio-file": "522389__filmmakersmanual__bullet-dirt-hit-6",
-						"loop": "not-looping",
-						"volume": "-3",
-						"tag-optional": "\"\""
-					}
 				}
 			],
 			"sid": 213048684142571
@@ -658,50 +650,20 @@
 					}
 				},
 				{
-					"id": "set-speed",
+					"id": "spawn-another-object",
 					"objectClass": "CarChase_Bullet",
-					"sid": 936444538189610,
-					"behaviorType": "Bullet",
+					"sid": 102113402862584,
 					"parameters": {
-						"speed": "0"
+						"object": "CarChase_AnimDummy",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
 					}
 				},
 				{
-					"id": "set-animation",
+					"id": "destroy",
 					"objectClass": "CarChase_Bullet",
-					"sid": 482338617984824,
-					"parameters": {
-						"animation": "\"animation 1\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "start-animation",
-					"objectClass": "CarChase_Bullet",
-					"sid": 631521821834757,
-					"parameters": {
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "set-animation-speed",
-					"objectClass": "CarChase_Bullet",
-					"sid": 210419397300008,
-					"parameters": {
-						"speed": "30"
-					}
-				},
-				{
-					"id": "play-by-name",
-					"objectClass": "Audio",
-					"sid": 377439699837089,
-					"parameters": {
-						"folder": "sounds",
-						"audio-file-name": "choose(\"bullet-metal-hit-1\",\"bullet-metal-hit-2\",\"bullet-metal-hit-3\",\"bullet-metal-hit-4\")",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
+					"sid": 992147622534741
 				}
 			],
 			"sid": 381963815326188,
@@ -811,17 +773,6 @@
 							"id": "destroy",
 							"objectClass": "carChase_enemyCar",
 							"sid": 414171301158407
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 528782926982170,
-							"parameters": {
-								"audio-file": "523089__magnuswaker__explosion-1",
-								"loop": "not-looping",
-								"volume": "0",
-								"tag-optional": "\"\""
-							}
 						}
 					],
 					"sid": 195819365645158,
@@ -1090,7 +1041,16 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 497135983914662,
+					"parameters": {
+						"layout": "NextLevel"
+					}
+				}
+			],
 			"sid": 706402726850243
 		},
 		{
@@ -1134,17 +1094,6 @@
 					"sid": 165152083895369,
 					"parameters": {
 						"visibility": "visible"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 133980137509472,
-					"parameters": {
-						"audio-file": "396331__nioczkus__1911-reload",
-						"loop": "not-looping",
-						"volume": "-5",
-						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -1209,30 +1158,6 @@
 					"id": "destroy",
 					"objectClass": "CarChase_EnemyBullet",
 					"sid": 713486328194664
-				},
-				{
-					"id": "play-by-name",
-					"objectClass": "Audio",
-					"sid": 198950808195783,
-					"parameters": {
-						"folder": "sounds",
-						"audio-file-name": "choose(\"bullet-metal-hit-1\",\"bullet-metal-hit-2\",\"bullet-metal-hit-3\",\"bullet-metal-hit-4\")",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
-					"id": "play-by-name",
-					"objectClass": "Audio",
-					"sid": 726286106395983,
-					"parameters": {
-						"folder": "sounds",
-						"audio-file-name": "choose(\"hurt1\",\"hurt2\")",
-						"loop": "not-looping",
-						"volume": "-5",
-						"tag-optional": "\"\""
-					}
 				}
 			],
 			"sid": 526946746218544,
@@ -1318,17 +1243,6 @@
 					"parameters": {
 						"angle": "CarChase_Enemy.Angle"
 					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 174889345342556,
-					"parameters": {
-						"audio-file": "gunshot-high-5",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
 				}
 			],
 			"sid": 481026056257171
@@ -1352,22 +1266,6 @@
 					"id": "restart-layout",
 					"objectClass": "System",
 					"sid": 186277143111415
-				},
-				{
-					"id": "stop",
-					"objectClass": "Audio",
-					"sid": 964003199829515,
-					"parameters": {
-						"tag": "\"soundtrack\""
-					}
-				},
-				{
-					"id": "stop",
-					"objectClass": "Audio",
-					"sid": 920304965139740,
-					"parameters": {
-						"tag": "\"ambience\""
-					}
 				}
 			],
 			"sid": 870285266552025
@@ -1583,9 +1481,222 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-animation-finished",
+					"id": "on-collision-with-another-object",
 					"objectClass": "CarChase_Bullet",
-					"sid": 318066244625686,
+					"sid": 873429432896418,
+					"parameters": {
+						"object": "Bossfight_Side1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Bossfight_Side1",
+					"sid": 136282455473802,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "CarChase_Bullet",
+					"sid": 302493977901878,
+					"parameters": {
+						"object": "CarChase_AnimDummy",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "CarChase_Bullet",
+					"sid": 374023339213295
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "Bossfight_Side1",
+					"sid": 485441493818516,
+					"parameters": {
+						"color": "rgbEx(100, 100 * Self.Health/Self.MaxHealth, 100 * Self.Health/Self.MaxHealth)"
+					}
+				}
+			],
+			"sid": 214320999163851
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "CarChase_Bullet",
+					"sid": 624773382945467,
+					"parameters": {
+						"object": "Bossfight_body"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "CarChase_Bullet",
+					"sid": 625967027966458,
+					"parameters": {
+						"object": "CarChase_AnimDummy",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "CarChase_Bullet",
+					"sid": 693105663043641
+				}
+			],
+			"sid": 407412383292171,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CarChase_GameManager",
+							"sid": 655556454862123,
+							"parameters": {
+								"instance-variable": "BossPhase",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Bossfight_body",
+							"sid": 341422843378756,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Bossfight_body",
+							"sid": 607884026104062,
+							"parameters": {
+								"color": "rgbEx(100, 100 * Self.Health/Self.MaxHealth, 100 * Self.Health/Self.MaxHealth)"
+							}
+						}
+					],
+					"sid": 103800958480811
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Bossfight_Side1",
+					"sid": 782860884829980,
+					"parameters": {
+						"instance-variable": "Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Bossfight_Side1",
+					"sid": 578250335231702,
+					"parameters": {
+						"object": "CarChase_Explosion",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "CarChase_GameManager",
+					"sid": 121185450149140,
+					"parameters": {
+						"instance-variable": "BossPhase",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Bossfight_Side1",
+					"sid": 916001381725004
+				}
+			],
+			"sid": 839144548953770
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Bossfight_body",
+					"sid": 740537301975632,
+					"parameters": {
+						"instance-variable": "Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Bossfight_body",
+					"sid": 186947556489125,
+					"parameters": {
+						"object": "CarChase_Explosion",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "CarChase_GameManager",
+					"sid": 509069861435294,
+					"parameters": {
+						"instance-variable": "BossPhase",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Bossfight_body",
+					"sid": 438570043850536
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "CarChase_GameManager",
+					"sid": 857211322080377,
+					"parameters": {
+						"instance-variable": "EnemiesLeft",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 576273223700214
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "CarChase_AnimDummy",
+					"sid": 857770549591067,
 					"parameters": {
 						"animation": "\"Animation 1\""
 					}
@@ -1594,67 +1705,552 @@
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "CarChase_Bullet",
-					"sid": 546789336872620
+					"objectClass": "CarChase_AnimDummy",
+					"sid": 137061076097907
 				}
 			],
-			"sid": 271212845975604
+			"sid": 221910984197265
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "CarChase_PlayerCar",
-					"sid": 607307688274676,
+					"id": "compare-instance-variable",
+					"objectClass": "CarChase_GameManager",
+					"sid": 423199873402481,
 					"parameters": {
-						"object": "carChase_enemyCar"
+						"instance-variable": "BossPhase",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 674684912362449,
+					"parameters": {
+						"interval-seconds": "0.75"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "play-by-name",
-					"objectClass": "Audio",
-					"sid": 239455889755760,
+					"id": "spawn-another-object",
+					"objectClass": "Bossfight_Side1",
+					"sid": 624200571738719,
 					"parameters": {
-						"folder": "sounds",
-						"audio-file-name": "choose(\"collision-1\",\"collision-2\",\"collision-3\",\"collision-4\")",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
+						"object": "CarChase_EnemyBullet",
+						"layer": "1",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 710314928085273,
+					"parameters": {
+						"x": "CarChase_PlayerCar.X",
+						"y": "CarChase_PlayerCar.Y"
+					}
+				},
+				{
+					"id": "rotate-clockwise",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 249811564856591,
+					"parameters": {
+						"degrees": "10"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Bossfight_Side1",
+					"sid": 538959152939682,
+					"parameters": {
+						"object": "CarChase_EnemyBullet",
+						"layer": "1",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 574923515004805,
+					"parameters": {
+						"x": "CarChase_PlayerCar.X",
+						"y": "CarChase_PlayerCar.Y"
+					}
+				},
+				{
+					"id": "rotate-clockwise",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 322547277204160,
+					"parameters": {
+						"degrees": "-10"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Bossfight_Side1",
+					"sid": 194463504935195,
+					"parameters": {
+						"object": "CarChase_EnemyBullet",
+						"layer": "1",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 869810110831197,
+					"parameters": {
+						"x": "CarChase_PlayerCar.X",
+						"y": "CarChase_PlayerCar.Y"
+					}
+				},
+				{
+					"id": "rotate-clockwise",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 459859169832811,
+					"parameters": {
+						"degrees": "15"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Bossfight_Side1",
+					"sid": 146036932273233,
+					"parameters": {
+						"object": "CarChase_EnemyBullet",
+						"layer": "1",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 815819696934503,
+					"parameters": {
+						"x": "CarChase_PlayerCar.X",
+						"y": "CarChase_PlayerCar.Y"
+					}
+				},
+				{
+					"id": "rotate-clockwise",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 561524166957142,
+					"parameters": {
+						"degrees": "-15"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Bossfight_Side1",
+					"sid": 198032613953747,
+					"parameters": {
+						"object": "CarChase_EnemyBullet",
+						"layer": "1",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 941897104973713,
+					"parameters": {
+						"x": "CarChase_PlayerCar.X",
+						"y": "CarChase_PlayerCar.Y"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Bossfight_Side1",
+					"sid": 448770425861212,
+					"parameters": {
+						"object": "CarChase_EnemyBullet",
+						"layer": "1",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 830392009585102,
+					"parameters": {
+						"x": "CarChase_PlayerCar.X",
+						"y": "CarChase_PlayerCar.Y"
 					}
 				}
 			],
-			"sid": 112860932300486
+			"sid": 796378995612151
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "CarChase_PlayerCar",
-					"sid": 368719130054609,
+					"id": "compare-instance-variable",
+					"objectClass": "CarChase_GameManager",
+					"sid": 940214895176599,
 					"parameters": {
-						"object": "carChase_dummy"
+						"instance-variable": "BossPhase",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 978113790424013,
+					"parameters": {
+						"interval-seconds": "0.25"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "play-by-name",
-					"objectClass": "Audio",
-					"sid": 107079451691837,
+					"id": "set-boolean-instvar",
+					"objectClass": "Bossfight_Side1",
+					"sid": 546412470034332,
 					"parameters": {
-						"folder": "sounds",
-						"audio-file-name": "choose(\"collision-1\",\"collision-2\",\"collision-3\",\"collision-4\")",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
+						"instance-variable": "Fired",
+						"value": "false"
 					}
 				}
 			],
-			"sid": 848235029400448
+			"sid": 457144704505941,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Bossfight_Side1",
+							"sid": 162422709617685,
+							"parameters": {
+								"instance-variable": "FireMode",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Bossfight_Side1",
+							"sid": 764597598976613,
+							"parameters": {
+								"instance-variable": "Fired"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Bossfight_Side1",
+							"sid": 209316695579162,
+							"parameters": {
+								"object": "CarChase_EnemyBullet",
+								"layer": "1",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "CarChase_EnemyBullet",
+							"sid": 357764241870605,
+							"parameters": {
+								"x": "CarChase_PlayerCar.X",
+								"y": "CarChase_PlayerCar.Y"
+							}
+						},
+						{
+							"id": "rotate-clockwise",
+							"objectClass": "CarChase_EnemyBullet",
+							"sid": 617136518741463,
+							"parameters": {
+								"degrees": "5"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Bossfight_Side1",
+							"sid": 502428624047971,
+							"parameters": {
+								"object": "CarChase_EnemyBullet",
+								"layer": "1",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "CarChase_EnemyBullet",
+							"sid": 544599383703434,
+							"parameters": {
+								"x": "CarChase_PlayerCar.X",
+								"y": "CarChase_PlayerCar.Y"
+							}
+						},
+						{
+							"id": "rotate-clockwise",
+							"objectClass": "CarChase_EnemyBullet",
+							"sid": 151179593154794,
+							"parameters": {
+								"degrees": "-5"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Bossfight_Side1",
+							"sid": 544812080016223,
+							"parameters": {
+								"instance-variable": "FireMode",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Bossfight_Side1",
+							"sid": 469079745424232,
+							"parameters": {
+								"instance-variable": "Fired",
+								"value": "true"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Bossfight_body",
+							"sid": 580666226052739,
+							"disabled": true,
+							"parameters": {
+								"object": "CarChase_EnemyBullet",
+								"layer": "1",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "CarChase_EnemyBullet",
+							"sid": 393861035395064,
+							"disabled": true,
+							"parameters": {
+								"x": "CarChase_PlayerCar.X",
+								"y": "CarChase_PlayerCar.Y"
+							}
+						}
+					],
+					"sid": 907725365854562
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Bossfight_Side1",
+							"sid": 827036468720056,
+							"parameters": {
+								"instance-variable": "FireMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Bossfight_Side1",
+							"sid": 506215927090278,
+							"parameters": {
+								"instance-variable": "Fired"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Bossfight_Side1",
+							"sid": 916277052145612,
+							"parameters": {
+								"object": "CarChase_EnemyBullet",
+								"layer": "1",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "CarChase_EnemyBullet",
+							"sid": 900056143823934,
+							"parameters": {
+								"x": "CarChase_PlayerCar.X",
+								"y": "CarChase_PlayerCar.Y"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Bossfight_Side1",
+							"sid": 673725122675547,
+							"parameters": {
+								"instance-variable": "FireMode",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Bossfight_Side1",
+							"sid": 891823953787139,
+							"parameters": {
+								"instance-variable": "Fired",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 132659672391450
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "CarChase_GameManager",
+					"sid": 580238914014471,
+					"parameters": {
+						"instance-variable": "BossPhase",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Bossfight_body",
+					"sid": 992035483861658,
+					"parameters": {
+						"instance-variable": "Shotsleft",
+						"comparison": 4,
+						"value": "0"
+					}
+				},
+				{
+					"id": "for",
+					"objectClass": "System",
+					"sid": 915485715506986,
+					"parameters": {
+						"name": "\"\"",
+						"start-index": "1",
+						"end-index": "Bossfight_body.MaxShots"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Bossfight_body",
+					"sid": 825102986244743,
+					"parameters": {
+						"object": "CarChase_EnemyBullet",
+						"layer": "1",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 845905504400221,
+					"parameters": {
+						"angle": "180"
+					}
+				},
+				{
+					"id": "rotate-clockwise",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 362505152906545,
+					"parameters": {
+						"degrees": "Bossfight_body.shotangle"
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Bossfight_body",
+					"sid": 429947530638150,
+					"parameters": {
+						"instance-variable": "shotangle",
+						"value": "(90/Self.MaxShots) * Self.Direction"
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Bossfight_body",
+					"sid": 730680078212656,
+					"parameters": {
+						"instance-variable": "Shotsleft",
+						"value": "1"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Bossfight_body",
+					"sid": 581661271354261,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "1",
+						"type": "once",
+						"tag": "\"Reload\""
+					}
+				}
+			],
+			"sid": 967680299500863
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Bossfight_body",
+					"sid": 812615054465796,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"Reload\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Bossfight_body",
+					"sid": 203337508381068,
+					"parameters": {
+						"instance-variable": "shotangle",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Bossfight_body",
+					"sid": 897963864939791,
+					"parameters": {
+						"instance-variable": "Direction",
+						"value": "Self.Direction * -1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Bossfight_body",
+					"sid": 713650722807933,
+					"parameters": {
+						"instance-variable": "Shotsleft",
+						"value": "Self.MaxShots"
+					}
+				}
+			],
+			"sid": 174368118557120
 		}
 	],
 	"sid": 210743918402358

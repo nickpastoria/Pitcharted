@@ -1,0 +1,91 @@
+{
+	"name": "Cutscene 1 Event",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 818625369428709
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 705909559289345,
+					"parameters": {
+						"width": "0",
+						"height": "1",
+						"depth": "1"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 300635055074986,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: Ok! We've got the treasure\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 667062812746577,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bently: Those Guys Sure look mad! We'd Better Scram!\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 386625364476987,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: We'll be fine. I'm a professional\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 367112282615994,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bently: QUICK HOP IN MY JEEPl\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "Temp_Cutscene_text",
+					"sid": 189276256462730,
+					"parameters": {
+						"text": "Temp_Cutscene_Array.Front",
+						"duration": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 233219894647915,
+					"parameters": {
+						"variable": "NextLevel",
+						"value": "\"Car Chase\""
+					}
+				}
+			],
+			"sid": 827641391877360
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Cutscene Main Event"
+		}
+	],
+	"sid": 370946394550620
+}

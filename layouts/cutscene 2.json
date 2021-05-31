@@ -1,5 +1,5 @@
 {
-	"name": "Cutscene temp",
+	"name": "Cutscene 2",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -14,7 +14,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 61,
+					"uid": 78,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -43,7 +43,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 60,
+					"uid": 80,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -72,7 +72,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 59,
+					"uid": 81,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -105,7 +105,7 @@
 						"origin": "top-left",
 						"seams": "overlap"
 					},
-					"uid": 62,
+					"uid": 82,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -147,7 +147,7 @@
 						"initially-visible": false,
 						"origin": "top-left"
 					},
-					"uid": 65,
+					"uid": 83,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -189,7 +189,7 @@
 						"initially-visible": true,
 						"origin": "top-left"
 					},
-					"uid": 64,
+					"uid": 88,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -210,7 +210,7 @@
 					}
 				}
 			],
-			"sid": 699396421103188,
+			"sid": 454303628654107,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -235,22 +235,11 @@
 			"global": false
 		}
 	],
-	"sid": 148093037049495,
-	"nonworld-instances": [
-		{
-			"type": "Temp_Cutscene_Array",
-			"properties": {
-				"width": 0,
-				"height": 1,
-				"depth": 1
-			},
-			"uid": 63,
-			"instanceVariables": {}
-		}
-	],
+	"sid": 648601574987659,
+	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 2000,
 	"height": 960,
 	"unboundedScrolling": false,
-	"eventSheet": null
+	"eventSheet": "Cutscene 2 Event"
 }

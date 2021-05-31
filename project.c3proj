@@ -88,6 +88,14 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Audio",
 			"name": "Audio",
 			"author": "Scirra",
@@ -286,8 +294,14 @@
 			"Temp_Cutscene_text",
 			"temp_cutscene_clicktocontinue",
 			"carChase_dummy",
-			"Audio",
-			"AudioController"
+			"Bossfight_body",
+			"Bossfight_Side1",
+			"CarChase_AnimDummy",
+			"BossFight_EndVolume",
+			"Button",
+			"Text",
+			"MainMenuText",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -301,9 +315,13 @@
 		"items": [
 			"Cutscene temp",
 			"Intro Cutscene",
+			"Cutscene 2",
 			"Fps",
 			"Car Chase",
-			"Boss Fight"
+			"BossFight",
+			"Main Menu",
+			"Final Cutscene",
+			"Ending"
 		],
 		"subfolders": []
 	},
@@ -312,7 +330,11 @@
 			"FPS Event",
 			"Cutscene Main Event",
 			"Car Chase Event",
-			"Boss Fight"
+			"Boss Fight",
+			"Menu Event",
+			"Cutscene 2 Event",
+			"Cutscene 1 Event",
+			"Cutscene Final Event"
 		],
 		"subfolders": []
 	},
@@ -324,89 +346,9 @@
 		"sound": {
 			"items": [
 				{
-					"name": "163457__lemudcrab__ak47-shot.webm",
+					"name": "explosion.webm",
 					"type": "audio/webm; codecs=opus",
-					"sid": 857628523414785
-				},
-				{
-					"name": "396331__nioczkus__1911-reload.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 358591764064337
-				},
-				{
-					"name": "344204__spiid__zoom0001-lr.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 462262947471501
-				},
-				{
-					"name": "522389__filmmakersmanual__bullet-dirt-hit-6.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 900507496596825
-				},
-				{
-					"name": "bullet-metal-hit-4.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 787500462787035
-				},
-				{
-					"name": "bullet-metal-hit-3.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 484472063044236
-				},
-				{
-					"name": "bullet-metal-hit-1.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 415253007111469
-				},
-				{
-					"name": "bullet-metal-hit-2.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 146840471995711
-				},
-				{
-					"name": "big-truck-engine.mp3",
-					"type": "audio/mpeg",
-					"sid": 473452170859969
-				},
-				{
-					"name": "523089__magnuswaker__explosion-1.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 646276224812198
-				},
-				{
-					"name": "466998__bone666138__8-bit-video-game-fight-music.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 233129038090416
-				},
-				{
-					"name": "gunshot-high-5.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 652166809055550
-				},
-				{
-					"name": "collision-2.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 797019728542777
-				},
-				{
-					"name": "collision-1.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 683708389148718
-				},
-				{
-					"name": "collision-3.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 643548117583221
-				},
-				{
-					"name": "hurt1.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 475267011275606
-				},
-				{
-					"name": "hurt2.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 831490471076289
+					"sid": 897725419974758
 				}
 			],
 			"subfolders": []
@@ -547,5 +489,5 @@
 	},
 	"viewportWidth": 2000,
 	"viewportHeight": 960,
-	"firstLayout": null
+	"firstLayout": "Main Menu"
 }

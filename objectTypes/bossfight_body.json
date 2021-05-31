@@ -1,0 +1,92 @@
+{
+	"name": "Bossfight_body",
+	"plugin-id": "Sprite",
+	"sid": 107111965250923,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "",
+			"sid": 255055516860510
+		},
+		{
+			"name": "MaxHealth",
+			"type": "number",
+			"desc": "",
+			"sid": 153527442404754
+		},
+		{
+			"name": "MaxShots",
+			"type": "number",
+			"desc": "",
+			"sid": 763457814391636
+		},
+		{
+			"name": "Shotsleft",
+			"type": "number",
+			"desc": "",
+			"sid": 268921246508724
+		},
+		{
+			"name": "shotangle",
+			"type": "number",
+			"desc": "",
+			"sid": 698959552512066
+		},
+		{
+			"name": "Direction",
+			"type": "number",
+			"desc": "",
+			"sid": 989410150981309
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 452814261941874
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 633052587327948
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4085200,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Gun",
+								"x": 0.248,
+								"y": 0.492
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 174075183978824,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

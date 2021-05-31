@@ -87,6 +87,18 @@
 			"type": "number",
 			"desc": "",
 			"sid": 853095510845121
+		},
+		{
+			"name": "BossPhase",
+			"type": "number",
+			"desc": "",
+			"sid": 524599442693400
+		},
+		{
+			"name": "nextLevel",
+			"type": "string",
+			"desc": "",
+			"sid": 509324101106425
 		}
 	],
 	"behaviorTypes": [],
