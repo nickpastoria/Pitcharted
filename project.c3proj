@@ -364,6 +364,91 @@
 					"name": "gunshot.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 881859968356678
+				},
+				{
+					"name": "163457__lemudcrab__ak47-shot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 158626564965940
+				},
+				{
+					"name": "344204__spiid__zoom0001-lr.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 128812757413059
+				},
+				{
+					"name": "396331__nioczkus__1911-reload.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 365079400867624
+				},
+				{
+					"name": "music.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 599448584287496
+				},
+				{
+					"name": "522389__filmmakersmanual__bullet-dirt-hit-6.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 961537896573799
+				},
+				{
+					"name": "523089__magnuswaker__explosion-1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 147195254120362
+				},
+				{
+					"name": "bullet-metal-hit-1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 653966047454231
+				},
+				{
+					"name": "bullet-metal-hit-2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 549020871179180
+				},
+				{
+					"name": "bullet-metal-hit-3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 545010739994147
+				},
+				{
+					"name": "bullet-metal-hit-4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 205095415299797
+				},
+				{
+					"name": "collision-1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 250023245880093
+				},
+				{
+					"name": "collision-2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 143012232535500
+				},
+				{
+					"name": "collision-3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 755539558534269
+				},
+				{
+					"name": "gunshot-high-5.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 297025779940631
+				},
+				{
+					"name": "reload.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 519648683710439
+				},
+				{
+					"name": "cutsceneclicks.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 253777528797183
+				},
+				{
+					"name": "gunshot-enemy.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 362587145539861
 				}
 			],
 			"subfolders": []
