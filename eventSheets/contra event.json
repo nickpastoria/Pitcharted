@@ -1,0 +1,253 @@
+{
+	"name": "Contra Event",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 362903315595448,
+					"parameters": {
+						"object": "Water"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 762242414882787
+				}
+			],
+			"sid": 693024548052150
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 196299349193268,
+					"parameters": {
+						"object": "Enemy"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 112562886340904
+				}
+			],
+			"sid": 156628658795486
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 498771730015540,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 932058078527724,
+					"parameters": {
+						"object": "Bullet",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Bullet",
+					"sid": 627093732367026,
+					"parameters": {
+						"angle": "180"
+					}
+				}
+			],
+			"sid": 660511070237204
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Player",
+					"sid": 303006520380499,
+					"parameters": {
+						"object": "Vine"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 236308054472304
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 262613499017602,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 303994529336563,
+					"parameters": {
+						"object": "Bullet",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 839710410544840
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 884833480478981,
+					"parameters": {
+						"key": 87
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 414025544611473,
+					"parameters": {
+						"object": "Bullet",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Bullet",
+					"sid": 111573200752474,
+					"parameters": {
+						"angle": "270"
+					}
+				}
+			],
+			"sid": 346779085478641
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Bullet",
+					"sid": 658871294643856,
+					"parameters": {
+						"object": "Enemy"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Enemy",
+					"sid": 833937730047599
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Bullet",
+					"sid": 516689708845668
+				}
+			],
+			"sid": 882174927464252
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Enemy",
+					"sid": 532072245343306,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "EnemyBullet",
+					"sid": 761097974481314,
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.Y"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 768098017396027,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Enemy",
+					"sid": 937326519823697,
+					"parameters": {
+						"object": "EnemyBullet",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 698890042896175
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "EnemyBullet",
+					"sid": 342537548026086,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "EnemyBullet",
+					"sid": 735731508325922
+				}
+			],
+			"sid": 202974536851788
+		}
+	],
+	"sid": 450506472566586
+}
