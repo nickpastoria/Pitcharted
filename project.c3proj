@@ -439,6 +439,11 @@
 					"name": "reload.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 519648683710439
+				},
+				{
+					"name": "cutsceneclicks.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 253777528797183
 				}
 			],
 			"subfolders": []
