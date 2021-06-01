@@ -8,7 +8,7 @@
 				{
 					"type": "Text",
 					"properties": {
-						"text": "Thanks For Playing",
+						"text": "Thanks For Playing\nCreated by: Shubangi Verma, Timothy Lanthier, and Nick Pastoria",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 31.700000000000003,
@@ -31,9 +31,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 440,
-						"y": 389,
-						"width": 371,
+						"x": 193,
+						"y": 228,
+						"width": 1258,
 						"height": 136,
 						"originX": 0,
 						"originY": 0,
