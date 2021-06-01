@@ -1093,6 +1093,14 @@
 					"parameters": {
 						"layout": "NextLevel"
 					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 520879922790541,
+					"parameters": {
+						"tag": "\"music\""
+					}
 				}
 			],
 			"sid": 706402726850243
@@ -1654,13 +1662,13 @@
 				{
 					"id": "play-by-name",
 					"objectClass": "Audio",
-					"sid": 549052846832227,
+					"sid": 829500655784969,
 					"parameters": {
 						"folder": "sounds",
 						"audio-file-name": "choose(\"bullet-metal-hit-1\",\"bullet-metal-hit-2\",\"bullet-metal-hit-3\",\"bullet-metal-hit-4\")",
 						"loop": "not-looping",
-						"volume": "-10",
-						"tag-optional": "\"\""
+						"volume": "-5",
+						"tag-optional": "\"metal bullet hits\""
 					}
 				}
 			],
@@ -1707,6 +1715,14 @@
 								"loop": "not-looping",
 								"volume": "-10",
 								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 714436301550891,
+							"parameters": {
+								"tag": "\"metal bullet hits\""
 							}
 						}
 					],
