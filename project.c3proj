@@ -302,7 +302,7 @@
 			"Text",
 			"MainMenuText",
 			"Audio",
-			"CarChase_EnemyDummy"
+			"CarChase_EnemyBulletDummy"
 		],
 		"subfolders": []
 	},

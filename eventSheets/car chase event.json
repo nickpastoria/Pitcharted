@@ -376,6 +376,14 @@
 					}
 				},
 				{
+					"id": "set-x",
+					"objectClass": "CarChase_EnemyBulletDummy",
+					"sid": 906535512290937,
+					"parameters": {
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
 					"id": "rotate-toward-position",
 					"objectClass": "CarChase_Enemy",
 					"sid": 223550001164081,
@@ -1214,7 +1222,7 @@
 					"objectClass": "CarChase_EnemyBullet",
 					"sid": 710951510676062,
 					"parameters": {
-						"object": "CarChase_EnemyDummy",
+						"object": "CarChase_EnemyBulletDummy",
 						"layer": "1",
 						"image-point": "0",
 						"create-hierarchy": false
@@ -1777,9 +1785,20 @@
 					}
 				},
 				{
+					"id": "spawn-another-object",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 466585183807792,
+					"parameters": {
+						"object": "CarChase_EnemyBulletDummy",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "CarChase_EnemyBullet",
-					"sid": 565982947556185
+					"sid": 776676417627677
 				}
 			],
 			"sid": 839144548953770
