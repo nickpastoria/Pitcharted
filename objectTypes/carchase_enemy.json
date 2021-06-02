@@ -24,7 +24,7 @@
 					{
 						"width": 250,
 						"height": 165,
-						"originX": 0.36,
+						"originX": 0.28,
 						"originY": 0.5575757575757576,
 						"originalSource": "",
 						"exportFormat": "png",
@@ -63,11 +63,11 @@
 				],
 				"sid": 498074509954623,
 				"name": "Animation 1",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 2
 			}
 		],
 		"subfolders": []
