@@ -403,6 +403,14 @@
 					}
 				},
 				{
+					"id": "set-x",
+					"objectClass": "CarChase_AnimDummy",
+					"sid": 745983062534767,
+					"parameters": {
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
 					"id": "rotate-toward-position",
 					"objectClass": "CarChase_Enemy",
 					"sid": 223550001164081,
@@ -1892,27 +1900,6 @@
 				}
 			],
 			"sid": 576273223700214
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-animation-finished",
-					"objectClass": "CarChase_AnimDummy",
-					"sid": 857770549591067,
-					"parameters": {
-						"animation": "\"Animation 1\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "CarChase_AnimDummy",
-					"sid": 137061076097907
-				}
-			],
-			"sid": 221910984197265
 		},
 		{
 			"eventType": "block",
