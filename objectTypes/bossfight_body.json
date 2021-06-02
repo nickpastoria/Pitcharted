@@ -61,8 +61,8 @@
 					{
 						"width": 250,
 						"height": 250,
-						"originX": 0.468,
-						"originY": 0.468,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -94,7 +94,7 @@
 					{
 						"width": 250,
 						"height": 250,
-						"originX": 0.5,
+						"originX": 0.508,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",

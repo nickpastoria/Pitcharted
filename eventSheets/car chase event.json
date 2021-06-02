@@ -1872,6 +1872,14 @@
 					}
 				},
 				{
+					"id": "set-visible",
+					"objectClass": "Bossfight_air",
+					"sid": 819375577395711,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 839741456627103,
@@ -2344,6 +2352,14 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Bossfight_air",
+					"sid": 698235689642773,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Bossfight_body",
