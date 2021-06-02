@@ -216,6 +216,14 @@
 					}
 				},
 				{
+					"id": "set-x",
+					"objectClass": "Bossfight_tread",
+					"sid": 344769895355431,
+					"parameters": {
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
 					"id": "set-position",
 					"objectClass": "CarChase_ReloadBar",
 					"sid": 775304291265793,
@@ -230,6 +238,17 @@
 					"sid": 397110243270584,
 					"parameters": {
 						"value": "(CarChase_PlayerCar.Timer.CurrentTime(\"Reload\")/CarChase_PlayerCar.Timer.Duration(\"Reload\")) * 100"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Bossfight_Side1",
+					"sid": 709378778711011,
+					"parameters": {
+						"object": "Bossfight_tread",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
 					}
 				},
 				{

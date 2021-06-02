@@ -302,7 +302,8 @@
 			"Text",
 			"MainMenuText",
 			"Audio",
-			"CarChase_EnemyBulletDummy"
+			"CarChase_EnemyBulletDummy",
+			"Bossfight_tread"
 		],
 		"subfolders": []
 	},

@@ -766,35 +766,6 @@
 					}
 				},
 				{
-					"type": "CarChase_GrassSpawner",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 47,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 3339,
-						"y": 1,
-						"width": 53,
-						"height": 40,
-						"originX": 0,
-						"originY": 1,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "CarChase_ExitVolume",
 					"properties": {
 						"initially-visible": true,
