@@ -1904,6 +1904,22 @@
 					}
 				},
 				{
+					"id": "spawn-another-object",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 939356398632357,
+					"parameters": {
+						"object": "CarChase_EnemyBulletDummy",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 691764217209629
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 839741456627103,
