@@ -66,7 +66,40 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4085200,
+						"imageSpriteId": 8154766,
+						"collisionPoly": {
+							"points": [
+								0.2100000000000001,
+								0.1800000000000001,
+								1,
+								0,
+								1,
+								1,
+								0.2360000000000001,
+								0.8519999999999999,
+								0.0029999999999999315,
+								0.512
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Gun",
+								"x": 0.29,
+								"y": 0.49333333333333335
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.508,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9567411,
 						"collisionPoly": {
 							"points": [
 								0.2100000000000001,
@@ -94,11 +127,11 @@
 				],
 				"sid": 174075183978824,
 				"name": "Animation 1",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 2
 			}
 		],
 		"subfolders": []
