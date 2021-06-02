@@ -1,0 +1,43 @@
+{
+	"name": "Bossfight_tread",
+	"plugin-id": "Sprite",
+	"sid": 106085967798035,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 960623271554623
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 194,
+						"height": 131,
+						"originX": 0.4845360824742268,
+						"originY": 0.42748091603053434,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2511073,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 767698633778283,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
