@@ -301,7 +301,8 @@
 			"Button",
 			"Text",
 			"MainMenuText",
-			"Audio"
+			"Audio",
+			"CarChase_EnemyDummy"
 		],
 		"subfolders": []
 	},

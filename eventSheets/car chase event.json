@@ -1210,6 +1210,17 @@
 			],
 			"actions": [
 				{
+					"id": "spawn-another-object",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 710951510676062,
+					"parameters": {
+						"object": "CarChase_EnemyDummy",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "CarChase_EnemyBullet",
 					"sid": 713486328194664
@@ -1764,6 +1775,11 @@
 						"volume": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "CarChase_EnemyBullet",
+					"sid": 565982947556185
 				}
 			],
 			"sid": 839144548953770

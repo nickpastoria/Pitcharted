@@ -1112,6 +1112,39 @@
 					}
 				},
 				{
+					"type": "CarChase_EnemyDummy",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 67,
+					"instanceVariables": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 1593,
+						"y": 452,
+						"width": 23,
+						"height": 23,
+						"originX": 0.4782608695652174,
+						"originY": 0.4782608695652174,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "CarChase_Bullet",
 					"properties": {
 						"initially-visible": true,
