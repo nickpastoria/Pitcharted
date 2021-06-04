@@ -224,16 +224,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Pin",
-			"name": "Pin",
+			"id": "Anchor",
+			"name": "Anchor",
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "Anchor",
-			"name": "Anchor",
+			"id": "Pin",
+			"name": "Pin",
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
@@ -304,8 +304,7 @@
 			"Audio",
 			"CarChase_EnemyBulletDummy",
 			"Bossfight_tread",
-			"Bossfight_air",
-			"CarChase_BGLooper"
+			"Bossfight_air"
 		],
 		"subfolders": []
 	},
