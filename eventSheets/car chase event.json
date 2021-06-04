@@ -16,7 +16,7 @@
 					"objectClass": "CarChase_GrassSpawner",
 					"sid": 579547867665406,
 					"parameters": {
-						"width": "CarChase_Grass.Width"
+						"width": "CarChase_BGGrass.Width"
 					}
 				},
 				{
@@ -185,7 +185,7 @@
 				},
 				{
 					"id": "set-x",
-					"objectClass": "CarChase_Grass",
+					"objectClass": "CarChase_BGGrass",
 					"sid": 120851261017032,
 					"parameters": {
 						"x": "Self.X - CarChase_GameManager.BG_Speed"
@@ -193,16 +193,40 @@
 				},
 				{
 					"id": "set-x",
-					"objectClass": "CarChase_TreeCover",
-					"sid": 711820030285128,
+					"objectClass": "CarChase_BGTreeCover",
+					"sid": 153947709966995,
 					"parameters": {
-						"x": "Self.X - (CarChase_GameManager.BG_Speed + Self.Parralax)"
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
 					}
 				},
 				{
 					"id": "set-x",
-					"objectClass": "CarChase_Road",
+					"objectClass": "CarChase_BGRoad",
 					"sid": 966993043752090,
+					"parameters": {
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGGrass2",
+					"sid": 127340739417762,
+					"parameters": {
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGTreeCover2",
+					"sid": 866644654583237,
+					"parameters": {
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGRoad2",
+					"sid": 471925632019221,
 					"parameters": {
 						"x": "Self.X - CarChase_GameManager.BG_Speed"
 					}
@@ -439,8 +463,8 @@
 			"conditions": [
 				{
 					"id": "compare-x",
-					"objectClass": "CarChase_Grass",
-					"sid": 414254985275462,
+					"objectClass": "CarChase_BGRoad",
+					"sid": 960428242425595,
 					"parameters": {
 						"comparison": 3,
 						"x-co-ordinate": "-4000"
@@ -450,22 +474,38 @@
 			"actions": [
 				{
 					"id": "set-x",
-					"objectClass": "CarChase_Grass",
-					"sid": 100173463896151,
+					"objectClass": "CarChase_BGRoad",
+					"sid": 480943940007454,
+					"parameters": {
+						"x": "4000 - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGGrass",
+					"sid": 528017244544520,
+					"parameters": {
+						"x": "4000 - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGTreeCover",
+					"sid": 167520818597710,
 					"parameters": {
 						"x": "4000 - CarChase_GameManager.BG_Speed"
 					}
 				}
 			],
-			"sid": 742222447027985
+			"sid": 413811760502106
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "compare-x",
-					"objectClass": "CarChase_Road",
-					"sid": 985950972456580,
+					"objectClass": "CarChase_BGRoad2",
+					"sid": 367903203961516,
 					"parameters": {
 						"comparison": 3,
 						"x-co-ordinate": "-4000"
@@ -475,39 +515,30 @@
 			"actions": [
 				{
 					"id": "set-x",
-					"objectClass": "CarChase_Road",
-					"sid": 690589015059155,
+					"objectClass": "CarChase_BGRoad2",
+					"sid": 309507155778925,
+					"parameters": {
+						"x": "4000 - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGGrass2",
+					"sid": 416760821151202,
+					"parameters": {
+						"x": "4000 - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGTreeCover2",
+					"sid": 521391352049846,
 					"parameters": {
 						"x": "4000 - CarChase_GameManager.BG_Speed"
 					}
 				}
 			],
-			"sid": 655579851139042
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-x",
-					"objectClass": "CarChase_TreeCover",
-					"sid": 154305832819656,
-					"parameters": {
-						"comparison": 3,
-						"x-co-ordinate": "-4000"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-x",
-					"objectClass": "CarChase_TreeCover",
-					"sid": 211512139936730,
-					"parameters": {
-						"x": "4000 - (CarChase_GameManager.BG_Speed+Self.Parralax)"
-					}
-				}
-			],
-			"sid": 715342185257535
+			"sid": 834129503046900
 		},
 		{
 			"eventType": "block",
@@ -808,10 +839,10 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "carChase_enemyCar",
-							"sid": 807844293848488,
+							"sid": 577015057055908,
 							"parameters": {
 								"object": "CarChase_Explosion",
-								"layer": "1",
+								"layer": "0",
 								"image-point": "0",
 								"create-hierarchy": false
 							}
@@ -819,10 +850,10 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "carChase_enemyCar",
-							"sid": 394865482386265,
+							"sid": 283988652459603,
 							"parameters": {
 								"object": "carChase_dummy",
-								"layer": "1",
+								"layer": "0",
 								"image-point": "0",
 								"create-hierarchy": false
 							}
@@ -961,10 +992,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "CarChase_CarSpawner",
-					"sid": 174548730315855,
+					"sid": 250130936723637,
 					"parameters": {
 						"object": "carChase_enemyCar",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "0",
 						"create-hierarchy": false
 					}
@@ -1012,10 +1043,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "carChase_enemyCar",
-					"sid": 249092702321201,
+					"sid": 983576762775647,
 					"parameters": {
 						"object": "CarChase_Enemy",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "0",
 						"create-hierarchy": false
 					}
@@ -1255,10 +1286,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "CarChase_EnemyBullet",
-					"sid": 710951510676062,
+					"sid": 266771048236372,
 					"parameters": {
 						"object": "CarChase_EnemyBulletDummy",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "0",
 						"create-hierarchy": false
 					}
@@ -1348,10 +1379,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "CarChase_Enemy",
-					"sid": 896517816296694,
+					"sid": 687592516962490,
 					"parameters": {
 						"object": "CarChase_EnemyBullet",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "1",
 						"create-hierarchy": false
 					}
@@ -1830,10 +1861,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "CarChase_EnemyBullet",
-					"sid": 466585183807792,
+					"sid": 394148349435642,
 					"parameters": {
 						"object": "CarChase_EnemyBulletDummy",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "0",
 						"create-hierarchy": false
 					}
@@ -1906,10 +1937,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "CarChase_EnemyBullet",
-					"sid": 939356398632357,
+					"sid": 925040458759812,
 					"parameters": {
 						"object": "CarChase_EnemyBulletDummy",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "0",
 						"create-hierarchy": false
 					}
@@ -1959,10 +1990,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Bossfight_Side1",
-					"sid": 624200571738719,
+					"sid": 896317957100476,
 					"parameters": {
 						"object": "CarChase_EnemyBullet",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "1",
 						"create-hierarchy": false
 					}
@@ -1987,10 +2018,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Bossfight_Side1",
-					"sid": 538959152939682,
+					"sid": 238755283781120,
 					"parameters": {
 						"object": "CarChase_EnemyBullet",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "1",
 						"create-hierarchy": false
 					}
@@ -2015,10 +2046,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Bossfight_Side1",
-					"sid": 194463504935195,
+					"sid": 429975209951582,
 					"parameters": {
 						"object": "CarChase_EnemyBullet",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "1",
 						"create-hierarchy": false
 					}
@@ -2043,10 +2074,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Bossfight_Side1",
-					"sid": 146036932273233,
+					"sid": 130007661236928,
 					"parameters": {
 						"object": "CarChase_EnemyBullet",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "1",
 						"create-hierarchy": false
 					}
@@ -2071,10 +2102,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Bossfight_Side1",
-					"sid": 198032613953747,
+					"sid": 408439458831207,
 					"parameters": {
 						"object": "CarChase_EnemyBullet",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "1",
 						"create-hierarchy": false
 					}
@@ -2091,10 +2122,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Bossfight_Side1",
-					"sid": 448770425861212,
+					"sid": 578778179835662,
 					"parameters": {
 						"object": "CarChase_EnemyBullet",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "1",
 						"create-hierarchy": false
 					}
@@ -2173,10 +2204,10 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Bossfight_Side1",
-							"sid": 209316695579162,
+							"sid": 149097070712778,
 							"parameters": {
 								"object": "CarChase_EnemyBullet",
-								"layer": "1",
+								"layer": "0",
 								"image-point": "1",
 								"create-hierarchy": false
 							}
@@ -2201,10 +2232,10 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Bossfight_Side1",
-							"sid": 502428624047971,
+							"sid": 636779648091042,
 							"parameters": {
 								"object": "CarChase_EnemyBullet",
-								"layer": "1",
+								"layer": "0",
 								"image-point": "1",
 								"create-hierarchy": false
 							}
@@ -2296,10 +2327,10 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Bossfight_Side1",
-							"sid": 916277052145612,
+							"sid": 288429214957974,
 							"parameters": {
 								"object": "CarChase_EnemyBullet",
-								"layer": "1",
+								"layer": "0",
 								"image-point": "1",
 								"create-hierarchy": false
 							}
@@ -2307,7 +2338,7 @@
 						{
 							"id": "set-angle-toward-position",
 							"objectClass": "CarChase_EnemyBullet",
-							"sid": 900056143823934,
+							"sid": 447275620933848,
 							"parameters": {
 								"x": "CarChase_PlayerCar.X",
 								"y": "CarChase_PlayerCar.Y"
@@ -2382,10 +2413,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Bossfight_body",
-					"sid": 825102986244743,
+					"sid": 634200766859717,
 					"parameters": {
 						"object": "CarChase_EnemyBullet",
-						"layer": "1",
+						"layer": "0",
 						"image-point": "1",
 						"create-hierarchy": false
 					}
