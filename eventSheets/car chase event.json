@@ -16,7 +16,7 @@
 					"objectClass": "CarChase_GrassSpawner",
 					"sid": 579547867665406,
 					"parameters": {
-						"width": "CarChase_Grass.Width"
+						"width": "CarChase_BGGrass.Width"
 					}
 				},
 				{
@@ -185,7 +185,7 @@
 				},
 				{
 					"id": "set-x",
-					"objectClass": "CarChase_Grass",
+					"objectClass": "CarChase_BGGrass",
 					"sid": 120851261017032,
 					"parameters": {
 						"x": "Self.X - CarChase_GameManager.BG_Speed"
@@ -193,16 +193,40 @@
 				},
 				{
 					"id": "set-x",
-					"objectClass": "CarChase_TreeCover",
-					"sid": 711820030285128,
+					"objectClass": "CarChase_BGTreeCover",
+					"sid": 153947709966995,
 					"parameters": {
-						"x": "Self.X - (CarChase_GameManager.BG_Speed + Self.Parralax)"
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
 					}
 				},
 				{
 					"id": "set-x",
-					"objectClass": "CarChase_Road",
+					"objectClass": "CarChase_BGRoad",
 					"sid": 966993043752090,
+					"parameters": {
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGGrass2",
+					"sid": 127340739417762,
+					"parameters": {
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGTreeCover2",
+					"sid": 866644654583237,
+					"parameters": {
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGRoad2",
+					"sid": 471925632019221,
 					"parameters": {
 						"x": "Self.X - CarChase_GameManager.BG_Speed"
 					}
@@ -439,8 +463,8 @@
 			"conditions": [
 				{
 					"id": "compare-x",
-					"objectClass": "CarChase_Grass",
-					"sid": 414254985275462,
+					"objectClass": "CarChase_BGRoad",
+					"sid": 960428242425595,
 					"parameters": {
 						"comparison": 3,
 						"x-co-ordinate": "-4000"
@@ -450,22 +474,38 @@
 			"actions": [
 				{
 					"id": "set-x",
-					"objectClass": "CarChase_Grass",
-					"sid": 100173463896151,
+					"objectClass": "CarChase_BGRoad",
+					"sid": 480943940007454,
+					"parameters": {
+						"x": "4000 - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGGrass",
+					"sid": 528017244544520,
+					"parameters": {
+						"x": "4000 - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGTreeCover",
+					"sid": 167520818597710,
 					"parameters": {
 						"x": "4000 - CarChase_GameManager.BG_Speed"
 					}
 				}
 			],
-			"sid": 742222447027985
+			"sid": 413811760502106
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "compare-x",
-					"objectClass": "CarChase_Road",
-					"sid": 985950972456580,
+					"objectClass": "CarChase_BGRoad2",
+					"sid": 367903203961516,
 					"parameters": {
 						"comparison": 3,
 						"x-co-ordinate": "-4000"
@@ -475,39 +515,30 @@
 			"actions": [
 				{
 					"id": "set-x",
-					"objectClass": "CarChase_Road",
-					"sid": 690589015059155,
+					"objectClass": "CarChase_BGRoad2",
+					"sid": 309507155778925,
+					"parameters": {
+						"x": "4000 - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGGrass2",
+					"sid": 416760821151202,
+					"parameters": {
+						"x": "4000 - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "CarChase_BGTreeCover2",
+					"sid": 521391352049846,
 					"parameters": {
 						"x": "4000 - CarChase_GameManager.BG_Speed"
 					}
 				}
 			],
-			"sid": 655579851139042
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-x",
-					"objectClass": "CarChase_TreeCover",
-					"sid": 154305832819656,
-					"parameters": {
-						"comparison": 3,
-						"x-co-ordinate": "-4000"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-x",
-					"objectClass": "CarChase_TreeCover",
-					"sid": 211512139936730,
-					"parameters": {
-						"x": "4000 - (CarChase_GameManager.BG_Speed+Self.Parralax)"
-					}
-				}
-			],
-			"sid": 715342185257535
+			"sid": 834129503046900
 		},
 		{
 			"eventType": "block",

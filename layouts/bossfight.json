@@ -6,7 +6,85 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "CarChase_Grass",
+					"type": "CarChase_BGGrass2",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 14,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 4000,
+						"y": 0,
+						"width": 4000,
+						"height": 1003,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_BGRoad2",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 71,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 4000,
+						"y": 56,
+						"width": 4000,
+						"height": 850,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_BGGrass",
 					"properties": {
 						"initially-visible": true,
 						"origin": "top-left",
@@ -20,7 +98,13 @@
 					},
 					"uid": 9,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"world": {
 						"x": 0,
 						"y": 0,
@@ -39,7 +123,7 @@
 					}
 				},
 				{
-					"type": "CarChase_Road",
+					"type": "CarChase_BGRoad",
 					"properties": {
 						"initially-visible": true,
 						"origin": "top-left",
@@ -53,7 +137,13 @@
 					},
 					"uid": 12,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"world": {
 						"x": 0,
 						"y": 56,
@@ -599,72 +689,6 @@
 					}
 				},
 				{
-					"type": "CarChase_Grass",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 10,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 4000,
-						"y": 5.684341886080802e-14,
-						"width": 4000,
-						"height": 1003,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_Road",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 14,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 4000,
-						"y": 56,
-						"width": 4000,
-						"height": 849,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Bossfight_tread",
 					"properties": {
 						"initially-visible": true,
@@ -1204,7 +1228,7 @@
 					}
 				},
 				{
-					"type": "CarChase_TreeCover",
+					"type": "CarChase_BGTreeCover",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -1212,13 +1236,19 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 99,
+					"uid": 98,
 					"instanceVariables": {
 						"Parralax": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"world": {
-						"x": 4000,
+						"x": 0,
 						"y": 0,
 						"width": 4000,
 						"height": 1000,
@@ -1235,7 +1265,7 @@
 					}
 				},
 				{
-					"type": "CarChase_TreeCover",
+					"type": "CarChase_BGTreeCover2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -1243,13 +1273,19 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 98,
+					"uid": 72,
 					"instanceVariables": {
-						"Parralax": 1
+						"Parralax": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"world": {
-						"x": 0,
+						"x": 4000,
 						"y": 0,
 						"width": 4000,
 						"height": 1000,

@@ -1,5 +1,5 @@
 {
-	"name": "CarChase_TreeCover",
+	"name": "CarChase_BGTreeCover",
 	"plugin-id": "Sprite",
 	"sid": 156004269876496,
 	"isGlobal": false,
@@ -11,7 +11,13 @@
 			"sid": 117754873007707
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 382139421378759
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
