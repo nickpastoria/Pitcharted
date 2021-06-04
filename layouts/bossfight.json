@@ -20,7 +20,13 @@
 					},
 					"uid": 9,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"world": {
 						"x": 0,
 						"y": 0,
@@ -613,7 +619,13 @@
 					},
 					"uid": 10,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"world": {
 						"x": 4000,
 						"y": 5.684341886080802e-14,
@@ -1307,10 +1319,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 2381.972705669141,
-						"y": 399.97270566914085,
-						"width": 70.36807808353359,
-						"height": 70.36807808353359,
+						"x": 2408.5409205758338,
+						"y": 426.54092057583364,
+						"width": 123.5045078969192,
+						"height": 123.5045078969192,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1385,6 +1397,35 @@
 							1,
 							1
 						]
+					}
+				},
+				{
+					"type": "CarChase_BGLooper",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 71,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2059,
+						"y": -279,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],

@@ -53,7 +53,13 @@
 					},
 					"uid": 46,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"world": {
 						"x": 4000,
 						"y": 5.684341886080802e-14,
@@ -119,7 +125,13 @@
 					},
 					"uid": 21,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"world": {
 						"x": 0,
 						"y": 0,
@@ -701,7 +713,7 @@
 					},
 					"uid": 52,
 					"instanceVariables": {
-						"MaxEnemies": 20,
+						"MaxEnemies": 30,
 						"EnemiesLeft": 0,
 						"EnemiesAlive": 0,
 						"BG_Speed": 7,
@@ -1035,7 +1047,7 @@
 					"instanceVariables": {
 						"Health": 5,
 						"Dead": false,
-						"MaxHealth": 10
+						"MaxHealth": 4
 					},
 					"behaviors": {
 						"DestroyOutsideLayout": {
