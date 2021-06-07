@@ -1,0 +1,15 @@
+{
+	"name": "CarChase_AmmoText",
+	"plugin-id": "Text",
+	"sid": 163163808560091,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 796181732490277
+		}
+	],
+	"effectTypes": []
+}
