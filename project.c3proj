@@ -307,7 +307,10 @@
 			"Bossfight_air",
 			"CarChase_BGTreeCover2",
 			"CarChase_BGRoad2",
-			"CarChase_BGGrass2"
+			"CarChase_BGGrass2",
+			"Background",
+			"MainMenuBackground",
+			"Cutscene_Jeep"
 		],
 		"subfolders": []
 	},
