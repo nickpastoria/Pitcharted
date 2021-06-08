@@ -311,7 +311,8 @@
 			"Background",
 			"MainMenuBackground",
 			"Cutscene_Jeep",
-			"Pothole"
+			"Pothole",
+			"Endscreen"
 		],
 		"subfolders": []
 	},
