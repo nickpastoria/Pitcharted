@@ -18,10 +18,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 712,
-						"y": 359,
-						"width": 3933.2519123563993,
-						"height": 1284.862291369757,
+						"x": 997,
+						"y": 367,
+						"width": 2318.407102522623,
+						"height": 1304.103995168975,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -38,7 +38,7 @@
 					"type": "Temp_Cutscene_Sprite2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -47,12 +47,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1734,
-						"y": 531,
-						"width": 422.76130909003405,
-						"height": 1082.4547804173399,
-						"originX": 0.5054945054945055,
-						"originY": 0.4678111587982833,
+						"x": -18,
+						"y": -202,
+						"width": 256.8972337984912,
+						"height": 664.9104874784476,
+						"originX": -5.177316628008672,
+						"originY": -0.72480868477991,
 						"color": [
 							1,
 							1,
@@ -67,7 +67,7 @@
 					"type": "Temp_Cutscene_Sprite1",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -76,12 +76,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 242,
-						"y": 561,
-						"width": 417.31534023698936,
-						"height": 1068.5107063210826,
-						"originX": 0.5054945054945055,
-						"originY": 0.4678111587982833,
+						"x": 2121,
+						"y": -197,
+						"width": 336.8233720257288,
+						"height": 688.2912384873588,
+						"originX": 4.909745736305282,
+						"originY": -0.5948300650674085,
 						"color": [
 							1,
 							1,

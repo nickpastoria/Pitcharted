@@ -310,6 +310,9 @@
 			"CarChase_BGGrass2",
 			"Pothole",
 			"CarChase_AmmoText"
+			"Background",
+			"MainMenuBackground",
+			"Cutscene_Jeep"
 		],
 		"subfolders": []
 	},
