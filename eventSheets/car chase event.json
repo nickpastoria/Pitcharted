@@ -201,6 +201,14 @@
 				},
 				{
 					"id": "set-x",
+					"objectClass": "Pothole",
+					"sid": 470143298584953,
+					"parameters": {
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
 					"objectClass": "CarChase_BGRoad",
 					"sid": 966993043752090,
 					"parameters": {
@@ -2549,6 +2557,44 @@
 				}
 			],
 			"sid": 489905272390694
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 577281489361082,
+					"parameters": {
+						"interval-seconds": "1.1"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 678211844014539,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"Obstacles\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 248081374633727,
+					"parameters": {
+						"object-to-create": "Pothole",
+						"layer": "0",
+						"x": "3650",
+						"y": "random(160,815)",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 328154669435682
 		}
 	],
 	"sid": 210743918402358
