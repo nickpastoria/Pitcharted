@@ -35,6 +35,35 @@
 					}
 				},
 				{
+					"type": "Cutscene_Jeep",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 73,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1892,
+						"y": 386,
+						"width": 770.2886278478293,
+						"height": 787.7951875716435,
+						"originX": 0.5045454545454545,
+						"originY": 0.28888888888888886,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "Temp_Cutscene_Sprite2",
 					"properties": {
 						"initially-visible": true,
