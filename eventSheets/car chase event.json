@@ -193,6 +193,14 @@
 				},
 				{
 					"id": "set-x",
+					"objectClass": "Pothole",
+					"sid": 179129995093370,
+					"parameters": {
+						"x": "Self.X - CarChase_GameManager.BG_Speed"
+					}
+				},
+				{
+					"id": "set-x",
 					"objectClass": "CarChase_BGTreeCover",
 					"sid": 153947709966995,
 					"parameters": {
@@ -1280,6 +1288,14 @@
 					"parameters": {
 						"object": "CarChase_EnemyBullet"
 					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 664512067559793,
+					"parameters": {
+						"object": "Pothole"
+					}
 				}
 			],
 			"actions": [
@@ -1356,7 +1372,8 @@
 					],
 					"sid": 134811523385045
 				}
-			]
+			],
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -2540,6 +2557,44 @@
 				}
 			],
 			"sid": 489905272390694
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 918102704053438,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"Obstacles\""
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 882512786460701,
+					"parameters": {
+						"interval-seconds": "1.1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 653697854126477,
+					"parameters": {
+						"object-to-create": "Pothole",
+						"layer": "0",
+						"x": "3650",
+						"y": "random(160,815)",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 184902182799134
 		}
 	],
 	"sid": 210743918402358

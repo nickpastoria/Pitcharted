@@ -54,10 +54,10 @@
 				{
 					"id": "push",
 					"objectClass": "Temp_Cutscene_Array",
-					"sid": 902800594514510,
+					"sid": 367112282615994,
 					"parameters": {
 						"where": "back",
-						"value": "\"Bently: QUICK HOP IN MY JEEP!\"",
+						"value": "\"Bently: QUICK HOP IN MY JEEPl\"",
 						"axis": "x"
 					}
 				},
