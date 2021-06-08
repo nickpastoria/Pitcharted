@@ -310,7 +310,8 @@
 			"CarChase_BGGrass2",
 			"Background",
 			"MainMenuBackground",
-			"Cutscene_Jeep"
+			"Cutscene_Jeep",
+			"Pothole"
 		],
 		"subfolders": []
 	},
@@ -330,7 +331,8 @@
 			"BossFight",
 			"Main Menu",
 			"Final Cutscene",
-			"Ending"
+			"Ending",
+			"Obstacles"
 		],
 		"subfolders": []
 	},

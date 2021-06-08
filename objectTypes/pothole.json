@@ -1,0 +1,57 @@
+{
+	"name": "Pothole",
+	"plugin-id": "Sprite",
+	"sid": 537288952604719,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 507,
+						"height": 598,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 733208,
+						"collisionPoly": {
+							"points": [
+								0.34714003944773203,
+								0.2625418060200669,
+								0.5118343195266273,
+								0.1354515050167224,
+								0.7357001972386581,
+								0.1789297658862876,
+								0.8303747534516761,
+								0.4765886287625418,
+								0.7495069033530569,
+								0.7458193979933111,
+								0.5315581854043394,
+								0.8628762541806021,
+								0.33530571992110453,
+								0.7140468227424749,
+								0.3037475345167653,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 254917615235089,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

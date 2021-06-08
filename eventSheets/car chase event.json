@@ -1280,6 +1280,14 @@
 					"parameters": {
 						"object": "CarChase_EnemyBullet"
 					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "CarChase_PlayerCar",
+					"sid": 674747773250220,
+					"parameters": {
+						"object": "Pothole"
+					}
 				}
 			],
 			"actions": [
@@ -1356,7 +1364,8 @@
 					],
 					"sid": 134811523385045
 				}
-			]
+			],
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
