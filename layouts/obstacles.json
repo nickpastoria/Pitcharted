@@ -1,8 +1,8 @@
 {
-	"name": "Car Chase",
+	"name": "Obstacles",
 	"layers": [
 		{
-			"name": "Game",
+			"name": "Layer 0",
 			"overriden": 0,
 			"instances": [
 				{
@@ -18,7 +18,7 @@
 						"image-scale-y": 1,
 						"image-angle": 0
 					},
-					"uid": 25,
+					"uid": 115,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -45,39 +45,6 @@
 					}
 				},
 				{
-					"type": "CarChase_Skid",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 53,
-					"instanceVariables": {},
-					"behaviors": {
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 1661.8771900826443,
-						"y": -10.161735537191475,
-						"width": 14,
-						"height": 14,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							0.56
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "CarChase_BGGrass",
 					"properties": {
 						"initially-visible": true,
@@ -90,7 +57,7 @@
 						"image-scale-y": 1,
 						"image-angle": 0
 					},
-					"uid": 21,
+					"uid": 114,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -117,6 +84,33 @@
 					}
 				},
 				{
+					"type": "CarChase_ReloadBar",
+					"properties": {
+						"value": 0,
+						"maximum": 100,
+						"tooltip": "",
+						"initially-visible": false,
+						"id": ""
+					},
+					"uid": 75,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1219,
+						"y": 420,
+						"width": 200,
+						"height": 25,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
 					"type": "CarChase_BGRoad",
 					"properties": {
 						"initially-visible": true,
@@ -129,7 +123,7 @@
 						"image-scale-y": 1,
 						"image-angle": 0
 					},
-					"uid": 24,
+					"uid": 10,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {
@@ -156,7 +150,46 @@
 					}
 				},
 				{
-					"type": "CarChase_CarSpawner",
+					"type": "CarChase_BGRoad2",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 76,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 4000,
+						"y": 56,
+						"width": 4000,
+						"height": 850,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_GameManager",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -164,15 +197,32 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 36,
-					"instanceVariables": {},
+					"uid": 121,
+					"instanceVariables": {
+						"MaxEnemies": 20,
+						"EnemiesLeft": 0,
+						"EnemiesAlive": 0,
+						"BG_Speed": 7,
+						"FireRate": 7,
+						"MaxAmmo": 20,
+						"Ammo": 0,
+						"MaxEnemiesOnScreen": 1,
+						"EnemiesKilled": 0,
+						"MaxHealth": 6,
+						"Health": 0,
+						"EnemyIncrease1": 3,
+						"EnemyIncrease2": 7,
+						"EnemyIncrease3": 11,
+						"BossPhase": 3,
+						"nextLevel": "Cutscene 2"
+					},
 					"behaviors": {},
 					"world": {
-						"x": 3666,
-						"y": 310,
-						"width": 45,
-						"height": 42,
-						"originX": 0.4888888888888889,
+						"x": 105,
+						"y": -123,
+						"width": 52.53570214625478,
+						"height": 52.53570214625478,
+						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -185,23 +235,48 @@
 					}
 				},
 				{
-					"type": "CarChase_CarSpawner",
+					"type": "CarChase_Smoke",
 					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
+						"rate": 10,
+						"spray-cone": 10,
+						"type": "continuous-spray",
+						"object": -1,
+						"live-preview": false,
+						"speed": 500,
+						"size": 32,
+						"opacity": 100,
+						"grow-rate": 20,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 1
 					},
-					"uid": 37,
+					"uid": 123,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Pin": {
+							"properties": {
+								"destroy": true
+							}
+						}
+					},
 					"world": {
-						"x": 3672,
-						"y": 401,
-						"width": 45,
-						"height": 42,
-						"originX": 0.4888888888888889,
+						"x": 1058,
+						"y": -148,
+						"width": 56.97086922186465,
+						"height": 56.97086922186465,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -209,65 +284,7 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_CarSpawner",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 38,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 3670,
-						"y": 502,
-						"width": 45,
-						"height": 42,
-						"originX": 0.4888888888888889,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_CarSpawner",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 39,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 3672,
-						"y": 596,
-						"width": 45,
-						"height": 42,
-						"originX": 0.4888888888888889,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
+						"angle": 3.141592653589793,
 						"zElevation": 0
 					}
 				},
@@ -280,7 +297,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 32,
+					"uid": 127,
 					"instanceVariables": {
 						"distanceToCar": 500,
 						"FollowCar": false
@@ -323,12 +340,12 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 33,
+					"uid": 128,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 69,
-						"y": 351,
+						"x": 74,
+						"y": 361,
 						"width": 45,
 						"height": 42,
 						"originX": 0.4888888888888889,
@@ -339,7 +356,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 6.2638795805204905,
 						"zElevation": 0
 					}
 				},
@@ -352,12 +369,12 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 34,
+					"uid": 129,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
 						"x": 75,
-						"y": 442,
+						"y": 446,
 						"width": 45,
 						"height": 42,
 						"originX": 0.4888888888888889,
@@ -381,41 +398,12 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 35,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 73,
-						"y": 543,
-						"width": 45,
-						"height": 42,
-						"originX": 0.4888888888888889,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_CarSpawner",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 40,
+					"uid": 130,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
 						"x": 75,
-						"y": 637,
+						"y": 537,
 						"width": 45,
 						"height": 42,
 						"originX": 0.4888888888888889,
@@ -431,31 +419,51 @@
 					}
 				},
 				{
-					"type": "CarChase_Wall",
+					"type": "CarChase_CarSpawner",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 42,
-					"instanceVariables": {
-						"DisableAtEnd": false
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "Wall"
-							}
-						}
-					},
+					"uid": 131,
+					"instanceVariables": {},
+					"behaviors": {},
 					"world": {
-						"x": 2141,
-						"y": 906,
-						"width": 2742,
-						"height": 104,
+						"x": 75,
+						"y": 635,
+						"width": 45,
+						"height": 42,
+						"originX": 0.4888888888888889,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.00017627357476501793,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_ExitVolume",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 134,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3535,
+						"y": 485,
+						"width": 934,
+						"height": 1056,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -469,6 +477,151 @@
 					}
 				},
 				{
+					"type": "CarChase_RoadSpawner",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 135,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3766,
+						"y": 451,
+						"width": 53,
+						"height": 40,
+						"originX": 0.4716981132075472,
+						"originY": 0.475,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_CarSpawner",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 136,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3649,
+						"y": 321,
+						"width": 45,
+						"height": 42,
+						"originX": 0.4888888888888889,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_CarSpawner",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 137,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3652,
+						"y": 425,
+						"width": 45,
+						"height": 42,
+						"originX": 0.4888888888888889,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_CarSpawner",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 138,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3657,
+						"y": 517,
+						"width": 45,
+						"height": 42,
+						"originX": 0.4888888888888889,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.275499719823016,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_CarSpawner",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 139,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3659,
+						"y": 609,
+						"width": 45,
+						"height": 42,
+						"originX": 0.4888888888888889,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "CarChase_Wall",
 					"properties": {
 						"initially-visible": false,
@@ -477,7 +630,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 43,
+					"uid": 140,
 					"instanceVariables": {
 						"DisableAtEnd": false
 					},
@@ -490,7 +643,7 @@
 						}
 					},
 					"world": {
-						"x": 2137,
+						"x": 2029,
 						"y": 70,
 						"width": 2742,
 						"height": 104,
@@ -515,7 +668,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 44,
+					"uid": 143,
 					"instanceVariables": {
 						"DisableAtEnd": false
 					},
@@ -528,8 +681,46 @@
 						}
 					},
 					"world": {
-						"x": 965,
-						"y": 488,
+						"x": 2078,
+						"y": 904,
+						"width": 2742,
+						"height": 104,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_Wall",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 144,
+					"instanceVariables": {
+						"DisableAtEnd": false
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Wall"
+							}
+						}
+					},
+					"world": {
+						"x": 862,
+						"y": 493,
 						"width": 129,
 						"height": 1125,
 						"originX": 0.5,
@@ -553,7 +744,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 45,
+					"uid": 145,
 					"instanceVariables": {
 						"DisableAtEnd": true
 					},
@@ -566,8 +757,8 @@
 						}
 					},
 					"world": {
-						"x": 3060,
-						"y": 501,
+						"x": 3052,
+						"y": 492,
 						"width": 129,
 						"height": 1057,
 						"originX": 0.5,
@@ -583,7 +774,7 @@
 					}
 				},
 				{
-					"type": "CarChase_ExitVolume",
+					"type": "Pothole",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -591,285 +782,37 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 26,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 3535,
-						"y": 485,
-						"width": 934,
-						"height": 1056,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_ReloadBar",
-					"properties": {
-						"value": 0,
-						"maximum": 100,
-						"tooltip": "",
-						"initially-visible": false,
-						"id": ""
-					},
-					"uid": 27,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 1219,
-						"y": 420,
-						"width": 200,
-						"height": 25,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
-					"type": "CarChase_AmmoBar",
-					"properties": {
-						"value": 0,
-						"maximum": 100,
-						"tooltip": "",
-						"initially-visible": true,
-						"id": ""
-					},
-					"uid": 50,
+					"uid": 149,
 					"instanceVariables": {},
 					"behaviors": {
-						"Anchor": {
+						"Solid": {
 							"properties": {
-								"left-edge": "window-left",
-								"top-edge": "window-top",
-								"right-edge": "none",
-								"bottom-edge": "none",
-								"enabled": true
+								"enabled": false,
+								"tags": ""
 							}
-						}
-					},
-					"world": {
-						"x": 180,
-						"y": 873,
-						"width": 548,
-						"height": 48,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
-					"type": "CarChase_GameManager",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 52,
-					"instanceVariables": {
-						"MaxEnemies": 20,
-						"EnemiesLeft": 0,
-						"EnemiesAlive": 0,
-						"BG_Speed": 7,
-						"FireRate": 7,
-						"MaxAmmo": 20,
-						"Ammo": 0,
-						"MaxEnemiesOnScreen": 1,
-						"EnemiesKilled": 0,
-						"MaxHealth": 6,
-						"Health": 0,
-						"EnemyIncrease1": 3,
-						"EnemyIncrease2": 7,
-						"EnemyIncrease3": 11,
-						"BossPhase": 3,
-						"nextLevel": "Obstacles"
-					},
-					"behaviors": {},
-					"world": {
-						"x": 100,
-						"y": -90,
-						"width": 52.53570214625478,
-						"height": 52.53570214625478,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_Smoke",
-					"properties": {
-						"rate": 10,
-						"spray-cone": 10,
-						"type": "continuous-spray",
-						"object": -1,
-						"live-preview": false,
-						"speed": 500,
-						"size": 32,
-						"opacity": 100,
-						"grow-rate": 20,
-						"x-randomiser": 0,
-						"y-randomiser": 0,
-						"initial-speed-randomiser": 0,
-						"size-randomiser": 0,
-						"grow-rate-randomiser": 0,
-						"acceleration": -150,
-						"gravity": 0,
-						"angle-randomiser": 0,
-						"life-speed-randomiser": 800,
-						"opacity-randomiser": 0,
-						"destroy-mode": "fade-to-invisible",
-						"timeout": 1
-					},
-					"uid": 54,
-					"instanceVariables": {},
-					"behaviors": {
-						"DestroyOutsideLayout": {
-							"properties": {}
 						},
-						"Pin": {
-							"properties": {
-								"destroy": true
-							}
-						}
-					},
-					"world": {
-						"x": 1346,
-						"y": -150,
-						"width": 56.97086922186465,
-						"height": 56.97086922186465,
-						"originX": 0,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 3.141592653589793,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_RoadSpawner",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 22,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 3766,
-						"y": 451,
-						"width": 53,
-						"height": 40,
-						"originX": 0.4716981132075472,
-						"originY": 0.475,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CarChase_Health",
-					"properties": {
-						"value": 0,
-						"maximum": 100,
-						"tooltip": "",
-						"initially-visible": true,
-						"id": ""
-					},
-					"uid": 48,
-					"instanceVariables": {},
-					"behaviors": {
-						"Anchor": {
-							"properties": {
-								"left-edge": "window-left",
-								"top-edge": "window-top",
-								"right-edge": "none",
-								"bottom-edge": "none",
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 185,
-						"y": 25,
-						"width": 548,
-						"height": 58,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
-					"type": "CarChase_BGRoad2",
-					"properties": {
-						"initially-visible": true,
-						"origin": "top-left",
-						"wrap-horizontal": "repeat",
-						"wrap-vertical": "repeat",
-						"image-offset-x": 0,
-						"image-offset-y": 0,
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"image-angle": 0
-					},
-					"uid": 56,
-					"instanceVariables": {},
-					"behaviors": {
 						"Pin": {
 							"properties": {
 								"destroy": false
 							}
+						},
+						"Anchor": {
+							"properties": {
+								"left-edge": "window-left",
+								"top-edge": "window-top",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": false
+							}
 						}
 					},
 					"world": {
-						"x": 4000,
-						"y": 56,
-						"width": 4000,
-						"height": 850,
-						"originX": 0,
-						"originY": 0,
+						"x": 2026,
+						"y": -239,
+						"width": 179.30487804878047,
+						"height": 231.38962605548852,
+						"originX": 0.5069033530571992,
+						"originY": 0.3720735785953177,
 						"color": [
 							1,
 							1,
@@ -881,7 +824,7 @@
 					}
 				},
 				{
-					"type": "CarChase_EnemyBulletDummy",
+					"type": "CarChase_PlayerCar",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -889,153 +832,59 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 67,
+					"uid": 73,
 					"instanceVariables": {},
 					"behaviors": {
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 1880,
-						"y": -232,
-						"width": 23,
-						"height": 23,
-						"originX": 0.4782608695652174,
-						"originY": 0.4782608695652174,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 1
-					}
-				},
-				{
-					"type": "CarChase_EnemyBullet",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 28,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
+						"8Direction": {
 							"properties": {
-								"speed": 400,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
+								"max-speed": 550,
+								"acceleration": 1000,
+								"deceleration": 1000,
+								"directions": "dir-8",
+								"set-angle": "no",
+								"default-controls": false,
 								"enabled": true
 							}
 						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 1809.8729758823972,
-						"y": -275.12702411760284,
-						"width": 29.336459074316476,
-						"height": 29.336459074316476,
-						"originX": 0.4782608695652174,
-						"originY": 0.4782608695652174,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 1
-					}
-				},
-				{
-					"type": "CarChase_Enemy",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 58,
-					"instanceVariables": {},
-					"behaviors": {
-						"DestroyOutsideLayout": {
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						},
+						"Flash": {
 							"properties": {}
 						},
-						"Pin": {
+						"Solid": {
 							"properties": {
-								"destroy": true
+								"enabled": true,
+								"tags": "Player"
 							}
-						}
-					},
-					"world": {
-						"x": 2534,
-						"y": -127,
-						"width": 67.80446206447724,
-						"height": 44.750944962554975,
-						"originX": 0.28,
-						"originY": 0.5575757575757576,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 1
-					}
-				},
-				{
-					"type": "carChase_dummy",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 77,
-					"instanceVariables": {
-						"Health": 0,
-						"Dead": false,
-						"MaxHealth": 0
-					},
-					"behaviors": {
-						"DestroyOutsideLayout": {
+						},
+						"Timer": {
 							"properties": {}
 						},
 						"Physics": {
 							"properties": {
 								"immovable": false,
 								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
-								"density": 15,
-								"friction": 0.5,
-								"elasticity": 0.01,
-								"linear-damping": 0.75,
-								"angular-damping": 1,
+								"prevent-rotation": true,
+								"density": 10,
+								"friction": 0,
+								"elasticity": 0,
+								"linear-damping": 0,
+								"angular-damping": 0,
 								"bullet": false,
 								"enabled": true
 							}
 						}
 					},
 					"world": {
-						"x": 1135,
-						"y": -301,
-						"width": 111.49090099999998,
-						"height": 60.390905,
-						"originX": 0.5104166666666666,
-						"originY": 0.4807692307692308,
+						"x": 1246,
+						"y": 508,
+						"width": 119.172248,
+						"height": 65.793012,
+						"originX": 0.2708333333333333,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1055,7 +904,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 29,
+					"uid": 118,
 					"instanceVariables": {
 						"Health": 5,
 						"Dead": false,
@@ -1120,7 +969,7 @@
 					}
 				},
 				{
-					"type": "CarChase_crosshair",
+					"type": "carChase_dummy",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -1128,16 +977,76 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 30,
-					"instanceVariables": {},
-					"behaviors": {},
+					"uid": 119,
+					"instanceVariables": {
+						"Health": 0,
+						"Dead": false,
+						"MaxHealth": 0
+					},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Physics": {
+							"properties": {
+								"immovable": false,
+								"collision-mask": "use-collision-polygon",
+								"prevent-rotation": false,
+								"density": 15,
+								"friction": 0.5,
+								"elasticity": 0.01,
+								"linear-damping": 0.75,
+								"angular-damping": 1,
+								"bullet": false,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
-						"x": 2830,
-						"y": 395,
-						"width": 124.42266674525183,
-						"height": 124.42266674525183,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 792,
+						"y": -123,
+						"width": 111.49090099999998,
+						"height": 60.390905,
+						"originX": 0.5104166666666666,
+						"originY": 0.4807692307692308,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "CarChase_Enemy",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 120,
+					"instanceVariables": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Pin": {
+							"properties": {
+								"destroy": true
+							}
+						}
+					},
+					"world": {
+						"x": 1490,
+						"y": -145,
+						"width": 67.80446206447724,
+						"height": 44.750944962554975,
+						"originX": 0.28,
+						"originY": 0.5575757575757576,
 						"color": [
 							1,
 							1,
@@ -1157,7 +1066,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 31,
+					"uid": 124,
 					"instanceVariables": {},
 					"behaviors": {
 						"Bullet": {
@@ -1176,8 +1085,8 @@
 						}
 					},
 					"world": {
-						"x": 963,
-						"y": -108,
+						"x": 580,
+						"y": -120,
 						"width": 20,
 						"height": 22,
 						"originX": 0.5,
@@ -1194,7 +1103,7 @@
 					}
 				},
 				{
-					"type": "CarChase_PlayerCar",
+					"type": "CarChase_EnemyBullet",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -1202,59 +1111,31 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 23,
+					"uid": 125,
 					"instanceVariables": {},
 					"behaviors": {
-						"8Direction": {
+						"Bullet": {
 							"properties": {
-								"max-speed": 550,
-								"acceleration": 1000,
-								"deceleration": 1000,
-								"directions": "dir-8",
-								"set-angle": "no",
-								"default-controls": false,
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
 								"enabled": true
 							}
 						},
-						"BoundToLayout": {
-							"properties": {
-								"bound-by": "edge"
-							}
-						},
-						"Flash": {
+						"DestroyOutsideLayout": {
 							"properties": {}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "Player"
-							}
-						},
-						"Timer": {
-							"properties": {}
-						},
-						"Physics": {
-							"properties": {
-								"immovable": false,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": true,
-								"density": 10,
-								"friction": 0,
-								"elasticity": 0,
-								"linear-damping": 0,
-								"angular-damping": 0,
-								"bullet": false,
-								"enabled": true
-							}
 						}
 					},
 					"world": {
-						"x": 1246,
-						"y": 508,
-						"width": 119.17224810545045,
-						"height": 65.79301197488411,
-						"originX": 0.2708333333333333,
-						"originY": 0.5,
+						"x": 1651,
+						"y": -287,
+						"width": 29.336459074316476,
+						"height": 29.336459074316476,
+						"originX": 0.4782608695652174,
+						"originY": 0.4782608695652174,
 						"color": [
 							1,
 							1,
@@ -1266,47 +1147,28 @@
 					}
 				},
 				{
-					"type": "CarChase_HealthText",
+					"type": "CarChase_EnemyBulletDummy",
 					"properties": {
-						"text": "Health:",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 33.20000000000015,
-						"line-height": 0,
-						"bold": true,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
 						"initially-visible": true,
-						"origin": "top-left"
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
 					},
-					"uid": 49,
+					"uid": 126,
 					"instanceVariables": {},
 					"behaviors": {
-						"Anchor": {
-							"properties": {
-								"left-edge": "window-left",
-								"top-edge": "window-top",
-								"right-edge": "none",
-								"bottom-edge": "none",
-								"enabled": true
-							}
+						"DestroyOutsideLayout": {
+							"properties": {}
 						}
 					},
 					"world": {
-						"x": 30,
-						"y": 36,
-						"width": 494,
-						"height": 51,
-						"originX": 0,
-						"originY": 0,
+						"x": 1710,
+						"y": -220,
+						"width": 23,
+						"height": 23,
+						"originX": 0.4782608695652174,
+						"originY": 0.4782608695652174,
 						"color": [
 							1,
 							1,
@@ -1314,59 +1176,7 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 2
-					}
-				},
-				{
-					"type": "CarChase_HealthText",
-					"properties": {
-						"text": "Ammo:",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 33.20000000000015,
-						"line-height": 0,
-						"bold": true,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left"
-					},
-					"uid": 51,
-					"instanceVariables": {},
-					"behaviors": {
-						"Anchor": {
-							"properties": {
-								"left-edge": "window-left",
-								"top-edge": "window-top",
-								"right-edge": "none",
-								"bottom-edge": "none",
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 29,
-						"y": 858,
-						"width": 548,
-						"height": 58,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 2
+						"zElevation": 1
 					}
 				},
 				{
@@ -1378,7 +1188,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 57,
+					"uid": 122,
 					"instanceVariables": {},
 					"behaviors": {
 						"Fade": {
@@ -1393,8 +1203,8 @@
 						}
 					},
 					"world": {
-						"x": 1648,
-						"y": -138,
+						"x": 1216,
+						"y": -120,
 						"width": 149.4880496388461,
 						"height": 149.4880496388461,
 						"originX": 0.5,
@@ -1418,7 +1228,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 41,
+					"uid": 132,
 					"instanceVariables": {},
 					"behaviors": {
 						"Flash": {
@@ -1451,7 +1261,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 46,
+					"uid": 113,
 					"instanceVariables": {
 						"Parralax": 0
 					},
@@ -1488,7 +1298,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 55,
+					"uid": 99,
 					"instanceVariables": {
 						"Parralax": 1
 					},
@@ -1503,7 +1313,7 @@
 						"x": 0,
 						"y": 0,
 						"width": 4000,
-						"height": 1000,
+						"height": 1002.9999999999999,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -1517,7 +1327,7 @@
 					}
 				}
 			],
-			"sid": 736296461812608,
+			"sid": 371537741273733,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -1527,12 +1337,12 @@
 				1
 			],
 			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
+				1,
+				1,
+				1,
 				1
 			],
-			"isTransparent": true,
+			"isTransparent": false,
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,
@@ -1542,10 +1352,245 @@
 			"global": false
 		},
 		{
-			"name": "Hud",
+			"name": "HUD",
 			"overriden": 0,
-			"instances": [],
-			"sid": 947493678085140,
+			"instances": [
+				{
+					"type": "CarChase_ReloadBar",
+					"properties": {
+						"value": 0,
+						"maximum": 100,
+						"tooltip": "",
+						"initially-visible": false,
+						"id": ""
+					},
+					"uid": 116,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1219,
+						"y": 420,
+						"width": 200,
+						"height": 25,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "CarChase_crosshair",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 133,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2830,
+						"y": 395,
+						"width": 124.42266674525183,
+						"height": 124.42266674525183,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarChase_Health",
+					"properties": {
+						"value": 0,
+						"maximum": 100,
+						"tooltip": "",
+						"initially-visible": true,
+						"id": ""
+					},
+					"uid": 74,
+					"instanceVariables": {},
+					"behaviors": {
+						"Anchor": {
+							"properties": {
+								"left-edge": "window-left",
+								"top-edge": "window-top",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 185,
+						"y": 25,
+						"width": 548,
+						"height": 58,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "CarChase_AmmoBar",
+					"properties": {
+						"value": 0,
+						"maximum": 100,
+						"tooltip": "",
+						"initially-visible": true,
+						"id": ""
+					},
+					"uid": 117,
+					"instanceVariables": {},
+					"behaviors": {
+						"Anchor": {
+							"properties": {
+								"left-edge": "window-left",
+								"top-edge": "window-top",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 180,
+						"y": 873,
+						"width": 548,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "CarChase_HealthText",
+					"properties": {
+						"text": "Health:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 33.20000000000015,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 141,
+					"instanceVariables": {},
+					"behaviors": {
+						"Anchor": {
+							"properties": {
+								"left-edge": "window-left",
+								"top-edge": "window-top",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 39,
+						"y": 27,
+						"width": 494,
+						"height": 51,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "CarChase_AmmoText",
+					"properties": {
+						"text": "Ammo:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 33.2,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 146,
+					"instanceVariables": {},
+					"behaviors": {
+						"Anchor": {
+							"properties": {
+								"left-edge": "window-left",
+								"top-edge": "window-top",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 20,
+						"y": 872,
+						"width": 498,
+						"height": 52,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				}
+			],
+			"sid": 558646536011872,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -1570,7 +1615,7 @@
 			"global": false
 		}
 	],
-	"sid": 473098134909112,
+	"sid": 765946698691191,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 4000,

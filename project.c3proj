@@ -307,7 +307,9 @@
 			"Bossfight_air",
 			"CarChase_BGTreeCover2",
 			"CarChase_BGRoad2",
-			"CarChase_BGGrass2"
+			"CarChase_BGGrass2",
+			"Pothole",
+			"CarChase_AmmoText"
 		],
 		"subfolders": []
 	},
@@ -327,7 +329,8 @@
 			"BossFight",
 			"Main Menu",
 			"Final Cutscene",
-			"Ending"
+			"Ending",
+			"Obstacles"
 		],
 		"subfolders": []
 	},
