@@ -1734,6 +1734,16 @@
 					"parameters": {
 						"object": "Bossfight_body"
 					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "CarChase_GameManager",
+					"sid": 176738736679574,
+					"parameters": {
+						"instance-variable": "BossPhase",
+						"comparison": 0,
+						"value": "2"
+					}
 				}
 			],
 			"actions": [
@@ -1754,6 +1764,42 @@
 					"sid": 693105663043641
 				},
 				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Bossfight_body",
+					"sid": 524278831885041,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "Bossfight_body",
+					"sid": 269668289151818,
+					"parameters": {
+						"color": "rgbEx(100, 100 * Self.Health/Self.MaxHealth, 100 * Self.Health/Self.MaxHealth)"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 373755262022835,
+					"parameters": {
+						"audio-file": "hit",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 213465897331147,
+					"parameters": {
+						"tag": "\"metal bullet hits\""
+					}
+				},
+				{
 					"id": "play-by-name",
 					"objectClass": "Audio",
 					"sid": 829500655784969,
@@ -1766,63 +1812,7 @@
 					}
 				}
 			],
-			"sid": 407412383292171,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "CarChase_GameManager",
-							"sid": 655556454862123,
-							"parameters": {
-								"instance-variable": "BossPhase",
-								"comparison": 0,
-								"value": "2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "subtract-from-instvar",
-							"objectClass": "Bossfight_body",
-							"sid": 341422843378756,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-default-color",
-							"objectClass": "Bossfight_body",
-							"sid": 607884026104062,
-							"parameters": {
-								"color": "rgbEx(100, 100 * Self.Health/Self.MaxHealth, 100 * Self.Health/Self.MaxHealth)"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 563512748653604,
-							"parameters": {
-								"audio-file": "hit",
-								"loop": "not-looping",
-								"volume": "-10",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "stop",
-							"objectClass": "Audio",
-							"sid": 714436301550891,
-							"parameters": {
-								"tag": "\"metal bullet hits\""
-							}
-						}
-					],
-					"sid": 103800958480811
-				}
-			]
+			"sid": 407412383292171
 		},
 		{
 			"eventType": "block",

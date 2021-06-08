@@ -1,0 +1,101 @@
+{
+	"name": "InnerCutscene",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 821036622070716
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 422926755184093,
+					"parameters": {
+						"width": "0",
+						"height": "1",
+						"depth": "1"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 159842948061854,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: Whew that was close\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 390371382946587,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bently: I thought you said this would be easy\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 494361866873271,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: I didnt say it would be easy. I just said we would survive.\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 904369716281534,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bently: Uh oh theres more of them!\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "Temp_Cutscene_Array",
+					"sid": 695944120859780,
+					"parameters": {
+						"where": "back",
+						"value": "\"Bathan: And This section of the road is much worse!\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "Temp_Cutscene_text",
+					"sid": 504092374333270,
+					"parameters": {
+						"text": "Temp_Cutscene_Array.Front",
+						"duration": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 840544153183425,
+					"parameters": {
+						"variable": "NextLevel",
+						"value": "\"Obstacles\""
+					}
+				}
+			],
+			"sid": 632951905237741
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Cutscene Main Event"
+		}
+	],
+	"sid": 498612282025346
+}

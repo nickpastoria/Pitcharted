@@ -664,7 +664,7 @@
 						"EnemyIncrease2": 7,
 						"EnemyIncrease3": 11,
 						"BossPhase": 3,
-						"nextLevel": "Obstacles"
+						"nextLevel": "InnerCutscene"
 					},
 					"behaviors": {},
 					"world": {

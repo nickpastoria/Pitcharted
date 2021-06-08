@@ -332,7 +332,8 @@
 			"Main Menu",
 			"Final Cutscene",
 			"Ending",
-			"Obstacles"
+			"Obstacles",
+			"InnerCutscene"
 		],
 		"subfolders": []
 	},
@@ -345,7 +346,8 @@
 			"Menu Event",
 			"Cutscene 2 Event",
 			"Cutscene 1 Event",
-			"Cutscene Final Event"
+			"Cutscene Final Event",
+			"InnerCutscene"
 		],
 		"subfolders": []
 	},
