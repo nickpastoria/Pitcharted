@@ -1,0 +1,81 @@
+{
+	"name": "Cutscene_Jeep",
+	"plugin-id": "Sprite",
+	"sid": 872693988796119,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 220,
+						"height": 225,
+						"originX": 0.5045454545454545,
+						"originY": 0.28888888888888886,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4118985,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0,
+								1,
+								0.28888888888888886,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.28888888888888886
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 220,
+						"height": 225,
+						"originX": 0.5045454545454545,
+						"originY": 0.28444444444444444,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5800111,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0,
+								1,
+								0.28888888888888886,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.28888888888888886
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 415747832670898,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 15
+			}
+		],
+		"subfolders": []
+	}
+}

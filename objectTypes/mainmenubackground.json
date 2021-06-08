@@ -1,7 +1,7 @@
 {
-	"name": "Temp_Cutscene_Background",
+	"name": "MainMenuBackground",
 	"plugin-id": "Sprite",
-	"sid": 189463934270271,
+	"sid": 982020117110031,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,30 +11,30 @@
 			{
 				"frames": [
 					{
-						"width": 960,
-						"height": 540,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 2000,
+						"height": 960,
+						"originX": 0,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2320002,
+						"imageSpriteId": 9849504,
 						"collisionPoly": {
 							"points": [
 								0,
 								0,
 								0.5,
 								0,
-								0.9983333333333333,
+								0.9995,
 								0,
-								0.9983333333333333,
+								0.9995,
 								0.5,
-								0.9983333333333333,
-								0.9948979591836735,
+								0.9995,
+								0.9989583333333333,
 								0.5,
-								0.9948979591836735,
+								0.9989583333333333,
 								0,
-								0.9948979591836735,
+								0.9989583333333333,
 								0,
 								0.5
 							]
@@ -43,7 +43,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 485944663874908,
+				"sid": 983018751482290,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
