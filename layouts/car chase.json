@@ -1120,35 +1120,6 @@
 					}
 				},
 				{
-					"type": "CarChase_crosshair",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 30,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 2830,
-						"y": 395,
-						"width": 124.42266674525183,
-						"height": 124.42266674525183,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 1
-					}
-				},
-				{
 					"type": "CarChase_Bullet",
 					"properties": {
 						"initially-visible": true,
@@ -1544,7 +1515,37 @@
 		{
 			"name": "Hud",
 			"overriden": 0,
-			"instances": [],
+			"instances": [
+				{
+					"type": "CarChase_crosshair",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 30,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2830,
+						"y": 395,
+						"width": 124.42266674525183,
+						"height": 124.42266674525183,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 947493678085140,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
